@@ -8,8 +8,8 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0">
-  <link rel="stylesheet" href="../../../layuiadmin/layui/css/layui.css" media="all">
-  <link rel="stylesheet" href="../../../layuiadmin/style/admin.css" media="all">
+  <link rel="stylesheet" href="{{ asset('layuiadmin/layui/css/layui.css') }}" media="all">
+  <link rel="stylesheet" href="{{ asset('layuiadmin/style/admin.css') }}" media="all">
 </head>
 <body>
 
@@ -36,11 +36,11 @@
               <div class="layui-form-item">
                 <label class="layui-form-label">用户名</label>
                 <div class="layui-input-inline">
-                  <input type="text" name="username" value="xianxin" readonly class="layui-input">
+                <input type="text" name="username" value="{{$name}}" readonly class="layui-input">
                 </div>
                 <div class="layui-form-mid layui-word-aux">不可修改。一般用于后台登入名</div>
               </div>
-              <div class="layui-form-item">
+              {{-- <div class="layui-form-item">
                 <label class="layui-form-label">昵称</label>
                 <div class="layui-input-inline">
                   <input type="text" name="nickname" value="贤心" lay-verify="nickname" autocomplete="off" placeholder="请输入昵称" class="layui-input">
@@ -64,8 +64,8 @@
                   </button>
                   <button class="layui-btn layui-btn-primary" layadmin-event="avartatPreview">查看图片</button >
                 </div>
-             </div>
-              <div class="layui-form-item">
+             </div> --}}
+              {{-- <div class="layui-form-item">
                 <label class="layui-form-label">手机</label>
                 <div class="layui-input-inline">
                   <input type="text" name="cellphone" value="" lay-verify="phone" autocomplete="off" class="layui-input">
@@ -88,7 +88,7 @@
                   <button class="layui-btn" lay-submit lay-filter="setmyinfo">确认修改</button>
                   <button type="reset" class="layui-btn layui-btn-primary">重新填写</button>
                 </div>
-              </div>
+              </div> --}}
             </div>
             
           </div>

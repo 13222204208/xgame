@@ -68,10 +68,10 @@
           </li>
           <li class="layui-nav-item" lay-unselect>
             <a href="javascript:;">
-              <cite>贤心</cite>
+            <cite>{{$name}}</cite>
             </a>
             <dl class="layui-nav-child">
-              <dd><a lay-href="set/user/info.html">基本资料</a></dd>
+              <dd><a lay-href="{{ url('set/user/info') }}">基本资料</a></dd>
               <dd><a lay-href="set/user/password.html">修改密码</a></dd>
               <hr>
               <dd layadmin-event="logout" style="text-align: center;"><a>退出</a></dd>
@@ -90,8 +90,8 @@
       <!-- 侧边菜单 -->
       <div class="layui-side layui-side-menu">
         <div class="layui-side-scroll">
-          <div class="layui-logo" lay-href="home/console.html">
-            <span>layuiAdmin</span>
+        <div class="layui-logo" lay-href="{{ url('/console') }}">
+            <span>后台管理</span>
           </div>
           
           <ul class="layui-nav layui-nav-tree" lay-shrink="all" id="LAY-system-side-menu" lay-filter="layadmin-system-side-menu">
@@ -104,18 +104,12 @@
                 <dd data-name="console" class="layui-this">
                   <a lay-href="{{ url('/console')}}">控制台</a>
                 </dd>
-                <dd data-name="console">
-                  <a lay-href="home/homepage1.html">主页一</a>
-                </dd>
-                <dd data-name="console">
-                  <a lay-href="home/homepage2.html">主页二</a>
-                </dd>
               </dl>
             </li>
             <li data-name="component" class="layui-nav-item">
-              <a href="javascript:;" lay-tips="组件" lay-direction="2">
+              <a href="javascript:;" lay-tips="账号管理" lay-direction="2">
                 <i class="layui-icon layui-icon-component"></i>
-                <cite>组件</cite>
+                <cite>账号管理</cite>
               </a>
               <dl class="layui-nav-child">
                 <dd data-name="grid">
@@ -305,9 +299,9 @@
               </dl>
             </li>
             <li data-name="template" class="layui-nav-item">
-              <a href="javascript:;" lay-tips="页面" lay-direction="2">
+              <a href="javascript:;" lay-tips="游玩记录" lay-direction="2">
                 <i class="layui-icon layui-icon-template"></i>
-                <cite>页面</cite>
+                <cite>游玩记录</cite>
               </a>
               <dl class="layui-nav-child">
                 <dd><a lay-href="template/personalpage.html">个人主页</a></dd>
@@ -326,9 +320,9 @@
               </dl>
             </li>
             <li data-name="app" class="layui-nav-item">
-              <a href="javascript:;" lay-tips="应用" lay-direction="2">
+              <a href="javascript:;" lay-tips="统计" lay-direction="2">
                 <i class="layui-icon layui-icon-app"></i>
-                <cite>应用</cite>
+                <cite>统计</cite>
               </a>
               <dl class="layui-nav-child">
                 
@@ -356,9 +350,9 @@
               </dl>
             </li>
             <li data-name="senior" class="layui-nav-item">
-              <a href="javascript:;" lay-tips="高级" lay-direction="2">
+              <a href="javascript:;" lay-tips="游戏管理" lay-direction="2">
                 <i class="layui-icon layui-icon-senior"></i>
-                <cite>高级</cite>
+                <cite>游戏管理</cite>
               </a>
               <dl class="layui-nav-child">
                 <dd>
@@ -375,9 +369,9 @@
               </dl>
             </li>
             <li data-name="user" class="layui-nav-item">
-              <a href="javascript:;" lay-tips="用户" lay-direction="2">
+              <a href="javascript:;" lay-tips="活动配置" lay-direction="2">
                 <i class="layui-icon layui-icon-user"></i>
-                <cite>用户</cite>
+                <cite>活动配置</cite>
               </a>
               <dl class="layui-nav-child">
                 <dd>
@@ -391,6 +385,69 @@
                 </dd>
               </dl>
             </li>
+
+            <li data-name="app" class="layui-nav-item">
+              <a href="javascript:;" lay-tips="客户流失" lay-direction="2">
+                <i class="layui-icon layui-icon-app"></i>
+                <cite>客户流失</cite>
+              </a>
+              <dl class="layui-nav-child">
+                
+                <dd data-name="content">
+                  <a href="javascript:;">内容系统</a>
+                  <dl class="layui-nav-child">
+                    <dd data-name="list"><a lay-href="app/content/list.html">文章列表</a></dd>
+                    <dd data-name="tags"><a lay-href="app/content/tags.html">分类管理</a></dd>
+                    <dd data-name="comment"><a lay-href="app/content/comment.html">评论管理</a></dd>
+                  </dl>
+                </dd>
+                <dd data-name="forum">
+                  <a href="javascript:;">社区系统</a>
+                  <dl class="layui-nav-child">
+                    <dd data-name="list"><a lay-href="app/forum/list.html">帖子列表</a></dd>
+                    <dd data-name="replys"><a lay-href="app/forum/replys.html">回帖列表</a></dd>
+                  </dl>
+                </dd>
+                <dd>
+                  <a lay-href="app/message/index.html">消息中心</a>
+                </dd>
+                <dd data-name="workorder">
+                  <a lay-href="app/workorder/list.html">工单系统</a>
+                </dd>
+              </dl>
+            </li>
+
+            <li data-name="app" class="layui-nav-item">
+              <a href="javascript:;" lay-tips="客服管理" lay-direction="2">
+                <i class="layui-icon layui-icon-app"></i>
+                <cite>客服管理</cite>
+              </a>
+              <dl class="layui-nav-child">
+                
+                <dd data-name="content">
+                  <a href="javascript:;">内容系统</a>
+                  <dl class="layui-nav-child">
+                    <dd data-name="list"><a lay-href="app/content/list.html">文章列表</a></dd>
+                    <dd data-name="tags"><a lay-href="app/content/tags.html">分类管理</a></dd>
+                    <dd data-name="comment"><a lay-href="app/content/comment.html">评论管理</a></dd>
+                  </dl>
+                </dd>
+                <dd data-name="forum">
+                  <a href="javascript:;">社区系统</a>
+                  <dl class="layui-nav-child">
+                    <dd data-name="list"><a lay-href="app/forum/list.html">帖子列表</a></dd>
+                    <dd data-name="replys"><a lay-href="app/forum/replys.html">回帖列表</a></dd>
+                  </dl>
+                </dd>
+                <dd>
+                  <a lay-href="app/message/index.html">消息中心</a>
+                </dd>
+                <dd data-name="workorder">
+                  <a lay-href="app/workorder/list.html">工单系统</a>
+                </dd>
+              </dl>
+            </li>
+
             <li data-name="set" class="layui-nav-item">
               <a href="javascript:;" lay-tips="设置" lay-direction="2">
                 <i class="layui-icon layui-icon-set"></i>
@@ -414,9 +471,9 @@
               </dl>
             </li>
             <li data-name="get" class="layui-nav-item">
-              <a href="javascript:;" lay-href="http://www.layui.com/admin/#get" lay-tips="授权" lay-direction="2">
+              <a href="javascript:;" lay-href="http://www.layui.com/admin/#get" lay-tips="邮件公告" lay-direction="2">
                 <i class="layui-icon layui-icon-auz"></i>
-                <cite>授权</cite>
+                <cite>邮件公告</cite>
               </a>
             </li>
           </ul>
@@ -441,7 +498,7 @@
         </div>
         <div class="layui-tab" lay-unauto lay-allowClose="true" lay-filter="layadmin-layout-tabs">
           <ul class="layui-tab-title" id="LAY_app_tabsheader">
-            <li lay-id="home/console.html" lay-attr="home/console.html" class="layui-this"><i class="layui-icon layui-icon-home"></i></li>
+          <li lay-id="{{ url('console') }}" lay-attr="{{ url('console') }}" class="layui-this"><i class="layui-icon layui-icon-home"></i></li>
           </ul>
         </div>
       </div>
@@ -450,7 +507,7 @@
       <!-- 主体内容 -->
       <div class="layui-body" id="LAY_app_body">
         <div class="layadmin-tabsbody-item layui-show">
-          <iframe src="home/console.html" frameborder="0" class="layadmin-iframe"></iframe>
+          <iframe src="{{ url('console') }}" frameborder="0" class="layadmin-iframe"></iframe>
         </div>
       </div>
       

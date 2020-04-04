@@ -103,13 +103,34 @@
           url: "{{url('admin/login')}}",
           method: 'POST',
           data: obj.field,
-          dataType: 'text',
+          dataType: 'json',
           success: function(res) {
-            console.log(res);
-
+            if (res.status == 200) {
+              layer.msg('登入成功',{
+                offset: '15px',
+                icon: 1,
+                time: 1000
+              }, function(){
+                location.href= '/';
+              })
+            }else if (res.status == 403) {
+              layer.msg('登录失败请确认用户密码',{
+                offset: '15px',
+                icon: 1,
+                time: 3000
+              }, function(){
+                location.href= '/login';
+              })
+            }
           },
           error: function(error) {
-            console.log(error.readyState);
+            layer.msg('登录失败请确认信息',{
+                offset: '15px',
+                icon: 1,
+                time: 3000
+              }, function(){
+                location.href= '/login';
+              })
           }
         });
 

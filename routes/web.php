@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('index');
+    return view('index',['name' => session('username')]);
 });//主页
 
 Route::get('/console', function () {
@@ -24,6 +24,10 @@ Route::get('/console', function () {
 Route::get('/login', function () {
     return view('user.login');
 });//后台登陆页面
+
+Route::get('/set/user/info', function () {
+    return view('set.user.info',['name' => session('username')]);
+});//后台用户资料
 
 Route::post('admin/login','AdminLoginController@login');
 
