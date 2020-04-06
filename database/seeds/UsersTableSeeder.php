@@ -15,7 +15,7 @@ class UsersTableSeeder extends Seeder
             'username' => 'mygame',
             'power' => 'all',
             'role' =>  'admin',
-            'password' => bcrypt('xgame123'),
+            'password' => bcrypt('mygame123'),
         ]);
     }
 }
