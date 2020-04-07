@@ -33,7 +33,19 @@
           </div>
   
           
-
+          <div class="layui-form-item">
+            <label class="layui-form-label">选择旗帜</label>
+            <div class="layui-input-block">
+              <select name="interest" lay-filter="aihao">
+                <option value=""></option>
+                <option value="0">写作</option>
+                <option value="1" selected="">阅读</option>
+                <option value="2">游戏</option>
+                <option value="3">音乐</option>
+                <option value="4">旅行</option>
+              </select>
+            </div>
+          </div>
           
           
         
@@ -46,7 +58,7 @@
           <div class="layui-form-item layui-layout-admin">
             <div class="layui-input-block">
               <div class="layui-footer" style="left: 0;">
-                <button class="layui-btn" lay-submit="" lay-filter="component-form-demo1">创建公会</button>
+                <button class="layui-btn" lay-submit="" lay-filter="component-form-demo1">立即提交</button>
                 <button type="reset" class="layui-btn layui-btn-primary">重置</button>
               </div>
             </div>

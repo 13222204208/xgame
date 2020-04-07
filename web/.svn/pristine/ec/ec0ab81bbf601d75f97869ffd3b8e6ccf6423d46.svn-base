@@ -1,0 +1,11 @@
+[ 2019-06-20T14:41:04+08:00 ] ::1 /kucun/index.php/Home/Dianyuan/dayin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000363s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000401s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000436s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.012811s ]
+INFO: [ app_end ] --END-- [ RunTime:0.012898s ]
+

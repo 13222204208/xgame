@@ -31,7 +31,14 @@ Route::get('/set/user/info', function () {
 
 Route::get('/set/user/newuser', function() {
     return view('set.user.newuser');
-});//创建客户帐号
+});//创建客服帐号
+
+Route::get('/set/user/power', function() {
+    return view('set.user.power');
+});//添加权限页面
+
+Route::post('add/role','UserManageController@addRole');//添加权限
+Route::post('add/newuser','UserManageController@addNewuser');//添加权限
 
 //公会
 
@@ -45,6 +52,13 @@ Route::get('/edit/guild-info', function() {
 
 Route::get('/guild/info','GuildController@guildInfo');//获取公会成员信息
 
+Route::get('/edit/the-charts', function() {
+    return view('edit.the-charts');
+});//排行榜
+
+Route::get('/the-charts/info','GuildController@guildInfo');//获取排行榜信息
+
+
 Route::get('/create/turntable', function() {
     return view('create.turntable');
 });//转盘设置
@@ -55,7 +69,11 @@ Route::get('/create/advert', function() {
 
 Route::get('/create/horse', function() {
     return view('create.horse');
-});//创建广告
+});//跑马灯
+
+Route::get('/create/rescue', function() {
+    return view('create.rescue');
+});//救援金
 
 Route::post('admin/login','AdminLoginController@login');//后台登录
 

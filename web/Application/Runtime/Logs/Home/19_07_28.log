@@ -1,0 +1,1241 @@
+[ 2019-07-28T12:35:33+08:00 ] ::1 /game/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001220s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000392s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000425s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001500s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001656s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018928s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.019002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000236s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000256s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000349s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000373s ]
+
+[ 2019-07-28T12:35:33+08:00 ] ::1 /game/index.php/Home/Index/console
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000285s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000347s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000387s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000049s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000083s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005414s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005461s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000171s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000192s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000304s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000326s ]
+
+[ 2019-07-28T21:20:24+08:00 ] ::1 /game/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000392s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000460s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000501s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000092s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000135s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012698s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012732s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000260s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000282s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000418s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000450s ]
+
+[ 2019-07-28T21:20:24+08:00 ] ::1 /game/index.php/Home/Index/console
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000274s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000382s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000423s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000090s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000129s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.004956s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005023s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000218s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000241s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000340s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000366s ]
+
+[ 2019-07-28T21:20:32+08:00 ] ::1 /game/index.php/Home/Houtai/user_list.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000257s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000305s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000333s ]
+SQL: SHOW COLUMNS FROM `t_account_guest` [ RunTime:0.0081s ]
+SQL: SELECT * FROM `t_account_guest`  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `t_account_info_wx` [ RunTime:0.0049s ]
+SQL: SELECT * FROM `t_account_info_wx` WHERE `f_account_id` = 1  [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000035s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000066s ]
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\game\Application\Runtime\Cache\Home\576efd2ff42223f693ac7145ec3bb4ae.php 第 50 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\game\Application\Runtime\Cache\Home\576efd2ff42223f693ac7145ec3bb4ae.php 第 51 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\game\Application\Runtime\Cache\Home\576efd2ff42223f693ac7145ec3bb4ae.php 第 52 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\game\Application\Runtime\Cache\Home\576efd2ff42223f693ac7145ec3bb4ae.php 第 53 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\game\Application\Runtime\Cache\Home\576efd2ff42223f693ac7145ec3bb4ae.php 第 54 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\game\Application\Runtime\Cache\Home\576efd2ff42223f693ac7145ec3bb4ae.php 第 55 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\game\Application\Runtime\Cache\Home\576efd2ff42223f693ac7145ec3bb4ae.php 第 56 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\game\Application\Runtime\Cache\Home\576efd2ff42223f693ac7145ec3bb4ae.php 第 57 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\game\Application\Runtime\Cache\Home\576efd2ff42223f693ac7145ec3bb4ae.php 第 58 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\game\Application\Runtime\Cache\Home\576efd2ff42223f693ac7145ec3bb4ae.php 第 59 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\game\Application\Runtime\Cache\Home\576efd2ff42223f693ac7145ec3bb4ae.php 第 60 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\game\Application\Runtime\Cache\Home\576efd2ff42223f693ac7145ec3bb4ae.php 第 62 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\game\Application\Runtime\Cache\Home\576efd2ff42223f693ac7145ec3bb4ae.php 第 63 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\game\Application\Runtime\Cache\Home\576efd2ff42223f693ac7145ec3bb4ae.php 第 64 行.
+NOTIC: [8] Undefined index: id D:\phpStudy\WWW\game\Application\Runtime\Cache\Home\576efd2ff42223f693ac7145ec3bb4ae.php 第 66 行.
+NOTIC: [8] Undefined index: id D:\phpStudy\WWW\game\Application\Runtime\Cache\Home\576efd2ff42223f693ac7145ec3bb4ae.php 第 67 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007122s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007150s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000193s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000213s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000300s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000340s ]
+
+[ 2019-07-28T21:20:59+08:00 ] ::1 /game/index.php/Home/Houtai/user_list.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000241s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000326s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000358s ]
+SQL: SHOW COLUMNS FROM `t_account_guest` [ RunTime:0.0123s ]
+SQL: SELECT * FROM `t_account_guest`  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `t_account_info_wx` [ RunTime:0.0035s ]
+SQL: SELECT * FROM `t_account_info_wx` WHERE `f_account_id` = 1  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000036s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000065s ]
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\game\Application\Runtime\Cache\Home\576efd2ff42223f693ac7145ec3bb4ae.php 第 50 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\game\Application\Runtime\Cache\Home\576efd2ff42223f693ac7145ec3bb4ae.php 第 51 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\game\Application\Runtime\Cache\Home\576efd2ff42223f693ac7145ec3bb4ae.php 第 52 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\game\Application\Runtime\Cache\Home\576efd2ff42223f693ac7145ec3bb4ae.php 第 53 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\game\Application\Runtime\Cache\Home\576efd2ff42223f693ac7145ec3bb4ae.php 第 54 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\game\Application\Runtime\Cache\Home\576efd2ff42223f693ac7145ec3bb4ae.php 第 55 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\game\Application\Runtime\Cache\Home\576efd2ff42223f693ac7145ec3bb4ae.php 第 56 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\game\Application\Runtime\Cache\Home\576efd2ff42223f693ac7145ec3bb4ae.php 第 57 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\game\Application\Runtime\Cache\Home\576efd2ff42223f693ac7145ec3bb4ae.php 第 58 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\game\Application\Runtime\Cache\Home\576efd2ff42223f693ac7145ec3bb4ae.php 第 59 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\game\Application\Runtime\Cache\Home\576efd2ff42223f693ac7145ec3bb4ae.php 第 60 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\game\Application\Runtime\Cache\Home\576efd2ff42223f693ac7145ec3bb4ae.php 第 62 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\game\Application\Runtime\Cache\Home\576efd2ff42223f693ac7145ec3bb4ae.php 第 63 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\game\Application\Runtime\Cache\Home\576efd2ff42223f693ac7145ec3bb4ae.php 第 64 行.
+NOTIC: [8] Undefined index: id D:\phpStudy\WWW\game\Application\Runtime\Cache\Home\576efd2ff42223f693ac7145ec3bb4ae.php 第 66 行.
+NOTIC: [8] Undefined index: id D:\phpStudy\WWW\game\Application\Runtime\Cache\Home\576efd2ff42223f693ac7145ec3bb4ae.php 第 67 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.004394s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004421s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000184s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000203s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000314s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000336s ]
+
+[ 2019-07-28T21:21:00+08:00 ] ::1 /game/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000374s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.005413s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005460s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000094s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000141s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007886s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007934s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000261s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000287s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000428s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000466s ]
+
+[ 2019-07-28T21:21:00+08:00 ] ::1 /game/index.php/Home/Index/console
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000295s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000390s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000428s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000047s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000081s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.004523s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004576s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000195s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000218s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000351s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000381s ]
+
+[ 2019-07-28T21:21:02+08:00 ] ::1 /game/index.php/Home/Houtai/user_list.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000279s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000361s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000418s ]
+SQL: SHOW COLUMNS FROM `t_account_guest` [ RunTime:0.0125s ]
+SQL: SELECT * FROM `t_account_guest`  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `t_account_info_wx` [ RunTime:0.0039s ]
+SQL: SELECT * FROM `t_account_info_wx` WHERE `f_account_id` = 1  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000034s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000060s ]
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\game\Application\Runtime\Cache\Home\576efd2ff42223f693ac7145ec3bb4ae.php 第 50 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\game\Application\Runtime\Cache\Home\576efd2ff42223f693ac7145ec3bb4ae.php 第 51 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\game\Application\Runtime\Cache\Home\576efd2ff42223f693ac7145ec3bb4ae.php 第 52 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\game\Application\Runtime\Cache\Home\576efd2ff42223f693ac7145ec3bb4ae.php 第 53 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\game\Application\Runtime\Cache\Home\576efd2ff42223f693ac7145ec3bb4ae.php 第 54 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\game\Application\Runtime\Cache\Home\576efd2ff42223f693ac7145ec3bb4ae.php 第 55 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\game\Application\Runtime\Cache\Home\576efd2ff42223f693ac7145ec3bb4ae.php 第 56 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\game\Application\Runtime\Cache\Home\576efd2ff42223f693ac7145ec3bb4ae.php 第 57 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\game\Application\Runtime\Cache\Home\576efd2ff42223f693ac7145ec3bb4ae.php 第 58 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\game\Application\Runtime\Cache\Home\576efd2ff42223f693ac7145ec3bb4ae.php 第 59 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\game\Application\Runtime\Cache\Home\576efd2ff42223f693ac7145ec3bb4ae.php 第 60 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\game\Application\Runtime\Cache\Home\576efd2ff42223f693ac7145ec3bb4ae.php 第 62 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\game\Application\Runtime\Cache\Home\576efd2ff42223f693ac7145ec3bb4ae.php 第 63 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\game\Application\Runtime\Cache\Home\576efd2ff42223f693ac7145ec3bb4ae.php 第 64 行.
+NOTIC: [8] Undefined index: id D:\phpStudy\WWW\game\Application\Runtime\Cache\Home\576efd2ff42223f693ac7145ec3bb4ae.php 第 66 行.
+NOTIC: [8] Undefined index: id D:\phpStudy\WWW\game\Application\Runtime\Cache\Home\576efd2ff42223f693ac7145ec3bb4ae.php 第 67 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005144s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005172s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000198s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000219s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000302s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000325s ]
+
+[ 2019-07-28T21:21:16+08:00 ] ::1 /game/index.php/Home/Houtai/user_list.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000291s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000373s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000409s ]
+SQL: SHOW COLUMNS FROM `t_account_guest` [ RunTime:0.0128s ]
+SQL: SELECT * FROM `t_account_guest`  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `t_account_info_wx` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `t_account_info_wx` WHERE `f_account_id` = 1  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000036s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000062s ]
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\game\Application\Runtime\Cache\Home\576efd2ff42223f693ac7145ec3bb4ae.php 第 50 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\game\Application\Runtime\Cache\Home\576efd2ff42223f693ac7145ec3bb4ae.php 第 51 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\game\Application\Runtime\Cache\Home\576efd2ff42223f693ac7145ec3bb4ae.php 第 52 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\game\Application\Runtime\Cache\Home\576efd2ff42223f693ac7145ec3bb4ae.php 第 53 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\game\Application\Runtime\Cache\Home\576efd2ff42223f693ac7145ec3bb4ae.php 第 54 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\game\Application\Runtime\Cache\Home\576efd2ff42223f693ac7145ec3bb4ae.php 第 55 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\game\Application\Runtime\Cache\Home\576efd2ff42223f693ac7145ec3bb4ae.php 第 56 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\game\Application\Runtime\Cache\Home\576efd2ff42223f693ac7145ec3bb4ae.php 第 57 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\game\Application\Runtime\Cache\Home\576efd2ff42223f693ac7145ec3bb4ae.php 第 58 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\game\Application\Runtime\Cache\Home\576efd2ff42223f693ac7145ec3bb4ae.php 第 59 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\game\Application\Runtime\Cache\Home\576efd2ff42223f693ac7145ec3bb4ae.php 第 60 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\game\Application\Runtime\Cache\Home\576efd2ff42223f693ac7145ec3bb4ae.php 第 62 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\game\Application\Runtime\Cache\Home\576efd2ff42223f693ac7145ec3bb4ae.php 第 63 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\game\Application\Runtime\Cache\Home\576efd2ff42223f693ac7145ec3bb4ae.php 第 64 行.
+NOTIC: [8] Undefined index: id D:\phpStudy\WWW\game\Application\Runtime\Cache\Home\576efd2ff42223f693ac7145ec3bb4ae.php 第 66 行.
+NOTIC: [8] Undefined index: id D:\phpStudy\WWW\game\Application\Runtime\Cache\Home\576efd2ff42223f693ac7145ec3bb4ae.php 第 67 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.004403s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004431s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000191s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000210s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000310s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000331s ]
+
+[ 2019-07-28T21:21:23+08:00 ] ::1 /game/index.php/Home/Houtai/user_list.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000281s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000320s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000349s ]
+SQL: SHOW COLUMNS FROM `t_account_guest` [ RunTime:0.0125s ]
+SQL: SELECT * FROM `t_account_guest`  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `t_account_info_wx` [ RunTime:0.0034s ]
+SQL: SELECT * FROM `t_account_info_wx` WHERE `f_account_id` = 1  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000042s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000083s ]
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\game\Application\Runtime\Cache\Home\576efd2ff42223f693ac7145ec3bb4ae.php 第 50 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\game\Application\Runtime\Cache\Home\576efd2ff42223f693ac7145ec3bb4ae.php 第 51 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\game\Application\Runtime\Cache\Home\576efd2ff42223f693ac7145ec3bb4ae.php 第 52 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\game\Application\Runtime\Cache\Home\576efd2ff42223f693ac7145ec3bb4ae.php 第 53 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\game\Application\Runtime\Cache\Home\576efd2ff42223f693ac7145ec3bb4ae.php 第 54 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\game\Application\Runtime\Cache\Home\576efd2ff42223f693ac7145ec3bb4ae.php 第 55 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\game\Application\Runtime\Cache\Home\576efd2ff42223f693ac7145ec3bb4ae.php 第 56 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\game\Application\Runtime\Cache\Home\576efd2ff42223f693ac7145ec3bb4ae.php 第 57 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\game\Application\Runtime\Cache\Home\576efd2ff42223f693ac7145ec3bb4ae.php 第 58 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\game\Application\Runtime\Cache\Home\576efd2ff42223f693ac7145ec3bb4ae.php 第 59 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\game\Application\Runtime\Cache\Home\576efd2ff42223f693ac7145ec3bb4ae.php 第 60 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\game\Application\Runtime\Cache\Home\576efd2ff42223f693ac7145ec3bb4ae.php 第 62 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\game\Application\Runtime\Cache\Home\576efd2ff42223f693ac7145ec3bb4ae.php 第 63 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\game\Application\Runtime\Cache\Home\576efd2ff42223f693ac7145ec3bb4ae.php 第 64 行.
+NOTIC: [8] Undefined index: id D:\phpStudy\WWW\game\Application\Runtime\Cache\Home\576efd2ff42223f693ac7145ec3bb4ae.php 第 66 行.
+NOTIC: [8] Undefined index: id D:\phpStudy\WWW\game\Application\Runtime\Cache\Home\576efd2ff42223f693ac7145ec3bb4ae.php 第 67 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.004940s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004972s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000231s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000253s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000327s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000350s ]
+
+[ 2019-07-28T21:21:25+08:00 ] ::1 /game/index.php/Home/Houtai/user_list.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000237s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000291s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000320s ]
+SQL: SHOW COLUMNS FROM `t_account_guest` [ RunTime:0.0121s ]
+SQL: SELECT * FROM `t_account_guest`  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `t_account_info_wx` [ RunTime:0.0033s ]
+SQL: SELECT * FROM `t_account_info_wx` WHERE `f_account_id` = 1  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000036s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000065s ]
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\game\Application\Runtime\Cache\Home\576efd2ff42223f693ac7145ec3bb4ae.php 第 50 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\game\Application\Runtime\Cache\Home\576efd2ff42223f693ac7145ec3bb4ae.php 第 51 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\game\Application\Runtime\Cache\Home\576efd2ff42223f693ac7145ec3bb4ae.php 第 52 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\game\Application\Runtime\Cache\Home\576efd2ff42223f693ac7145ec3bb4ae.php 第 53 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\game\Application\Runtime\Cache\Home\576efd2ff42223f693ac7145ec3bb4ae.php 第 54 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\game\Application\Runtime\Cache\Home\576efd2ff42223f693ac7145ec3bb4ae.php 第 55 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\game\Application\Runtime\Cache\Home\576efd2ff42223f693ac7145ec3bb4ae.php 第 56 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\game\Application\Runtime\Cache\Home\576efd2ff42223f693ac7145ec3bb4ae.php 第 57 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\game\Application\Runtime\Cache\Home\576efd2ff42223f693ac7145ec3bb4ae.php 第 58 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\game\Application\Runtime\Cache\Home\576efd2ff42223f693ac7145ec3bb4ae.php 第 59 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\game\Application\Runtime\Cache\Home\576efd2ff42223f693ac7145ec3bb4ae.php 第 60 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\game\Application\Runtime\Cache\Home\576efd2ff42223f693ac7145ec3bb4ae.php 第 62 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\game\Application\Runtime\Cache\Home\576efd2ff42223f693ac7145ec3bb4ae.php 第 63 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\game\Application\Runtime\Cache\Home\576efd2ff42223f693ac7145ec3bb4ae.php 第 64 行.
+NOTIC: [8] Undefined index: id D:\phpStudy\WWW\game\Application\Runtime\Cache\Home\576efd2ff42223f693ac7145ec3bb4ae.php 第 66 行.
+NOTIC: [8] Undefined index: id D:\phpStudy\WWW\game\Application\Runtime\Cache\Home\576efd2ff42223f693ac7145ec3bb4ae.php 第 67 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009405s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009431s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000177s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000196s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000313s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000334s ]
+
+[ 2019-07-28T21:21:25+08:00 ] ::1 /game/index.php/Home/Houtai/user_list.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000285s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000336s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000365s ]
+SQL: SHOW COLUMNS FROM `t_account_guest` [ RunTime:0.0123s ]
+SQL: SELECT * FROM `t_account_guest`  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `t_account_info_wx` [ RunTime:0.0033s ]
+SQL: SELECT * FROM `t_account_info_wx` WHERE `f_account_id` = 1  [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000034s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000061s ]
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\game\Application\Runtime\Cache\Home\576efd2ff42223f693ac7145ec3bb4ae.php 第 50 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\game\Application\Runtime\Cache\Home\576efd2ff42223f693ac7145ec3bb4ae.php 第 51 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\game\Application\Runtime\Cache\Home\576efd2ff42223f693ac7145ec3bb4ae.php 第 52 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\game\Application\Runtime\Cache\Home\576efd2ff42223f693ac7145ec3bb4ae.php 第 53 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\game\Application\Runtime\Cache\Home\576efd2ff42223f693ac7145ec3bb4ae.php 第 54 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\game\Application\Runtime\Cache\Home\576efd2ff42223f693ac7145ec3bb4ae.php 第 55 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\game\Application\Runtime\Cache\Home\576efd2ff42223f693ac7145ec3bb4ae.php 第 56 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\game\Application\Runtime\Cache\Home\576efd2ff42223f693ac7145ec3bb4ae.php 第 57 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\game\Application\Runtime\Cache\Home\576efd2ff42223f693ac7145ec3bb4ae.php 第 58 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\game\Application\Runtime\Cache\Home\576efd2ff42223f693ac7145ec3bb4ae.php 第 59 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\game\Application\Runtime\Cache\Home\576efd2ff42223f693ac7145ec3bb4ae.php 第 60 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\game\Application\Runtime\Cache\Home\576efd2ff42223f693ac7145ec3bb4ae.php 第 62 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\game\Application\Runtime\Cache\Home\576efd2ff42223f693ac7145ec3bb4ae.php 第 63 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\game\Application\Runtime\Cache\Home\576efd2ff42223f693ac7145ec3bb4ae.php 第 64 行.
+NOTIC: [8] Undefined index: id D:\phpStudy\WWW\game\Application\Runtime\Cache\Home\576efd2ff42223f693ac7145ec3bb4ae.php 第 66 行.
+NOTIC: [8] Undefined index: id D:\phpStudy\WWW\game\Application\Runtime\Cache\Home\576efd2ff42223f693ac7145ec3bb4ae.php 第 67 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.004396s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004427s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000216s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000237s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000318s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000339s ]
+
+[ 2019-07-28T21:21:34+08:00 ] ::1 /game/index.php/Home/Houtai/user_list.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000268s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000303s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000332s ]
+SQL: SHOW COLUMNS FROM `t_account_guest` [ RunTime:0.0128s ]
+SQL: SELECT * FROM `t_account_guest`  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `t_account_info_wx` [ RunTime:0.0037s ]
+SQL: SELECT * FROM `t_account_info_wx` WHERE `f_account_id` = 1  [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000034s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000061s ]
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\game\Application\Runtime\Cache\Home\576efd2ff42223f693ac7145ec3bb4ae.php 第 50 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\game\Application\Runtime\Cache\Home\576efd2ff42223f693ac7145ec3bb4ae.php 第 51 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\game\Application\Runtime\Cache\Home\576efd2ff42223f693ac7145ec3bb4ae.php 第 52 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\game\Application\Runtime\Cache\Home\576efd2ff42223f693ac7145ec3bb4ae.php 第 53 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\game\Application\Runtime\Cache\Home\576efd2ff42223f693ac7145ec3bb4ae.php 第 54 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\game\Application\Runtime\Cache\Home\576efd2ff42223f693ac7145ec3bb4ae.php 第 55 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\game\Application\Runtime\Cache\Home\576efd2ff42223f693ac7145ec3bb4ae.php 第 56 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\game\Application\Runtime\Cache\Home\576efd2ff42223f693ac7145ec3bb4ae.php 第 57 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\game\Application\Runtime\Cache\Home\576efd2ff42223f693ac7145ec3bb4ae.php 第 58 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\game\Application\Runtime\Cache\Home\576efd2ff42223f693ac7145ec3bb4ae.php 第 59 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\game\Application\Runtime\Cache\Home\576efd2ff42223f693ac7145ec3bb4ae.php 第 60 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\game\Application\Runtime\Cache\Home\576efd2ff42223f693ac7145ec3bb4ae.php 第 62 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\game\Application\Runtime\Cache\Home\576efd2ff42223f693ac7145ec3bb4ae.php 第 63 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\game\Application\Runtime\Cache\Home\576efd2ff42223f693ac7145ec3bb4ae.php 第 64 行.
+NOTIC: [8] Undefined index: id D:\phpStudy\WWW\game\Application\Runtime\Cache\Home\576efd2ff42223f693ac7145ec3bb4ae.php 第 66 行.
+NOTIC: [8] Undefined index: id D:\phpStudy\WWW\game\Application\Runtime\Cache\Home\576efd2ff42223f693ac7145ec3bb4ae.php 第 67 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.004307s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004333s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000176s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000196s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000303s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000325s ]
+
+[ 2019-07-28T21:21:40+08:00 ] ::1 /game/index.php/Home/Houtai/user_list.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000252s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.009559s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.009608s ]
+SQL: SHOW COLUMNS FROM `t_account_guest` [ RunTime:0.0131s ]
+SQL: SELECT * FROM `t_account_guest`  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `t_account_info_wx` [ RunTime:0.0038s ]
+SQL: SELECT * FROM `t_account_info_wx` WHERE `f_account_id` = 1  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000033s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000057s ]
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\game\Application\Runtime\Cache\Home\576efd2ff42223f693ac7145ec3bb4ae.php 第 50 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\game\Application\Runtime\Cache\Home\576efd2ff42223f693ac7145ec3bb4ae.php 第 51 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\game\Application\Runtime\Cache\Home\576efd2ff42223f693ac7145ec3bb4ae.php 第 52 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\game\Application\Runtime\Cache\Home\576efd2ff42223f693ac7145ec3bb4ae.php 第 53 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\game\Application\Runtime\Cache\Home\576efd2ff42223f693ac7145ec3bb4ae.php 第 54 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\game\Application\Runtime\Cache\Home\576efd2ff42223f693ac7145ec3bb4ae.php 第 55 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\game\Application\Runtime\Cache\Home\576efd2ff42223f693ac7145ec3bb4ae.php 第 56 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\game\Application\Runtime\Cache\Home\576efd2ff42223f693ac7145ec3bb4ae.php 第 57 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\game\Application\Runtime\Cache\Home\576efd2ff42223f693ac7145ec3bb4ae.php 第 58 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\game\Application\Runtime\Cache\Home\576efd2ff42223f693ac7145ec3bb4ae.php 第 59 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\game\Application\Runtime\Cache\Home\576efd2ff42223f693ac7145ec3bb4ae.php 第 60 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\game\Application\Runtime\Cache\Home\576efd2ff42223f693ac7145ec3bb4ae.php 第 62 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\game\Application\Runtime\Cache\Home\576efd2ff42223f693ac7145ec3bb4ae.php 第 63 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\game\Application\Runtime\Cache\Home\576efd2ff42223f693ac7145ec3bb4ae.php 第 64 行.
+NOTIC: [8] Undefined index: id D:\phpStudy\WWW\game\Application\Runtime\Cache\Home\576efd2ff42223f693ac7145ec3bb4ae.php 第 66 行.
+NOTIC: [8] Undefined index: id D:\phpStudy\WWW\game\Application\Runtime\Cache\Home\576efd2ff42223f693ac7145ec3bb4ae.php 第 67 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.004160s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004186s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000230s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000255s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000328s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000374s ]
+
+[ 2019-07-28T21:21:50+08:00 ] ::1 /game/index.php/Home/Houtai/user_list.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000249s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000326s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000357s ]
+SQL: SHOW COLUMNS FROM `t_account_guest` [ RunTime:0.0125s ]
+SQL: SELECT * FROM `t_account_guest`  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `t_account_info_wx` [ RunTime:0.0037s ]
+SQL: SELECT * FROM `t_account_info_wx` WHERE `f_account_id` = 1  [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000035s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000062s ]
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\game\Application\Runtime\Cache\Home\576efd2ff42223f693ac7145ec3bb4ae.php 第 50 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\game\Application\Runtime\Cache\Home\576efd2ff42223f693ac7145ec3bb4ae.php 第 51 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\game\Application\Runtime\Cache\Home\576efd2ff42223f693ac7145ec3bb4ae.php 第 52 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\game\Application\Runtime\Cache\Home\576efd2ff42223f693ac7145ec3bb4ae.php 第 53 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\game\Application\Runtime\Cache\Home\576efd2ff42223f693ac7145ec3bb4ae.php 第 54 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\game\Application\Runtime\Cache\Home\576efd2ff42223f693ac7145ec3bb4ae.php 第 55 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\game\Application\Runtime\Cache\Home\576efd2ff42223f693ac7145ec3bb4ae.php 第 56 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\game\Application\Runtime\Cache\Home\576efd2ff42223f693ac7145ec3bb4ae.php 第 57 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\game\Application\Runtime\Cache\Home\576efd2ff42223f693ac7145ec3bb4ae.php 第 58 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\game\Application\Runtime\Cache\Home\576efd2ff42223f693ac7145ec3bb4ae.php 第 59 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\game\Application\Runtime\Cache\Home\576efd2ff42223f693ac7145ec3bb4ae.php 第 60 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\game\Application\Runtime\Cache\Home\576efd2ff42223f693ac7145ec3bb4ae.php 第 62 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\game\Application\Runtime\Cache\Home\576efd2ff42223f693ac7145ec3bb4ae.php 第 63 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\game\Application\Runtime\Cache\Home\576efd2ff42223f693ac7145ec3bb4ae.php 第 64 行.
+NOTIC: [8] Undefined index: id D:\phpStudy\WWW\game\Application\Runtime\Cache\Home\576efd2ff42223f693ac7145ec3bb4ae.php 第 66 行.
+NOTIC: [8] Undefined index: id D:\phpStudy\WWW\game\Application\Runtime\Cache\Home\576efd2ff42223f693ac7145ec3bb4ae.php 第 67 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.004327s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004353s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000177s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000198s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000306s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000329s ]
+
+[ 2019-07-28T21:23:01+08:00 ] ::1 /game/index.php/Home/Houtai/zxgl.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.008069s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.008114s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000046s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000075s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.003946s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.003981s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000260s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000285s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000438s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000468s ]
+
+[ 2019-07-28T22:02:22+08:00 ] ::1 /game/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000311s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000345s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000376s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000245s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000294s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013372s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013434s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000317s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000338s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000403s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000429s ]
+
+[ 2019-07-28T22:02:22+08:00 ] ::1 /game/index.php/Home/Index/console
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000375s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000416s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000463s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000051s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000088s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005169s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005246s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000210s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000233s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000330s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000355s ]
+
+[ 2019-07-28T22:02:24+08:00 ] ::1 /game/index.php/Home/Houtai/zhcz.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000272s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000308s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000336s ]
+ERR: 非法操作:zhcz
+
+[ 2019-07-28T22:02:25+08:00 ] ::1 /game/index.php/Home/Houtai/user_list.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000289s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000312s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000342s ]
+SQL: SHOW COLUMNS FROM `t_account_guest` [ RunTime:0.0126s ]
+SQL: SELECT * FROM `t_account_guest`  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `t_account_info_wx` [ RunTime:0.0045s ]
+SQL: SELECT * FROM `t_account_info_wx` WHERE `f_account_id` = 1  [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000034s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000062s ]
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\game\Application\Runtime\Cache\Home\576efd2ff42223f693ac7145ec3bb4ae.php 第 50 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\game\Application\Runtime\Cache\Home\576efd2ff42223f693ac7145ec3bb4ae.php 第 51 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\game\Application\Runtime\Cache\Home\576efd2ff42223f693ac7145ec3bb4ae.php 第 52 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\game\Application\Runtime\Cache\Home\576efd2ff42223f693ac7145ec3bb4ae.php 第 53 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\game\Application\Runtime\Cache\Home\576efd2ff42223f693ac7145ec3bb4ae.php 第 54 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\game\Application\Runtime\Cache\Home\576efd2ff42223f693ac7145ec3bb4ae.php 第 55 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\game\Application\Runtime\Cache\Home\576efd2ff42223f693ac7145ec3bb4ae.php 第 56 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\game\Application\Runtime\Cache\Home\576efd2ff42223f693ac7145ec3bb4ae.php 第 57 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\game\Application\Runtime\Cache\Home\576efd2ff42223f693ac7145ec3bb4ae.php 第 58 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\game\Application\Runtime\Cache\Home\576efd2ff42223f693ac7145ec3bb4ae.php 第 59 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\game\Application\Runtime\Cache\Home\576efd2ff42223f693ac7145ec3bb4ae.php 第 60 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\game\Application\Runtime\Cache\Home\576efd2ff42223f693ac7145ec3bb4ae.php 第 62 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\game\Application\Runtime\Cache\Home\576efd2ff42223f693ac7145ec3bb4ae.php 第 63 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\game\Application\Runtime\Cache\Home\576efd2ff42223f693ac7145ec3bb4ae.php 第 64 行.
+NOTIC: [8] Undefined index: id D:\phpStudy\WWW\game\Application\Runtime\Cache\Home\576efd2ff42223f693ac7145ec3bb4ae.php 第 66 行.
+NOTIC: [8] Undefined index: id D:\phpStudy\WWW\game\Application\Runtime\Cache\Home\576efd2ff42223f693ac7145ec3bb4ae.php 第 67 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007910s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007935s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000163s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000181s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000284s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000305s ]
+
+[ 2019-07-28T22:13:32+08:00 ] ::1 /game/index.php/Home/Houtai/ywjl.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000289s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000382s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000414s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000043s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000073s ]
+NOTIC: [8] Undefined variable: con D:\phpStudy\WWW\game\Application\Runtime\Cache\Home\8cddbb52f3e76576738e026983e26058.php 第 33 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010781s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010806s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000214s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000233s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000337s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000361s ]
+
+[ 2019-07-28T22:13:35+08:00 ] ::1 /game/index.php/Home/Index/console
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000250s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000326s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000360s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000046s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000074s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.004526s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004581s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000209s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000234s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000344s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000371s ]
+
+[ 2019-07-28T22:13:57+08:00 ] ::1 /game/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000353s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000422s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000464s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000073s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000109s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005907s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005938s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000169s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000189s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000365s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000389s ]
+
+[ 2019-07-28T22:13:57+08:00 ] ::1 /game/index.php/Home/Index/console
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000272s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000345s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000382s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000047s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000082s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005484s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005551s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000213s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000239s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000377s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000416s ]
+
+[ 2019-07-28T22:14:02+08:00 ] ::1 /game/index.php/Home/Houtai/user_list.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000247s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000312s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000422s ]
+SQL: SHOW COLUMNS FROM `t_account_guest` [ RunTime:0.0130s ]
+SQL: SELECT * FROM `t_account_guest`  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `t_account_info_wx` [ RunTime:0.0044s ]
+SQL: SELECT * FROM `t_account_info_wx` WHERE `f_account_id` = 1  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000034s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000061s ]
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\game\Application\Runtime\Cache\Home\576efd2ff42223f693ac7145ec3bb4ae.php 第 50 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\game\Application\Runtime\Cache\Home\576efd2ff42223f693ac7145ec3bb4ae.php 第 51 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\game\Application\Runtime\Cache\Home\576efd2ff42223f693ac7145ec3bb4ae.php 第 52 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\game\Application\Runtime\Cache\Home\576efd2ff42223f693ac7145ec3bb4ae.php 第 53 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\game\Application\Runtime\Cache\Home\576efd2ff42223f693ac7145ec3bb4ae.php 第 54 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\game\Application\Runtime\Cache\Home\576efd2ff42223f693ac7145ec3bb4ae.php 第 55 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\game\Application\Runtime\Cache\Home\576efd2ff42223f693ac7145ec3bb4ae.php 第 56 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\game\Application\Runtime\Cache\Home\576efd2ff42223f693ac7145ec3bb4ae.php 第 57 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\game\Application\Runtime\Cache\Home\576efd2ff42223f693ac7145ec3bb4ae.php 第 58 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\game\Application\Runtime\Cache\Home\576efd2ff42223f693ac7145ec3bb4ae.php 第 59 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\game\Application\Runtime\Cache\Home\576efd2ff42223f693ac7145ec3bb4ae.php 第 60 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\game\Application\Runtime\Cache\Home\576efd2ff42223f693ac7145ec3bb4ae.php 第 62 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\game\Application\Runtime\Cache\Home\576efd2ff42223f693ac7145ec3bb4ae.php 第 63 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\game\Application\Runtime\Cache\Home\576efd2ff42223f693ac7145ec3bb4ae.php 第 64 行.
+NOTIC: [8] Undefined index: id D:\phpStudy\WWW\game\Application\Runtime\Cache\Home\576efd2ff42223f693ac7145ec3bb4ae.php 第 66 行.
+NOTIC: [8] Undefined index: id D:\phpStudy\WWW\game\Application\Runtime\Cache\Home\576efd2ff42223f693ac7145ec3bb4ae.php 第 67 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.004385s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004411s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000168s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000186s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000324s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000348s ]
+
+[ 2019-07-28T22:15:19+08:00 ] ::1 /game/index.php/Home/Houtai/user_list.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000246s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000305s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000336s ]
+SQL: SHOW COLUMNS FROM `t_account_guest` [ RunTime:0.0124s ]
+SQL: SELECT * FROM `t_account_guest`  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `t_account_info_wx` [ RunTime:0.0032s ]
+SQL: SELECT * FROM `t_account_info_wx` WHERE `f_account_id` = 1  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000038s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000066s ]
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\game\Application\Runtime\Cache\Home\576efd2ff42223f693ac7145ec3bb4ae.php 第 63 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\game\Application\Runtime\Cache\Home\576efd2ff42223f693ac7145ec3bb4ae.php 第 64 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\game\Application\Runtime\Cache\Home\576efd2ff42223f693ac7145ec3bb4ae.php 第 65 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\game\Application\Runtime\Cache\Home\576efd2ff42223f693ac7145ec3bb4ae.php 第 66 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\game\Application\Runtime\Cache\Home\576efd2ff42223f693ac7145ec3bb4ae.php 第 67 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\game\Application\Runtime\Cache\Home\576efd2ff42223f693ac7145ec3bb4ae.php 第 68 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\game\Application\Runtime\Cache\Home\576efd2ff42223f693ac7145ec3bb4ae.php 第 69 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\game\Application\Runtime\Cache\Home\576efd2ff42223f693ac7145ec3bb4ae.php 第 70 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\game\Application\Runtime\Cache\Home\576efd2ff42223f693ac7145ec3bb4ae.php 第 71 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\game\Application\Runtime\Cache\Home\576efd2ff42223f693ac7145ec3bb4ae.php 第 72 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\game\Application\Runtime\Cache\Home\576efd2ff42223f693ac7145ec3bb4ae.php 第 73 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\game\Application\Runtime\Cache\Home\576efd2ff42223f693ac7145ec3bb4ae.php 第 75 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\game\Application\Runtime\Cache\Home\576efd2ff42223f693ac7145ec3bb4ae.php 第 76 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\game\Application\Runtime\Cache\Home\576efd2ff42223f693ac7145ec3bb4ae.php 第 77 行.
+NOTIC: [8] Undefined index: id D:\phpStudy\WWW\game\Application\Runtime\Cache\Home\576efd2ff42223f693ac7145ec3bb4ae.php 第 79 行.
+NOTIC: [8] Undefined index: id D:\phpStudy\WWW\game\Application\Runtime\Cache\Home\576efd2ff42223f693ac7145ec3bb4ae.php 第 80 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.004504s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004534s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000201s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000223s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000333s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000358s ]
+
+[ 2019-07-28T22:15:37+08:00 ] ::1 /game/index.php/Home/Houtai/user_list.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000298s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000342s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000373s ]
+SQL: SHOW COLUMNS FROM `t_account_guest` [ RunTime:0.0130s ]
+SQL: SELECT * FROM `t_account_guest`  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `t_account_info_wx` [ RunTime:0.0036s ]
+SQL: SELECT * FROM `t_account_info_wx` WHERE `f_account_id` = 1  [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000038s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000071s ]
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\game\Application\Runtime\Cache\Home\576efd2ff42223f693ac7145ec3bb4ae.php 第 60 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\game\Application\Runtime\Cache\Home\576efd2ff42223f693ac7145ec3bb4ae.php 第 61 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\game\Application\Runtime\Cache\Home\576efd2ff42223f693ac7145ec3bb4ae.php 第 62 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\game\Application\Runtime\Cache\Home\576efd2ff42223f693ac7145ec3bb4ae.php 第 63 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\game\Application\Runtime\Cache\Home\576efd2ff42223f693ac7145ec3bb4ae.php 第 64 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\game\Application\Runtime\Cache\Home\576efd2ff42223f693ac7145ec3bb4ae.php 第 65 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\game\Application\Runtime\Cache\Home\576efd2ff42223f693ac7145ec3bb4ae.php 第 66 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\game\Application\Runtime\Cache\Home\576efd2ff42223f693ac7145ec3bb4ae.php 第 67 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\game\Application\Runtime\Cache\Home\576efd2ff42223f693ac7145ec3bb4ae.php 第 68 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\game\Application\Runtime\Cache\Home\576efd2ff42223f693ac7145ec3bb4ae.php 第 69 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\game\Application\Runtime\Cache\Home\576efd2ff42223f693ac7145ec3bb4ae.php 第 70 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\game\Application\Runtime\Cache\Home\576efd2ff42223f693ac7145ec3bb4ae.php 第 72 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\game\Application\Runtime\Cache\Home\576efd2ff42223f693ac7145ec3bb4ae.php 第 73 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\game\Application\Runtime\Cache\Home\576efd2ff42223f693ac7145ec3bb4ae.php 第 74 行.
+NOTIC: [8] Undefined index: id D:\phpStudy\WWW\game\Application\Runtime\Cache\Home\576efd2ff42223f693ac7145ec3bb4ae.php 第 76 行.
+NOTIC: [8] Undefined index: id D:\phpStudy\WWW\game\Application\Runtime\Cache\Home\576efd2ff42223f693ac7145ec3bb4ae.php 第 77 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.004910s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004960s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000233s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000253s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000360s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000386s ]
+
+[ 2019-07-28T22:16:17+08:00 ] ::1 /game/index.php/Home/Houtai/user_list.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000257s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000302s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000331s ]
+SQL: SHOW COLUMNS FROM `t_account_guest` [ RunTime:0.0128s ]
+SQL: SELECT * FROM `t_account_guest`  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `t_account_info_wx` [ RunTime:0.0037s ]
+SQL: SELECT * FROM `t_account_info_wx` WHERE `f_account_id` = 1  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000042s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000082s ]
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\game\Application\Runtime\Cache\Home\576efd2ff42223f693ac7145ec3bb4ae.php 第 60 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\game\Application\Runtime\Cache\Home\576efd2ff42223f693ac7145ec3bb4ae.php 第 61 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\game\Application\Runtime\Cache\Home\576efd2ff42223f693ac7145ec3bb4ae.php 第 62 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\game\Application\Runtime\Cache\Home\576efd2ff42223f693ac7145ec3bb4ae.php 第 63 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\game\Application\Runtime\Cache\Home\576efd2ff42223f693ac7145ec3bb4ae.php 第 64 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\game\Application\Runtime\Cache\Home\576efd2ff42223f693ac7145ec3bb4ae.php 第 65 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\game\Application\Runtime\Cache\Home\576efd2ff42223f693ac7145ec3bb4ae.php 第 66 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\game\Application\Runtime\Cache\Home\576efd2ff42223f693ac7145ec3bb4ae.php 第 67 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\game\Application\Runtime\Cache\Home\576efd2ff42223f693ac7145ec3bb4ae.php 第 68 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\game\Application\Runtime\Cache\Home\576efd2ff42223f693ac7145ec3bb4ae.php 第 69 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\game\Application\Runtime\Cache\Home\576efd2ff42223f693ac7145ec3bb4ae.php 第 70 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\game\Application\Runtime\Cache\Home\576efd2ff42223f693ac7145ec3bb4ae.php 第 72 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\game\Application\Runtime\Cache\Home\576efd2ff42223f693ac7145ec3bb4ae.php 第 73 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\game\Application\Runtime\Cache\Home\576efd2ff42223f693ac7145ec3bb4ae.php 第 74 行.
+NOTIC: [8] Undefined index: id D:\phpStudy\WWW\game\Application\Runtime\Cache\Home\576efd2ff42223f693ac7145ec3bb4ae.php 第 76 行.
+NOTIC: [8] Undefined index: id D:\phpStudy\WWW\game\Application\Runtime\Cache\Home\576efd2ff42223f693ac7145ec3bb4ae.php 第 77 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005049s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005076s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000184s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000204s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000328s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000353s ]
+
+[ 2019-07-28T22:16:35+08:00 ] ::1 /game/index.php/Home/Houtai/user_list.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000249s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000304s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000333s ]
+SQL: SHOW COLUMNS FROM `t_account_guest` [ RunTime:0.0126s ]
+SQL: SELECT * FROM `t_account_guest`  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `t_account_info_wx` [ RunTime:0.0034s ]
+SQL: SELECT * FROM `t_account_info_wx` WHERE `f_account_id` = 1  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000038s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000065s ]
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\game\Application\Runtime\Cache\Home\576efd2ff42223f693ac7145ec3bb4ae.php 第 65 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\game\Application\Runtime\Cache\Home\576efd2ff42223f693ac7145ec3bb4ae.php 第 66 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\game\Application\Runtime\Cache\Home\576efd2ff42223f693ac7145ec3bb4ae.php 第 67 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\game\Application\Runtime\Cache\Home\576efd2ff42223f693ac7145ec3bb4ae.php 第 68 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\game\Application\Runtime\Cache\Home\576efd2ff42223f693ac7145ec3bb4ae.php 第 69 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\game\Application\Runtime\Cache\Home\576efd2ff42223f693ac7145ec3bb4ae.php 第 70 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\game\Application\Runtime\Cache\Home\576efd2ff42223f693ac7145ec3bb4ae.php 第 71 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\game\Application\Runtime\Cache\Home\576efd2ff42223f693ac7145ec3bb4ae.php 第 72 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\game\Application\Runtime\Cache\Home\576efd2ff42223f693ac7145ec3bb4ae.php 第 73 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\game\Application\Runtime\Cache\Home\576efd2ff42223f693ac7145ec3bb4ae.php 第 74 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\game\Application\Runtime\Cache\Home\576efd2ff42223f693ac7145ec3bb4ae.php 第 75 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\game\Application\Runtime\Cache\Home\576efd2ff42223f693ac7145ec3bb4ae.php 第 77 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\game\Application\Runtime\Cache\Home\576efd2ff42223f693ac7145ec3bb4ae.php 第 78 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\game\Application\Runtime\Cache\Home\576efd2ff42223f693ac7145ec3bb4ae.php 第 79 行.
+NOTIC: [8] Undefined index: id D:\phpStudy\WWW\game\Application\Runtime\Cache\Home\576efd2ff42223f693ac7145ec3bb4ae.php 第 81 行.
+NOTIC: [8] Undefined index: id D:\phpStudy\WWW\game\Application\Runtime\Cache\Home\576efd2ff42223f693ac7145ec3bb4ae.php 第 82 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.004438s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004462s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000170s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000191s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000331s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000360s ]
+
+[ 2019-07-28T22:16:49+08:00 ] ::1 /game/index.php/Home/Houtai/user_list.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000261s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000305s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000336s ]
+SQL: SHOW COLUMNS FROM `t_account_guest` [ RunTime:0.0127s ]
+SQL: SELECT * FROM `t_account_guest`  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `t_account_info_wx` [ RunTime:0.0038s ]
+SQL: SELECT * FROM `t_account_info_wx` WHERE `f_account_id` = 1  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000034s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000059s ]
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\game\Application\Runtime\Cache\Home\576efd2ff42223f693ac7145ec3bb4ae.php 第 64 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\game\Application\Runtime\Cache\Home\576efd2ff42223f693ac7145ec3bb4ae.php 第 65 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\game\Application\Runtime\Cache\Home\576efd2ff42223f693ac7145ec3bb4ae.php 第 66 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\game\Application\Runtime\Cache\Home\576efd2ff42223f693ac7145ec3bb4ae.php 第 67 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\game\Application\Runtime\Cache\Home\576efd2ff42223f693ac7145ec3bb4ae.php 第 68 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\game\Application\Runtime\Cache\Home\576efd2ff42223f693ac7145ec3bb4ae.php 第 69 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\game\Application\Runtime\Cache\Home\576efd2ff42223f693ac7145ec3bb4ae.php 第 70 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\game\Application\Runtime\Cache\Home\576efd2ff42223f693ac7145ec3bb4ae.php 第 71 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\game\Application\Runtime\Cache\Home\576efd2ff42223f693ac7145ec3bb4ae.php 第 72 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\game\Application\Runtime\Cache\Home\576efd2ff42223f693ac7145ec3bb4ae.php 第 73 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\game\Application\Runtime\Cache\Home\576efd2ff42223f693ac7145ec3bb4ae.php 第 74 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\game\Application\Runtime\Cache\Home\576efd2ff42223f693ac7145ec3bb4ae.php 第 76 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\game\Application\Runtime\Cache\Home\576efd2ff42223f693ac7145ec3bb4ae.php 第 77 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\game\Application\Runtime\Cache\Home\576efd2ff42223f693ac7145ec3bb4ae.php 第 78 行.
+NOTIC: [8] Undefined index: id D:\phpStudy\WWW\game\Application\Runtime\Cache\Home\576efd2ff42223f693ac7145ec3bb4ae.php 第 80 行.
+NOTIC: [8] Undefined index: id D:\phpStudy\WWW\game\Application\Runtime\Cache\Home\576efd2ff42223f693ac7145ec3bb4ae.php 第 81 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.004139s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004163s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000158s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000177s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000270s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000293s ]
+
+[ 2019-07-28T22:17:40+08:00 ] ::1 /game/index.php/Home/Houtai/user_list.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000290s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001187s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001223s ]
+SQL: SHOW COLUMNS FROM `t_account_guest` [ RunTime:0.0126s ]
+SQL: SELECT * FROM `t_account_guest`  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `t_account_info_wx` [ RunTime:0.0035s ]
+SQL: SELECT * FROM `t_account_info_wx` WHERE `f_account_id` = 1  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000039s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000069s ]
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\game\Application\Runtime\Cache\Home\576efd2ff42223f693ac7145ec3bb4ae.php 第 78 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\game\Application\Runtime\Cache\Home\576efd2ff42223f693ac7145ec3bb4ae.php 第 79 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\game\Application\Runtime\Cache\Home\576efd2ff42223f693ac7145ec3bb4ae.php 第 80 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\game\Application\Runtime\Cache\Home\576efd2ff42223f693ac7145ec3bb4ae.php 第 81 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\game\Application\Runtime\Cache\Home\576efd2ff42223f693ac7145ec3bb4ae.php 第 82 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\game\Application\Runtime\Cache\Home\576efd2ff42223f693ac7145ec3bb4ae.php 第 83 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\game\Application\Runtime\Cache\Home\576efd2ff42223f693ac7145ec3bb4ae.php 第 84 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\game\Application\Runtime\Cache\Home\576efd2ff42223f693ac7145ec3bb4ae.php 第 85 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\game\Application\Runtime\Cache\Home\576efd2ff42223f693ac7145ec3bb4ae.php 第 86 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\game\Application\Runtime\Cache\Home\576efd2ff42223f693ac7145ec3bb4ae.php 第 87 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\game\Application\Runtime\Cache\Home\576efd2ff42223f693ac7145ec3bb4ae.php 第 88 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\game\Application\Runtime\Cache\Home\576efd2ff42223f693ac7145ec3bb4ae.php 第 90 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\game\Application\Runtime\Cache\Home\576efd2ff42223f693ac7145ec3bb4ae.php 第 91 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\game\Application\Runtime\Cache\Home\576efd2ff42223f693ac7145ec3bb4ae.php 第 92 行.
+NOTIC: [8] Undefined index: id D:\phpStudy\WWW\game\Application\Runtime\Cache\Home\576efd2ff42223f693ac7145ec3bb4ae.php 第 94 行.
+NOTIC: [8] Undefined index: id D:\phpStudy\WWW\game\Application\Runtime\Cache\Home\576efd2ff42223f693ac7145ec3bb4ae.php 第 95 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.004792s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004820s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000248s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000269s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000359s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000381s ]
+
+[ 2019-07-28T22:31:47+08:00 ] ::1 /game/index.php/Home/Houtai/zhcz.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000352s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000364s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000396s ]
+ERR: 非法操作:zhcz
+
+[ 2019-07-28T22:32:01+08:00 ] ::1 /game/index.php/Home/Houtai/zhcz.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000266s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000309s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000341s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000073s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000107s ]
+NOTIC: [8] Undefined variable: con D:\phpStudy\WWW\game\Application\Runtime\Cache\Home\0b84b92b6efae84b300954e27fbf5db4.php 第 74 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012016s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012049s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000245s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000268s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000383s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000408s ]
+
+[ 2019-07-28T22:43:18+08:00 ] ::1 /game/index.php/Home/Houtai/zhcz.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000316s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000353s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000382s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000049s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000079s ]
+NOTIC: [8] Undefined variable: con D:\phpStudy\WWW\game\Application\Runtime\Cache\Home\0b84b92b6efae84b300954e27fbf5db4.php 第 67 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011339s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011365s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000259s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000280s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000373s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000397s ]
+
+[ 2019-07-28T22:45:16+08:00 ] ::1 /game/index.php/Home/Houtai/zhcz.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000244s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000300s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000332s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000036s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000076s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.003784s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.003829s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000211s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000244s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000351s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000373s ]
+
+[ 2019-07-28T22:45:44+08:00 ] ::1 /game/index.php/Home/Houtai/zhcz.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000525s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.014727s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.014778s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000036s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000082s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.004010s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004050s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000245s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000269s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000372s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000395s ]
+
+[ 2019-07-28T23:53:03+08:00 ] ::1 /game/index.php/Home/Houtai/zhcz.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000325s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000349s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000376s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000085s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000145s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011492s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011524s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000253s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000273s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000362s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000385s ]
+
+[ 2019-07-28T23:53:31+08:00 ] ::1 /game/index.php/Home/Houtai/zhcz.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000251s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000330s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000361s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000034s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000074s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.004666s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004697s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000171s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000194s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003273s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003308s ]
+
+[ 2019-07-28T23:53:43+08:00 ] ::1 /game/index.php/Home/Houtai/zhcz.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000242s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000301s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000333s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000048s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000084s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011855s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011886s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000163s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000181s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000308s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000342s ]
+
+[ 2019-07-28T23:54:06+08:00 ] ::1 /game/index.php/Home/Houtai/zhcz.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000249s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000295s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000361s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000048s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000082s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.003462s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.003493s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000173s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000193s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000303s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000327s ]
+
+[ 2019-07-28T23:54:17+08:00 ] ::1 /game/index.php/Home/Houtai/zhcz.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000248s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000294s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000325s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000047s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000082s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.003531s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.003562s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000169s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000189s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000297s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000321s ]
+
+[ 2019-07-28T23:55:10+08:00 ] ::1 /game/index.php/Home/Houtai/zhcz.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000304s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000353s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000387s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000044s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000077s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.003834s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.003865s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000219s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000240s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000346s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000369s ]
+
+[ 2019-07-28T23:55:22+08:00 ] ::1 /game/index.php/Home/Houtai/zhcz.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000269s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000333s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000366s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000055s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000098s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.003773s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.003810s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000195s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000217s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000335s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000359s ]
+
+[ 2019-07-28T23:56:22+08:00 ] ::1 /game/index.php/Home/Houtai/zhcz.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000246s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000297s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000328s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000071s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000110s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.003595s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.003631s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000202s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000223s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000310s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000336s ]
+

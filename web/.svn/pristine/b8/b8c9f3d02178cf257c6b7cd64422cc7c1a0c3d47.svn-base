@@ -1,0 +1,17 @@
+[ 2019-11-22T15:59:18+08:00 ] ::1 /game/index.php/Home/Houtai/userlist?page=1&limit=10
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000276s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000506s ]
+SQL: SHOW COLUMNS FROM `t_account_guest` [ RunTime:0.0078s ]
+SQL: SELECT * FROM `t_account_guest`  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `t_player` [ RunTime:0.0071s ]
+SQL: SELECT * FROM `t_player` WHERE `f_role_id` = 4625 LIMIT 1   [ RunTime:0.0004s ]
+NOTIC: [8] Undefined offset: 0 E:\phpStudy\WWW\game\Application\Home\Controller\HoutaiController.class.php 第 43 行.
+NOTIC: [8] Undefined offset: 0 E:\phpStudy\WWW\game\Application\Home\Controller\HoutaiController.class.php 第 44 行.
+NOTIC: [8] Undefined offset: 0 E:\phpStudy\WWW\game\Application\Home\Controller\HoutaiController.class.php 第 45 行.
+NOTIC: [8] Undefined offset: 0 E:\phpStudy\WWW\game\Application\Home\Controller\HoutaiController.class.php 第 46 行.
+NOTIC: [8] Undefined offset: 0 E:\phpStudy\WWW\game\Application\Home\Controller\HoutaiController.class.php 第 47 行.
+NOTIC: [8] Undefined offset: 0 E:\phpStudy\WWW\game\Application\Home\Controller\HoutaiController.class.php 第 48 行.
+NOTIC: [8] Undefined offset: 0 E:\phpStudy\WWW\game\Application\Home\Controller\HoutaiController.class.php 第 49 行.
+NOTIC: [8] Undefined offset: 0 E:\phpStudy\WWW\game\Application\Home\Controller\HoutaiController.class.php 第 50 行.
+

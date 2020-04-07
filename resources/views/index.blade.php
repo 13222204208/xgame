@@ -272,10 +272,10 @@
                   <a lay-href="/game/index.php/Home/Huodong/hyr_list.html">会员日活动</a>                
                 </dd>
                <dd class="layui-nav-itemed">
-                  <a lay-href="/game/index.php/Home/Huodong/jyj_list.html">救援金活动</a>                
+                  <a lay-href="{{ url('create/rescue') }}">救援金活动</a>                
                 </dd>
                 <dd class="layui-nav-itemed">
-                  <a lay-href="/game/index.php/Home/Huodong/phb_list.html">排行榜活动</a>                
+                  <a lay-href="{{ url('edit/the-charts') }}">排行榜活动</a>                
                 </dd>
                 <dd class="layui-nav-itemed">
                   <a lay-href="/game/index.php/Home/Huodong/tousu_list.html">投诉建议</a>                
@@ -305,10 +305,10 @@
               <dl class="layui-nav-child">
                 
                 <dd>
-                  <a lay-href="{{ url('/set/user/newuser')}}">创建帐号</a>
+                  <a lay-href="{{ url('/set/user/newuser') }}">创建帐号</a>
                 </dd>
                 <dd data-name="workorder">
-                  <a lay-href="app/workorder/list.html">权限管理</a>
+                  <a lay-href="{{ url('/set/user/power') }}">权限管理</a>
                 </dd>
               </dl>
             </li>
