@@ -184,7 +184,7 @@
               f_id: data.f_id,
               f_diamond_count: massage.field.f_diamond_count,
               f_gold_count: massage.field.f_gold_count,
-              f_silver_count: massage.field.silver_count,
+              f_silver_count: massage.field.f_silver_count,
               f_is_default: massage.field.f_is_default,
             },
             success: function(msg) {
@@ -200,7 +200,7 @@
                   obj.update({
                     f_diamond_count: massage.field.f_diamond_count,
                     f_gold_count: massage.field.f_gold_count,
-                    f_silver_count: massage.field.silver_count,
+                    f_silver_count: massage.field.f_silver_count,
                     f_is_default: massage.field.f_is_default,
                   }); //修改成功修改表格数据不进行跳转 
  
