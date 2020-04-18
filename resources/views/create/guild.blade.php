@@ -111,7 +111,7 @@
     });
     
     /* 监听提交 */
-    form.on('submit(component-form-demo1)', function(data){
+    form.on('submit(component-form-demo1)', function(data){ console.log(data);
       parent.layer.alert(JSON.stringify(data.field), {
         title: '最终的提交信息'
       })

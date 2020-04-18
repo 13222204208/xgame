@@ -17,7 +17,7 @@ class CreatePowersTable extends Migration
             $table->id();
             $table->string('role');//角色名称
             $table->string('power');//权限名称
-            $table->unsignedTinyInteger('status');//权限状态
+            $table->unsignedTinyInteger('status')->default(1);//权限状态默认启用,0是禁用
             $table->timestamps();
         });
     }

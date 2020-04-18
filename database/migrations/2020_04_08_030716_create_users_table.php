@@ -17,8 +17,8 @@ class CreateUsersTable extends Migration
             $table->id();
             $table->string('username');
             $table->string('password');
-            $table->string('role');//角色
-            $table->string('power');//权限
+            $table->string('role')->default(null);//角色
+            $table->string('power')->default(null);//权限
             $table->timestamps();
         });
     }

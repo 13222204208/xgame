@@ -118,7 +118,7 @@
             if (res.status == 404) {
               layer.msg('用户名密码不一致',{
                 offset: '15px',
-                icon: 1,
+                icon: 2,
                 time: 3000
               }, function(){ alert(404);
                 location.href= '/set/user/newuser';
@@ -137,7 +137,7 @@
    
               layer.msg('添加失败',{
                 offset: '15px',
-                icon: 1,
+                icon: 2,
                 time: 3000
               }, function(){
                 location.href= '/set/user/newuser';
@@ -148,7 +148,7 @@
             alert(error);
             layer.msg('添加失败',{
                 offset: '15px',
-                icon: 1,
+                icon: 2,
                 time: 3000
               }, function(){
                 location.href= '/set/user/newuser';

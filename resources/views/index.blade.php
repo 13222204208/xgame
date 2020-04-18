@@ -139,17 +139,27 @@
                   <a lay-href="{{ url('/create/advert') }}">创建广告</a>
                 </dd>
                 <dd data-name="tabs">
-                  <a lay-href="component/tabs/index.html">编辑广告</a>
+                  <a lay-href="{{ url('/edit/advert-info') }}">编辑广告</a>
                 </dd>
               
             </li>
 
-            <li data-name="user" class="layui-nav-item">
-              <a href="javascript:;" lay-href="{{ url('/create/horse') }}" lay-tips="跑马灯" lay-direction="2">
-                <i class="layui-icon layui-icon-auz"></i>
-                <cite>跑马灯</cite>
+            
+            <li data-name="component" class="layui-nav-item">
+              <a href="javascript:;" lay-tips="跑马灯管理" lay-direction="2">
+                <i class="layui-icon layui-icon-component"></i>
+                <cite>跑马灯管理</cite>
               </a>
+              <dl class="layui-nav-child">
+              
+                <dd data-name="nav">
+                  <a lay-href="{{ url('/create/horse') }}">创建跑马灯</a>
+                </dd>
+                <dd data-name="tabs">
+                  <a lay-href="{{ url('/edit/horse-info') }}">编辑跑马灯</a>
+                </dd>        
             </li>
+
 
             <li data-name="component" class="layui-nav-item">
               <a href="javascript:;" lay-tips="账号管理" lay-direction="2">
@@ -159,7 +169,7 @@
               <dl class="layui-nav-child">
               
                 <dd data-name="nav">
-                  <a lay-href="component/nav/index.html">用户列表</a>
+                  <a lay-href="{{ url('/game/userlist') }}">用户列表</a>
                 </dd>
                 <dd data-name="tabs">
                   <a lay-href="component/tabs/index.html">账号操作</a>
@@ -262,7 +272,7 @@
               </dl>
             </li>
 
-            <li data-name="app" class="layui-nav-item layui-nav-itemed">
+            <li data-name="app" class="layui-nav-item ">
               <a lay-tips="" lay-tips="活动配置"  lay-direction="2">
                 <i class="layui-icon layui-icon-app"></i>
                 <cite>活动配置</cite>
@@ -336,9 +346,9 @@
               </dl>
             </li>
             <li data-name="get" class="layui-nav-item">
-              <a href="javascript:;" lay-href="http://www.layui.com/admin/#get" lay-tips="邮件公告" lay-direction="2">
+              <a href="javascript:;" lay-href="{{ url('/create/mail') }}" lay-tips="发送邮件" lay-direction="2">
                 <i class="layui-icon layui-icon-auz"></i>
-                <cite>邮件公告</cite>
+                <cite>发送邮件</cite>
               </a>
             </li>
           </ul>
