@@ -7,6 +7,7 @@
   <title>创建公会</title>
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="csrf-token" content="{{ csrf_token() }}">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0">
   <link rel="stylesheet" href="{{ asset('layuiadmin/layui/css/layui.css') }}" media="all">
   <link rel="stylesheet" href="{{ asset('layuiadmin/style/admin.css') }}" media="all">
@@ -21,38 +22,43 @@
           <div class="layui-form-item">
             <label class="layui-form-label">公会名称</label>
             <div class="layui-input-block">
-              <input type="text" name="title" lay-verify="title" autocomplete="off" placeholder="请输入公会名称" class="layui-input">
+              <input type="text" name="f_name" lay-verify="title" autocomplete="off" placeholder="请输入公会名称 最多七个字符" class="layui-input">
             </div>
           </div>
 
           <div class="layui-form-item">
             <label class="layui-form-label">会长名称</label>
             <div class="layui-input-block">
-              <input type="text" name="title" lay-verify="title" autocomplete="off" placeholder="请输入会长名称" class="layui-input">
+              <input type="text" name="f_huizhang_name" lay-verify="title" autocomplete="off" placeholder="请输入会长名称 最多七个字符" class="layui-input">
             </div>
           </div>
   
           
-          <div class="layui-form-item">
-            <label class="layui-form-label">选择旗帜</label>
-            <div class="layui-input-block">
-              <select name="interest" lay-filter="aihao">
-                <option value=""></option>
-                <option value="0">写作</option>
-                <option value="1" selected="">阅读</option>
-                <option value="2">游戏</option>
-                <option value="3">音乐</option>
-                <option value="4">旅行</option>
-              </select>
-            </div>
+          <div class="layui-col-md6">
+              <label class="layui-form-label">选择旗帜</label>
+              <div class="layui-input-block">
+                  <select  id="photo"  lay-filter="photo" name="f_guild_icon_id" v-model="iotAssertSensorType.photo">
+                      <option value="1" selected="selected">第一种旗帜</option>
+                      <option value="2">第二种旗帜</option>
+                      <option value="3">第三种旗帜</option>
+                      <option value="4">第四种旗帜</option>
+                      <option value="5">第五种旗帜</option>
+                      <option value="6">第六种旗帜</option>
+                      <option value="7">第七种旗帜</option>
+                      <option value="8">第八种旗帜</option>
+                  </select>
+              </div>
+
+              <img name="photoImg" :src="iotAssertSensorType.photo" style="margin-left: 25%" >
           </div>
+
           
           
         
           <div class="layui-form-item layui-form-text">
             <label class="layui-form-label">公会公告</label>
             <div class="layui-input-block">
-              <textarea name="text" placeholder="请输入公告内容" class="layui-textarea"></textarea>
+              <textarea name="f_announcement" placeholder="请输入公告内容,如需换行请加 \n" class="layui-textarea"></textarea>
             </div>
           </div>        
           <div class="layui-form-item layui-layout-admin">
@@ -69,7 +75,7 @@
   </div>
 
     
-  <script src="../../../layuiadmin/layui/layui.js"></script>  
+  <script src="/layuiadmin/layui/layui.js"></script>  
   <script>
   layui.config({
     base: '../../../layuiadmin/' //静态资源所在路径
@@ -88,36 +94,69 @@
     laydate.render({
       elem: '#LAY-component-form-group-date'
     });
+
+    form.on('select(photo)', function(data){
+    document.photoImg.src='/flag/'+data.value+'.PNG';
+
+    });
     
     /* 自定义验证规则 */
     form.verify({
-      title: function(value){
-        if(value.length < 5){
-          return '标题至少得5个字符啊';
+      f_name: function(value){
+        if(value.length > 9){
+          return '公会名称最多七个字符';
         }
-      }
-      ,pass: [/(.+){6,12}$/, '密码必须6到12位']
-      ,content: function(value){
-        layedit.sync(editIndex);
-      }
+      },
+      f_huizhang_name: function(value){
+        if(value.length > 9){
+          return '会长名称最多七个字符';
+        }
+      },
     });
     
-    /* 监听指定开关 */
-    form.on('switch(component-form-switchTest)', function(data){
-      layer.msg('开关checked：'+ (this.checked ? 'true' : 'false'), {
-        offset: '6px'
-      });
-      layer.tips('温馨提示：请注意开关状态的文字可以随意定义，而不仅仅是ON|OFF', data.othis)
-    });
+
     
     /* 监听提交 */
     form.on('submit(component-form-demo1)', function(data){ console.log(data);
-      parent.layer.alert(JSON.stringify(data.field), {
-        title: '最终的提交信息'
-      })
-      return false;
+      var data = data.field;
+$.ajax( {
+       headers: { 'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content') },
+        url: "{{url('add/guild')}}",
+        method: 'POST',
+        data: data,
+        success: function(res) {
+          console.log(res);
+          if (res == '{"status":200}') {
+          layer.msg('添加成功',{
+            offset: '15px',
+            icon: 1,
+            time: 3000
+          }, function(){
+            location.href= "{{url('/create/guild')}}";
+          })
+          }else{
+            console.log(res);
+          layer.msg('添加失败',{
+            offset: '15px',
+            icon: 2,
+            time: 3000
+          })
+          }
+        },
+        error: function(error) {
+          console.log(error);
+          layer.msg('添加失败请重新确认',{
+            offset: '15px',
+            icon: 2,
+            time: 3000
+          })
+        }
+        });
+return false;
+});
+    
     });
-  });
+
   </script>
 </body>
 </html>

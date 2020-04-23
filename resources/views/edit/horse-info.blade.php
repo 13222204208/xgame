@@ -29,7 +29,7 @@
       </div>
 
       <div class="layui-form-item">
-        <label class="layui-form-label">选择框</label>
+        <label class="layui-form-label">优先级</label>
         <div class="layui-input-block">
           <select name="f_weights" required lay-verify="required">
             <option value=""></option>
@@ -41,6 +41,22 @@
         </div>
       </div>
 
+      <div class="layui-form-item">
+
+        <div class="layui-inline">
+          <label class="layui-form-label">播放日期</label></label>
+          <div class="layui-input-inline">
+            <input type="text" required name="f_openday" id="LAY-component-form-start-date" lay-verify="date" placeholder="yyyy-MM-dd" autocomplete="off" class="layui-input">
+          </div>
+        </div>
+
+        <div class="layui-inline">
+          <label class="layui-form-label">结束日期</label></label>
+          <div class="layui-input-inline">
+            <input type="text" required name="f_closeday" id="LAY-component-form-over-date" lay-verify="date" placeholder="yyyy-MM-dd" autocomplete="off" class="layui-input">
+          </div>
+        </div>
+      </div>
 
 
       <div class="layui-form-item">
@@ -71,22 +87,6 @@
 
       </div>
 
-      <div class="layui-form-item">
-
-        <div class="layui-inline">
-          <label class="layui-form-label">播放日期</label></label>
-          <div class="layui-input-inline">
-            <input type="text" required name="f_openday" id="LAY-component-form-start-date" lay-verify="date" placeholder="yyyy-MM-dd" autocomplete="off" class="layui-input">
-          </div>
-        </div>
-
-        <div class="layui-inline">
-          <label class="layui-form-label">结束日期</label></label>
-          <div class="layui-input-inline">
-            <input type="text" required name="f_closeday" id="LAY-component-form-over-date" lay-verify="date" placeholder="yyyy-MM-dd" autocomplete="off" class="layui-input">
-          </div>
-        </div>
-      </div>
 
       <div class="layui-form-item ">
         <div class="layui-input-block">
@@ -153,6 +153,24 @@
               title: '公告内容',
               align: 'center',
               width: 280
+            },{
+              field: 'f_openday',
+              title: '启用日期',
+              width: 200,
+              align: 'center',
+              templet: function(d) {
+                return util.toDateString(d.f_openday * 1000, "yyyy-MM-dd ");
+              },
+              sort: true
+            }, {
+              field: 'f_closeday',
+              title: '关闭日期',
+              align: 'center',
+              width: 200,
+              templet: function(d) {
+                return util.toDateString(d.f_closeday * 1000, "yyyy-MM-dd ");
+              },
+              sort: true
             },
             {
               field: 'f_opentime',
@@ -181,25 +199,7 @@
                 return d.f_waitime + '秒';
               },
               width: 120
-            }, {
-              field: 'f_openday',
-              title: '启用日期',
-              width: 200,
-              align: 'center',
-              templet: function(d) {
-                return util.toDateString(d.f_openday * 1000, "yyyy-MM-dd ");
-              },
-              sort: true
-            }, {
-              field: 'f_closeday',
-              title: '关闭日期',
-              align: 'center',
-              width: 200,
-              templet: function(d) {
-                return util.toDateString(d.f_closeday * 1000, "yyyy-MM-dd ");
-              },
-              sort: true
-            }, {
+            },  {
               fixed: 'right',
               width: 150,
               align: 'center',

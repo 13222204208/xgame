@@ -115,7 +115,7 @@
                   <a lay-href="{{ url('/create/guild')}}">创建公会</a>
                 </dd>
                 <dd>
-                  <a lay-href="{{ url('/edit/guild-info') }}">管理公会</a>
+                  <a lay-href="{{ url('/all/guild') }}">所有公会</a>
                 </dd>
            
               </dl>
@@ -172,7 +172,7 @@
                   <a lay-href="{{ url('/game/userlist') }}">用户列表</a>
                 </dd>
                 <dd data-name="tabs">
-                  <a lay-href="component/tabs/index.html">账号操作</a>
+                  <a lay-href="{{ url('/edit/game/user') }}">账号操作</a>
                 </dd>
               
             </li>

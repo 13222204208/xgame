@@ -46,11 +46,18 @@ Route::get('/create/guild', function() {
     return view('create.guild');
 });//创建公会
 
-Route::get('/edit/guild-info', function() {
-    return view('edit.guild-info');
-});//公会信息
+Route::get('/all/guild', function() {
+    return view('edit.allguild');
+});//所有公会
 
-Route::get('/guild/info','GuildController@guildInfo');//获取公会成员信息
+Route::get('/guild/info','Guild\GuildController@guildInfo');//获取公会成员信息
+Route::post('/add/guild','Guild\GuildController@addGuild');//添加公会
+Route::get('/edit/guild','Guild\GuildController@editGuild');//获取所有公会
+Route::get('/del/guild','Guild\GuildController@delGuild');//删除一个公会
+Route::post('/update/guild','Guild\GuildController@updateGuild');//更新公会信息
+Route::get('/guild/member/{guildID}','Guild\GuildMemberController@guildMember');//获取公会成员信息
+Route::post('/update/guild/member/title','Guild\GuildMemberController@memberTitle');//更改公会成员职务
+Route::get('/del/guild/member','Guild\GuildMemberController@delMember');//更改公会成员职务
 
 Route::get('/edit/the-charts', function() {
     return view('edit.the-charts');
@@ -102,6 +109,10 @@ Route::get('/game/userlist', function() {
     return view('edit.game-user-list');
 });//游戏用户列表
 Route::get('/edit/game-user-list','GameUserController@gameUserList');//获取玩家信息
+
+Route::get('/edit/game/user', function() {
+    return view('edit.game-user');
+});//游戏用户设置
 
 //邮件
 Route::get('/create/mail', function() {

@@ -54,6 +54,54 @@ class CDynamicWebController extends CCallbackClient
 		return parent::sendMessage($msg);
 	}
 
+	function cd_sendDynamicGuild( $f_name, $f_huizhang_name,$f_announcement,$f_guild_icon_id)
+	{
+		$msg = new CMessage;
+		$msg->setName("MSG_GUILD_CREATE");
+		$msg->serialString($f_name);
+		$msg->serialString($f_huizhang_name);
+		$msg->serialString($f_announcement);
+		$msg->serialUint32($f_guild_icon_id);
+		return parent::sendMessage($msg);
+	}
+
+	function cd_sendDynamicDelGuild( $f_guild_id)
+	{
+		$msg = new CMessage;
+		$msg->setName("MSG_GUILD_DELETE");
+		$msg->serialUint32($f_guild_id);
+		return parent::sendMessage($msg);
+	}
+
+	function cd_sendDynamicUpdateGuild( $f_guild_id ,$f_announcement)
+	{
+		$msg = new CMessage;
+		$msg->setName("MSG_GUILD_UPDATE_NOTICE");
+		$msg->serialUint32($f_guild_id);
+		$msg->serialString($f_announcement);
+		return parent::sendMessage($msg);
+	}
+
+	function cd_sendDynamicUpdateGuildTitle( $f_guild_id ,$f_role_id, $f_title)
+	{
+		$msg = new CMessage;
+		$msg->setName("MSG_GUILD_UPDATE_POST");
+		$msg->serialUint32($f_guild_id);
+		$msg->serialUint32($f_role_id);
+		$msg->serialUint32($f_title);
+		return parent::sendMessage($msg);
+	}
+
+	function cd_sendDynamicDelGuildTitle( $f_guild_id,$f_role_id )
+	{
+		$msg = new CMessage;
+		$msg->setName("MSG_GUILD_DELROLE");
+		$msg->serialUint32($f_guild_id);
+		$msg->serialUint32($f_role_id);
+		$msg->serialUint32($f_title);
+		return parent::sendMessage($msg);
+	}
+
 	function waitCallback()
 	{
 		$message = parent::waitMessage();
@@ -92,6 +140,36 @@ class CDynamicWebController extends CCallbackClient
 			case "WEB_UPDATE_TURNTABLE_FAIL":
 				echo json_encode(['status' => 403]);
 				break;
+			case "WEB_CREATE_GUILD_SUCCESS":
+				echo json_encode(['status' => 200]);
+				break;
+			case "WEB_CREATE_GUILD_FAIL":
+				echo json_encode(['status' => 403]);
+				break;
+			case "WEB_DELETE_GUILD_SUCCESS":
+				echo json_encode(['status' => 200]);
+				break;
+			case "WEB_DELETE_GUILD_FAIL":
+				echo json_encode(['status' => 403]);
+				break;
+			case "WEB_GUILD_UPDATENOTICE_SUCCESS":
+				echo json_encode(['status' => 200]);
+				break;
+			case "WEB_GUILD_UPDATENOTICE_FAIL":
+				echo json_encode(['status' => 403]);
+				break;	
+			case "WEB_GUILD_UPDATEPOST_SUCCESS"://更新公会成员职务返回状态
+				echo json_encode(['status' => 200]);
+				break;
+			case "WEB_GUILD_UPDATEPOST_FAIL":
+				echo json_encode(['status' => 403]);
+				break;	
+			case "WEB_GUILD_ROLE_DEL_SUCCESS"://请离公会成员返回的状态
+				echo json_encode(['status' => 200]);
+				break;
+			case "WEB_GUILD_ROLE_DEL_FAIL":
+				echo json_encode(['status' => 403]);
+				break;						
 
 			default:
 				return false;

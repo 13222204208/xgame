@@ -42,7 +42,7 @@ class CreateAdvertController
         $MailSvr = new CDynamicWeb;
         $res = "";
 
-        $MailSvr->connect("152.136.61.225", 30002, $res);
+        $MailSvr->connect(config('connect.ip'), config('connect.port'), $res);
 
         //  添加游戏房间; t_game_table 表
         //  第一个字段代表标识; 固定的不用改
