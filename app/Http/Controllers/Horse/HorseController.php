@@ -12,7 +12,7 @@ class HorseController extends Controller
     public function addHorse(Request $request)
     {
         if ($request->ajax()) {
-            $f_text = $request->input('f_text'); //内容
+            $f_text = preg_replace('/[(\xc2\xa0)|\s]+/','', $request->input('f_text')); //内容
             $f_weights = intval($request->input('f_weights')); //跑马灯类型
             $f_openday = intval(strtotime($request->input('f_openday'))); //开启日期
             $f_closeday = intval(strtotime($request->input('f_closeday'))); //关闭日期

@@ -27,6 +27,9 @@ class SendMailController extends Controller
         $EndTime = intval(strtotime($EndTime));
         $MailSvr = new CMailServiceWeb;
         $res = "";
+        if (!$EndTime) {
+            return response()->json(['res'=>'notime',]); 
+        }
         
        // return response()->json(['res'=>'成功','time'=>$StartTime]);  
       
