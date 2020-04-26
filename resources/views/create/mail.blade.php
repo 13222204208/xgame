@@ -217,6 +217,15 @@
 								}, function(){
 									//location.href= '/login';
 								})
+								}else if (res.endTime == "notime") {
+									console.log(res);
+								layer.msg('请填写销毁时间',{
+									offset: '15px',
+									icon: 2,
+									time: 3000
+								}, function(){
+									//location.href= '/login';
+								})
 								}
 							},
 							error: function(error) {
