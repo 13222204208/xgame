@@ -46,7 +46,7 @@ class SendMailController extends Controller
         }
         //return response()->json(['res'=>'成功','data'=>$book]);  
         //$book = array( array('RewardType'=>$RewardType,'ReWardCount'=>$ReWardCount));
-        $MailSvr->connect("152.136.61.225", 30002, $res);   
+        $MailSvr->connect(config('connect.ip'), config('connect.port'), $res);  
         $MailSvr->cd_SendMail($RoleID, $EndTime,$Title,$Content, $MailType, $IsImportant,$IsAuto,json_encode($book));
         
         if (!$MailSvr->waitCallback())

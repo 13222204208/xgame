@@ -109,6 +109,8 @@ Route::get('/game/userlist', function() {
     return view('edit.game-user-list');
 });//游戏用户列表
 Route::get('/edit/game-user-list','GameUserController@gameUserList');//获取玩家信息
+Route::post('/query/user','GameUserController@queryUser');//查询玩家昵称
+Route::post('/reset/phone','GameUserController@resetPhone');//查询玩家昵称
 
 Route::get('/edit/game/user', function() {
     return view('edit.game-user');

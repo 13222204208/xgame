@@ -1,4 +1,0 @@
-[ 2019-11-19T02:39:05+08:00 ] ::1 /game/index.php/Home/Houtai/ywjl.html
-ERR: 1146:Table 'd_logs.t_t_money_dot_191109' doesn't exist
- [ SQL语句 ] : SHOW COLUMNS FROM `t_t_money_dot_191109`
-

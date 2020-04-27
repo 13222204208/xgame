@@ -102,6 +102,16 @@ class CDynamicWebController extends CCallbackClient
 		return parent::sendMessage($msg);
 	}
 
+	function cd_sendDynamicResetPhone( $f_role_id )//重置手机号
+	{
+		$msg = new CMessage;
+		$msg->setName("MSG_RESET_PHONE");
+
+		$msg->serialUint32($f_role_id);
+	
+		return parent::sendMessage($msg);
+	}
+
 	function waitCallback()
 	{
 		$message = parent::waitMessage();
@@ -168,6 +178,12 @@ class CDynamicWebController extends CCallbackClient
 				echo json_encode(['status' => 200]);
 				break;
 			case "WEB_GUILD_ROLE_DEL_FAIL":
+				echo json_encode(['status' => 403]);
+				break;	
+			case "WEB_RESET_PHONE_SUCCESS"://重置玩家用户手机号
+				echo json_encode(['status' => 200]);
+				break;
+			case "WEB_RESET_PHONE_FAIL":
 				echo json_encode(['status' => 403]);
 				break;						
 
