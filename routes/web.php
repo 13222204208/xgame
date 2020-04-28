@@ -110,7 +110,10 @@ Route::get('/game/userlist', function() {
 });//游戏用户列表
 Route::get('/edit/game-user-list','GameUserController@gameUserList');//获取玩家信息
 Route::post('/query/user','GameUserController@queryUser');//查询玩家昵称
-Route::post('/reset/phone','GameUserController@resetPhone');//查询玩家昵称
+Route::post('/reset/phone','GameUserController@resetPhone');//重置玩家手机号
+Route::post('/reset/password','GameUserController@resetPassword');//重置玩家密码
+Route::post('/reset/depot','GameUserController@resetDepot');//重置玩家仓库密码
+Route::post('/update/account/status','GameUserController@accountStatus');//帐号封禁状态
 
 Route::get('/edit/game/user', function() {
     return view('edit.game-user');

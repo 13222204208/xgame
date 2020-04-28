@@ -61,16 +61,15 @@
                     <div class="layui-form-item">
                         <label class="layui-form-label" style="width:90px">重置密码</label>
                         <div class="layui-input-block">
-                            <input type="radio" name="password" value="1" title="是">
-                            <input type="radio" name="password" value="0" title="否" checked>
+                            <button class="layui-btn" lay-submit lay-filter="resetPassword">重置</button>
                         </div>
                     </div>
                 </form>
                 <form class="layui-form" action="">
                     <div class="layui-form-item">
-                        <label class="layui-form-label" style="width:90px">重置钱庄密码</label>
+                        <label class="layui-form-label" style="width:90px">重置仓库密码</label>
                         <div class="layui-input-block">
-                            <button class="layui-btn" lay-submit>重置</button>
+                            <button class="layui-btn" lay-submit lay-filter="resetDepot">重置</button>
                         </div>
                     </div>
                 </form>
@@ -78,7 +77,7 @@
                     <div class="layui-form-item">
                         <label class="layui-form-label" style="width:90px">启用帐号算法</label>
                         <div class="layui-input-block">
-                            <input type="checkbox" name="switch" lay-skin="switch" lay-text="开|关">
+                            <input type="checkbox" name="switch" lay-skin="switch" lay-text="已启用|已禁用">
                         </div>
                     </div>
                 </form>
@@ -86,15 +85,15 @@
                     <div class="layui-form-item">
                         <label class="layui-form-label">帐号封禁</label>
                         <div class="layui-input-block">
-                            <select name="city" lay-verify="required">
+                            <select name="city" lay-verify="required" lay-filter="stateSelect">
                                 <option value=""></option>
-                                <option value="0">1天</option>
-                                <option value="1">3天</option>
-                                <option value="2">7天</option>
-                                <option value="3">30天</option>
-                                <option value="4">365天</option>
-                                <option value="4">永久封禁</option>
-                                <option value="4">解除封禁</option>
+                                <option value="1">1天</option>
+                                <option value="3">3天</option>
+                                <option value="7">7天</option>
+                                <option value="30">30天</option>
+                                <option value="365">365天</option>
+                                <option value="forever">永久封禁</option>
+                                <option value="relieve">解除封禁</option>
                             </select>
                         </div>
                     </div>
@@ -150,45 +149,150 @@
 
                             $('#f_nick_name').val(res.f_nick_name);
 
-                            form.on('submit(resetPhone)', function(msg) {
+                            form.on('submit(resetPhone)', function(msg) { //重置手机号
 
-                                $.ajax({
-                    headers: {
-                        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-                    },
-                    url: "{{url('/reset/phone')}}",
-                    type: 'post',
-                    data: {
-                        'f_role_id': f_role_id
-                    
-                    },
-                    success: function(res) {
-                        console.log(res);
-                        if (res.status == 200) {
-                          
-                            layer.msg("查询成功", {
-                                icon: 1
+                                layer.confirm('确定重置手机号么', function(index) {
+                                    $.ajax({
+                                        headers: {
+                                            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                                        },
+                                        url: "{{url('/reset/phone')}}",
+                                        type: 'post',
+                                        data: {
+                                            'f_role_id': f_role_id
+                                        },
+                                        success: function(res) {
+                                            console.log(res);
+                                            if (res.status == 200) {
+
+                                                layer.msg("重置成功", {
+                                                    icon: 1
+                                                });
+
+                                            } else if (res.status == 403) {
+                                                layer.msg("查询不到用户", {
+                                                    icon: 5
+                                                });
+                                            } else {
+                                                layer.msg("重置失败", {
+                                                    icon: 5
+                                                });
+                                            }
+                                        }
+                                    });
+                                    layer.close(index);
+                                });
+                                return false;
                             });
 
-                            $('#f_nick_name').val(res.f_nick_name);
+                            form.on('submit(resetPassword)', function(msg) { //重置密码
 
-                            form.on('submit(resetPhone)', function(msg) {
-                                console.log(f_role_id);
+                                layer.confirm('确定重置密码么', function(index) {
+                                    $.ajax({
+                                        headers: {
+                                            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                                        },
+                                        url: "{{url('/reset/password')}}",
+                                        type: 'post',
+                                        data: {
+                                            'f_role_id': f_role_id
+                                        },
+                                        success: function(res) {
+                                            console.log(res);
+                                            if (res.status == 200) {
+
+                                                layer.msg("重置成功", {
+                                                    icon: 1
+                                                });
+
+                                            } else if (res.status == 403) {
+                                                layer.msg("查询不到用户", {
+                                                    icon: 5
+                                                });
+                                            } else {
+                                                layer.msg("重置失败", {
+                                                    icon: 5
+                                                });
+                                            }
+                                        }
+                                    });
+                                    layer.close(index);
+                                });
                                 return false;
                             });
 
 
-                        } else if (res.status == 403) {
-                            layer.msg("查询不到用户", {
-                                icon: 5
+                            form.on('submit(resetDepot)', function(msg) { //重置密码
+
+                                layer.confirm('确定仓库密码么', function(index) {
+                                    $.ajax({
+                                        headers: {
+                                            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                                        },
+                                        url: "{{url('/reset/depot')}}",
+                                        type: 'post',
+                                        data: {
+                                            'f_role_id': f_role_id
+                                        },
+                                        success: function(res) {
+                                            console.log(res);
+                                            if (res.status == 200) {
+
+                                                layer.msg("重置成功", {
+                                                    icon: 1
+                                                });
+
+                                            } else if (res.status == 403) {
+                                                layer.msg("查询不到用户", {
+                                                    icon: 5
+                                                });
+                                            } else {
+                                                layer.msg("重置失败", {
+                                                    icon: 5
+                                                });
+                                            }
+                                        }
+                                    });
+                                    layer.close(index);
+                                });
+                                return false;
                             });
-                        } else {
-                            layer.msg("查询失败", {
-                                icon: 5
-                            });
-                        }
-                    }
-                });
+
+                            form.on('select(stateSelect)', function(data) { //修改类型
+                                let status = data.elem.value; //当前字段变化的值
+                                console.log(status);
+                                layer.confirm('确定操作么', function(index) {
+                                    $.ajax({
+                                        headers: {
+                                            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                                        },
+                                        url: "{{url('/update/account/status')}}",
+                                        type: 'post',
+                                        data: {
+                                            'f_role_id': f_role_id,
+                                            'f_freeze_to_time': status
+                                        },
+                                        success: function(res) {
+                                            console.log(res);
+                                            if (res.status == 200) {
+
+                                                layer.msg("重置成功", {
+                                                    icon: 1
+                                                });
+
+                                            } else if (res.status == 403) {
+                                                layer.msg("查询不到用户", {
+                                                    icon: 5
+                                                });
+                                            } else {
+                                                layer.msg("重置失败", {
+                                                    icon: 5
+                                                });
+                                            }
+                                        }
+                                    });
+                                    layer.close(index);
+                                });
                                 return false;
                             });
 

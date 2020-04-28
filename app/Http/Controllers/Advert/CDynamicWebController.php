@@ -112,6 +112,16 @@ class CDynamicWebController extends CCallbackClient
 		return parent::sendMessage($msg);
 	}
 
+	function cd_sendDynamicResetDepot( $f_role_id )//重置仓库密码
+	{
+		$msg = new CMessage;
+		$msg->setName("MSG_RESET_SAVE_PASSWORLD");
+
+		$msg->serialUint32($f_role_id);
+	
+		return parent::sendMessage($msg);
+	}
+
 	function waitCallback()
 	{
 		$message = parent::waitMessage();
@@ -184,6 +194,12 @@ class CDynamicWebController extends CCallbackClient
 				echo json_encode(['status' => 200]);
 				break;
 			case "WEB_RESET_PHONE_FAIL":
+				echo json_encode(['status' => 403]);
+				break;	
+			case "WEB_RESET_SAVE_PASSWORLD_SUCCESS"://重置玩家仓库密码
+				echo json_encode(['status' => 200]);
+				break;
+			case "WEB_RESET_SAVE_PASSWORLD_FAIL":
 				echo json_encode(['status' => 403]);
 				break;						
 
