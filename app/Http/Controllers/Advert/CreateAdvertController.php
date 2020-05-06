@@ -23,7 +23,7 @@ class CreateAdvertController
             }
             $newName = md5(date("Y-m-d H:i:s") . $clientName) . "." . $entension;
             $path = $file->move($url_path, $newName);
-            $url_path = "http://192.168.1.104/uploads/advertImg";
+            $url_path = "/uploads/advertImg";
             $namePath = $url_path . '/' . $newName;
 
             $flag = DB::table('notice_config')->insertGetId([
@@ -73,7 +73,7 @@ class CreateAdvertController
         $MailSvr = new CDynamicWeb;
         $res = "";
 
-        $MailSvr->connect("152.136.61.225", 30002, $res);
+        $MailSvr->connect(config('connect.ip'), config('connect.port'), $res);
 
         //  添加游戏房间; t_game_table 表
         //  第一个字段代表标识; 固定的不用改
@@ -131,7 +131,7 @@ class CreateAdvertController
         $MailSvr = new CDynamicWeb;
         $res = "";
 
-        $MailSvr->connect("152.136.61.225", 30002, $res);
+        $MailSvr->connect(config('connect.ip'), config('connect.port'), $res);
 
         //  添加游戏房间; t_game_table 表
         //  第一个字段代表标识; 固定的不用改

@@ -113,6 +113,7 @@ Route::post('/query/user','GameUserController@queryUser');//查询玩家昵称
 Route::post('/reset/phone','GameUserController@resetPhone');//重置玩家手机号
 Route::post('/reset/password','GameUserController@resetPassword');//重置玩家密码
 Route::post('/reset/depot','GameUserController@resetDepot');//重置玩家仓库密码
+Route::post('/change/control/role','GameUserController@controlRole');//开启帐号算法
 Route::post('/update/account/status','GameUserController@accountStatus');//帐号封禁状态
 
 Route::get('/edit/game/user', function() {

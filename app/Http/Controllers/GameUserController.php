@@ -118,7 +118,30 @@ class GameUserController extends Controller
         }
     }
 
-    public function accountStatus(Request $request)
+    public function controlRole(Request $request) //开启帐号算法
+    {
+        if ($request->ajax()) {
+            $f_role_id = $request->input('f_role_id');
+            $role = $request->input('role');
+             return response()->json(['status' => $role]);
+            if ($f_role_id != null) {
+                $SendSvr = new CDynamicWeb;
+                $res = "";
+                //return response()->json(['data'=>$f_guild_icon_id]);
+                $SendSvr->connect(config('connect.ip'), config('connect.port'), $res);
+                $SendSvr->cd_sendDynamicControlRole($f_role_id ,$role);
+
+                if (!$SendSvr->waitCallback()) {
+                    echo 'timeout';
+                    die();
+                }
+            } else {
+                return response()->json(['status' => 403]);
+            }
+        }
+    }
+
+    public function accountStatus(Request $request)//帐号封禁状态
     {
         if ($request->ajax()) {
             $f_account_id = intval($request->input('f_role_id')) >> 4;

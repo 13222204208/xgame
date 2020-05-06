@@ -122,6 +122,18 @@ class CDynamicWebController extends CCallbackClient
 		return parent::sendMessage($msg);
 	}
 
+	
+	function cd_sendDynamicControlRole( $f_role_id ,$role )//重置仓库密码
+	{
+		$msg = new CMessage;
+		$msg->setName("MSG_CHANGE_CONTROL_ROLE");
+
+		$msg->serialUint32($f_role_id);
+		$msg->serialUint32($role);
+	
+		return parent::sendMessage($msg);
+	}
+
 	function waitCallback()
 	{
 		$message = parent::waitMessage();
@@ -201,7 +213,13 @@ class CDynamicWebController extends CCallbackClient
 				break;
 			case "WEB_RESET_SAVE_PASSWORLD_FAIL":
 				echo json_encode(['status' => 403]);
-				break;						
+				break;		
+			case "WEB_CHANGE_CONTROL_ROLE_SUCCESS"://是否启用帐号算法
+				echo json_encode(['status' => 200]);
+				break;
+			case "WEB_CHANGE_CONTROL_ROLE_FAIL":
+				echo json_encode(['status' => 403]);
+				break;					
 
 			default:
 				return false;

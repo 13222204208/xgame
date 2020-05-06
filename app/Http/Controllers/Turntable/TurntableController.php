@@ -30,7 +30,7 @@ class TurntableController extends Controller
                $SendTurntableSvr = new CDynamicWeb;
                $res = "";
        
-               $SendTurntableSvr->connect("152.136.61.225", 30002, $res);
+               $SendTurntableSvr->connect(config('connect.ip'), config('connect.port'), $res);
                $SendTurntableSvr->cd_sendDynamicFour( $f_diamond_count,  $f_gold_count,$f_silver_count, $f_is_default);
        
                if (!$SendTurntableSvr->waitCallback()) {

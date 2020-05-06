@@ -77,7 +77,7 @@
                     <div class="layui-form-item">
                         <label class="layui-form-label" style="width:90px">启用帐号算法</label>
                         <div class="layui-input-block">
-                            <input type="checkbox" name="switch" lay-skin="switch" lay-text="已启用|已禁用">
+                            <input type="checkbox" name="switch" lay-skin="switch"  lay-filter="accountSwitch" lay-text="已启用|已禁用">
                         </div>
                     </div>
                 </form>
@@ -222,7 +222,7 @@
                             });
 
 
-                            form.on('submit(resetDepot)', function(msg) { //重置密码
+                            form.on('submit(resetDepot)', function(msg) { //重置仓库密码
 
                                 layer.confirm('确定仓库密码么', function(index) {
                                     $.ajax({
@@ -258,7 +258,70 @@
                                 return false;
                             });
 
-                            form.on('select(stateSelect)', function(data) { //修改类型
+
+                            form.on('switch(accountSwitch)', function (data) {
+                                //得到checkbox原始DOM对象
+                  
+                                role = data.elem.value;
+                                console.log(role); 
+                                var x=data.elem.checked;
+                                layer.open({
+                                    content: '是否确定开启'
+                                    ,btn: ['确定', '取消']
+                                    ,yes: function(index, layero){
+                                        data.elem.checked=x;
+                                        form.render();
+                                        layer.close(index);
+
+                                        $.ajax({
+                                        headers: {
+                                            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                                        },
+                                        url: "{{url('/change/control/role')}}",
+                                        type: 'post',
+                                        data: {
+                                            'f_role_id': f_role_id,
+                                            'role': role
+                                        },
+                                        success: function(res) {
+                                            console.log(res.status);
+                                            if (res.status == 200) {
+
+                                                layer.msg("重置成功", {
+                                                    icon: 1
+                                                });
+
+                                            } else if (res.status == 403) {
+                                                layer.msg("查询不到用户", {
+                                                    icon: 5
+                                                });
+                                            } else {
+                                                layer.msg("重置失败", {
+                                                    icon: 5
+                                                });
+                                            }
+                                        }
+                                    });
+                                    }
+                                    ,btn2: function(index, layero){
+                                        //按钮【按钮二】的回调
+                                        data.elem.checked=!x;
+                                        form.render();
+                                        layer.close(index);
+                                        //return false 开启该代码可禁止点击该按钮关闭
+                                    }
+                                    ,cancel: function(){
+                                        //右上角关闭回调
+                                        data.elem.checked=!x;
+                                        form.render();
+                                        //return false 开启该代码可禁止点击该按钮关闭
+                                    }
+                                });
+                                return false;
+                            });
+
+
+                            form.on('select(stateSelect)', function(data) { //更改帐号状态
                                 let status = data.elem.value; //当前字段变化的值
                                 console.log(status);
                                 layer.confirm('确定操作么', function(index) {
