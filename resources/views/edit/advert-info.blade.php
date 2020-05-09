@@ -230,9 +230,9 @@
         var tr = obj.tr; //获得当前行 tr 的 DOM 对象（如果有的话）
 
         if (layEvent === 'detail') { //查看
-          // var img = '<img src="'+window.location.protocol+"//"+window.location.host+'/'+data.img_url+'"'+"/>'";
-          var img = '<img src="' + data.f_img_url + '"' + "/>'";
-
+           var img = '<img src="'+window.location.protocol+"//"+window.location.host+data.f_img_url+'"'+"/>'";
+         // var img = '<img src="' + data.f_img_url + '"' + "/>'";
+          console.log(img);
           layer.open({
             type: 1, //Page层类型
             shade: 0.6, //遮罩透明度

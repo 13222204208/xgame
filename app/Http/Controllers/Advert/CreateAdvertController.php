@@ -11,7 +11,7 @@ class CreateAdvertController
     public function createAdvert(Request $request)
     {
         $file = $request->file('file');
-        $url_path = 'D:\phpstudy_pro\WWW\game\public\uploads\advertImg'; //广告图片目录
+        $url_path = 'D:\phpstudy_pro\WWW\xgame\public\uploads\advertImg'; //广告图片目录
         $rule = ['jpg', 'png', 'gif', 'jpeg'];
         if ($file->isValid()) {
             $clientName = $file->getClientOriginalName();

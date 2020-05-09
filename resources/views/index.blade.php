@@ -105,7 +105,7 @@
               </dl>
             </li>
 
-            <li data-name="user" class="layui-nav-item">
+<!--             <li data-name="user" class="layui-nav-item">
               <a href="javascript:;" lay-tips="公会" lay-direction="2">
                 <i class="layui-icon layui-icon-user"></i>
                 <cite>公会</cite>
@@ -119,7 +119,7 @@
                 </dd>
            
               </dl>
-            </li>
+            </li>  -->
 
             <li data-name="user" class="layui-nav-item">
               <a href="javascript:;" lay-href="{{ url('/create/turntable') }}" lay-tips="转盘" lay-direction="2">
@@ -243,7 +243,7 @@
 
               <dl class="layui-nav-child">
                 <dd>
-                  <a lay-href="">翻牌大满贯管理</a>  
+                  <a lay-href="{{ url('/game/playing') }}">王牌小丑管理</a>  
                 </dd>
               </dl>
 

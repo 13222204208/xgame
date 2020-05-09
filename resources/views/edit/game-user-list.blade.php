@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <title>排行榜活动</title>
+  <title>用户列表</title>
   <link rel="stylesheet" href="/layuiadmin/layui/css/layui.css" media="all">
 </head>
 

@@ -42,7 +42,7 @@ Route::post('add/newuser','UserManageController@addNewuser');//添加权限
 
 //公会
 
-Route::get('/create/guild', function() {
+/* Route::get('/create/guild', function() {
     return view('create.guild');
 });//创建公会
 
@@ -57,7 +57,7 @@ Route::get('/del/guild','Guild\GuildController@delGuild');//删除一个公会
 Route::post('/update/guild','Guild\GuildController@updateGuild');//更新公会信息
 Route::get('/guild/member/{guildID}','Guild\GuildMemberController@guildMember');//获取公会成员信息
 Route::post('/update/guild/member/title','Guild\GuildMemberController@memberTitle');//更改公会成员职务
-Route::get('/del/guild/member','Guild\GuildMemberController@delMember');//更改公会成员职务
+Route::get('/del/guild/member','Guild\GuildMemberController@delMember');//更改公会成员职务 */
 
 Route::get('/edit/the-charts', function() {
     return view('edit.the-charts');
@@ -124,6 +124,11 @@ Route::get('/edit/game/user', function() {
 Route::get('/create/mail', function() {
     return view('create.mail');
 });//创建邮件页面
+
+//游戏管理
+Route::get('/game/playing', function() {
+    return view('game.playing');
+});
 
 Route::post('/send/mail','Mail\SendMailController@sendMail');
 Route::get('/test','Mail\SendMailController@test');
