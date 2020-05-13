@@ -23,19 +23,19 @@
     <div class="layui-form-item">
           <label class="layui-form-label">白银奖池</label>
           <div class="layui-input-block">
-            <input type="text" name="f_silver_count" required lay-verify="number" autocomplete="off" placeholder="请输入数量" class="layui-input">
+            <input type="number" name="f_silver_count" required lay-verify="number" autocomplete="off" placeholder="请输入数量" class="layui-input">
           </div>
         </div>
         <div class="layui-form-item">
           <label class="layui-form-label">黄金奖池</label>
           <div class="layui-input-block">
-            <input type="text" name="f_gold_count" required lay-verify="number" autocomplete="off" placeholder="请输入数量" class="layui-input">
+            <input type="number" name="f_gold_count" required lay-verify="number" autocomplete="off" placeholder="请输入数量" class="layui-input">
           </div>
         </div>
         <div class="layui-form-item">
           <label class="layui-form-label">钻石奖池</label>
           <div class="layui-input-block">
-            <input type="text" name="f_diamond_count" required lay-verify="number" autocomplete="off" placeholder="请输入数量" class="layui-input">
+            <input type="number" name="f_diamond_count" required lay-verify="number" autocomplete="off" placeholder="请输入数量" class="layui-input">
           </div>
         </div>
         <div class="layui-form-item">

@@ -34,7 +34,7 @@
                 <div class="layui-upload">
                   <button type="button" class="layui-btn" id="test-upload-normal">上传图片</button>
                   <div class="layui-upload-list">
-                    <img class="layui-upload-img" id="test-upload-normal-img" alt="图片预览">
+                    <img class="layui-upload-img" src="" id="test-upload-normal-img" alt="图片预览">
 
                   </div>
                 </div>

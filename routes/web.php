@@ -126,11 +126,27 @@ Route::get('/create/mail', function() {
 });//创建邮件页面
 
 //游戏管理
-Route::get('/game/playing', function() {
+Route::get('/game/playing', function() {//翻牌金豆设置
     return view('game.playing');
 });
 
-Route::post('/send/mail','Mail\SendMailController@sendMail');
+Route::get('/game/playing/earnings', function() {//翻牌赢利设置
+    return view('game.earnings');
+});
+
+Route::get('/game/playing/weight', function() {//翻牌权重设置
+    return view('game.weight');
+});
+
+Route::post('/game/playing','Game\PlayingGameController@gamePlaying');//王牌小丑，翻牌
+Route::get('/get/game/playing','Game\PlayingGameController@getGamePlaying');//获取王牌小丑数据
+Route::get('/get/playing/region','Game\PlayingGameController@getPlayingRegion');//获取翻牌王牌小丑区间
+Route::get('/get/playing/weight','Game\PlayingGameController@getPlayingWeight');//获取翻牌王牌小丑权重数据
+Route::post('/add/playing/region','Game\PlayingGameController@addPlayingRegion');//添加翻牌王牌小丑区间
+Route::post('/update/playing/region','Game\PlayingGameController@updatePlayingRegion');//更新翻牌王牌小丑区间
+Route::post('/update/playing/weight','Game\PlayingGameController@updatePlayingWeight');//更新翻牌王牌小丑牌型权重
+
+Route::post('/send/mail','Mail\SendMailController@sendMail');//邮件发送
 Route::get('/test','Mail\SendMailController@test');
 
 Route::post('admin/login','AdminLoginController@login');//后台登录

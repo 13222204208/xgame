@@ -38,7 +38,7 @@
         <div class="layui-form-item">
           <label class="layui-form-label">显示位置</label>
           <div class="layui-input-block">
-            <input type="text" name="f_view_type" required lay-verify="required" autocomplete="off" placeholder="请输入显示位置" class="layui-input">
+            <input type="number" name="f_view_type" required lay-verify="required" autocomplete="off" placeholder="请输入显示位置" class="layui-input">
           </div>
         </div>
         <div class="layui-form-item">
@@ -56,7 +56,7 @@
         <div class="layui-form-item">
           <label class="layui-form-label">权重</label>
           <div class="layui-input-block">
-            <input type="text" name="f_weight" required lay-verify="required" autocomplete="off" placeholder="请输入数字，数字越大权重越高" class="layui-input">
+            <input type="number" name="f_weight" required lay-verify="required" autocomplete="off" placeholder="请输入数字，数字越大权重越高" class="layui-input">
           </div>
         </div>
         <div class="layui-form-item">

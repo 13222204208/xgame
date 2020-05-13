@@ -1,64 +1,43 @@
-
 <!DOCTYPE html>
 
 <html>
 
-	<head>
-		<meta charset="utf-8">
-		<title>翻牌大满贯</title>
-		<meta name="renderer" content="webkit">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0">
-		<link rel="stylesheet" href="/layuiadmin/layui/css/layui.css" media="all">
-		<link rel="stylesheet" href="/layuiadmin/style/admin.css" media="all">
-		<style>
-			.layui-card {
-				margin-left: 20px;
-			}
-		</style>
-	</head>
+<head>
+	<meta charset="utf-8">
+	<title>翻牌大满贯</title>
+	<meta name="renderer" content="webkit">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0">
+	<meta name="csrf-token" content="{{ csrf_token() }}">
+	<link rel="stylesheet" href="/layuiadmin/layui/css/layui.css" media="all">
+	<link rel="stylesheet" href="/layuiadmin/style/admin.css" media="all">
+	<style>
+		.layui-card {
+			margin-left: 20px;
+		}
+	</style>
+</head>
 
-	<body>
-		<div class="layui-col-md12" style="padding: 30px;">
-			<form class="layui-form" action="" style="width: 60%;">
-				<div class="layui-form-item">
-					<label class="layui-form-label">赢利点</label>
-					<div class="layui-input-block">
-						<input type="text" name="int1" required lay-verify="required" placeholder="请输入赢利点" autocomplete="off" class="layui-input" style="display: inline-block;width: 60%;">‰
-					</div>
+<body>
+	<div class="layui-col-md12" style="padding: 30px;">
+		<form class="layui-form" action="" style="width: 60%;">
+
+			<div class="layui-form-item">
+				<label class="layui-form-label">金豆设置</label>
+				<div id="regionData">
 				</div>
-				<div class="layui-form-item">
-					<label class="layui-form-label">金豆设置</label>
-					<div class="layui-input-block">
-						<input type="text" name="jindou_shao" value="1" class="layui-input" style="width: 50px;display: inline-block;">--
-						<input type="text" name="jindou_duo" value="10" class="layui-input" style="width: 50px;display: inline-block;"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;返利:
-						<input type="text" name="fanli" value="1.2" class="layui-input" style="width: 50px;display: inline-block;">单位:千分比
-					</div>
-					<div class="layui-input-block">
+
+				<!-- 					<div class="layui-input-block">
 						<input type="text" name="jindou_shao" value="11" class="layui-input" style="width: 50px;display: inline-block;">--
 						<input type="text" name="jindou_duo" value="20" class="layui-input" style="width: 50px;display: inline-block;"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;返利:
 						<input type="text" name="fanli" value="1.2" class="layui-input" style="width: 50px;display: inline-block;">单位:千分比
-					</div>
-					<div class="layui-input-block">
-						<input type="text" name="jindou_shao" value="21" class="layui-input" style="width: 50px;display: inline-block;">--
-						<input type="text" name="jindou_duo" value="30" class="layui-input" style="width: 50px;display: inline-block;"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;返利:
-						<input type="text" name="fanli" value="1.2" class="layui-input" style="width: 50px;display: inline-block;">单位:千分比
-					</div>
-					<div class="layui-input-block">
-						<input type="text" name="jindou_shao" value="31" class="layui-input" style="width: 50px;display: inline-block;">--
-						<input type="text" name="jindou_duo" value="40" class="layui-input" style="width: 50px;display: inline-block;"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;返利:
-						<input type="text" name="fanli" value="1.3" class="layui-input" style="width: 50px;display: inline-block;">单位:千分比
-					</div>
-					<div class="layui-input-block">
-						<input type="text" name="jindou_shao" value="41" class="layui-input" style="width: 50px;display: inline-block;">--
-						<input type="text" name="jindou_duo" value="50" class="layui-input" style="width: 50px;display: inline-block;"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;返利:
-						<input type="text" name="fanli" value="1.3" class="layui-input" style="width: 50px;display: inline-block;">单位:千分比
-					</div>
-				</div>
-				<button  class="layui-btn" style="margin-left:350px">添加区间</button>
-				<button type="button" onclick="tijiao()" class="layui-btn" style="margin-left:50px">提交</button>
-				<br /><br />
-				<!-- <div class="layui-form-item">
+					</div>  -->
+			</div>
+			<button class="layui-btn" style="margin-left:350px" id="addRegion">添加区间</button>
+			<button type="button" class="layui-btn" lay-submit="" lay-filter="updateRegion" style="margin-left:50px">更新</button>
+		</form>
+		<br /><br />
+		<!-- <div class="layui-form-item">
 					<label class="layui-form-label">炒场开关</label>
 					<div class="layui-input-block">
 						<input type="checkbox" name="switch" lay-skin="switch" lay-text="开|关">
@@ -77,15 +56,9 @@
 						<input type="text" name="title" required lay-verify="required" placeholder="" autocomplete="off" class="layui-input" style="display: inline-block;width: 80px;">‰
 					</div>
 				</div> -->
-				<div class="layui-form-item">
-					<label class="layui-form-label">波动控制</label>
-					<div class="layui-input-block">
-						吃分占比<input type="text" name="int3" value="30" class="layui-input" style="width: 80px;display: inline-block;">% 平分占比
-						<input type="text" name="int4" value="50" class="layui-input" style="width: 80px;display: inline-block;">% 吐分占比
-						<input type="text" name="int5" value="20" class="layui-input" style="width: 80px;display: inline-block;">%
-					</div>
-				</div>
-				<div class="layui-form-item">
+
+
+			<!-- 				<div class="layui-form-item">
 					<label class="layui-form-label">牌型权重</label>
 					<div class="layui-input-block">
 					<table class="layui-table" style="width: 60%;">
@@ -166,177 +139,155 @@
 						</tbody>
 					</table>
 					</div>
-				</div>
-				<div class="layui-form-item">
-					<label class="layui-form-label">连线彩金</label>
-					<div class="layui-input-block">
-						<input type="text" name="int6" value="10000" class="layui-input" style="width: 60px;display: inline-block;">‰有效押注入奖池、奖池最低分数<input type="text" name="int7" value="10000" class="layui-input" style="width: 60px;display: inline-block;"> <!-- 彩金中奖概率<input type="text" name="title" value="10000" class="layui-input" style="width: 60px;display: inline-block;">% -->
-					</div>
-				</div>
-			<!-- 	<div class="layui-form-item">
-					<label class="layui-form-label">指定放奖</label>
-					<div class="layui-input-block">
-						账号<input type="text" name="title" value="" class="layui-input" style="width: 80px;display: inline-block;">
-						座位<input type="text" name="title" value="" class="layui-input" style="width: 80px;display: inline-block;">
-						牌型<input type="text" name="title" value="" class="layui-input" style="width: 80px;display: inline-block;">
-					</div>
 				</div> -->
-				<div class="layui-form-item">
-					<label class="layui-form-label">自动踢出</label>
-					<div class="layui-input-block">
-						<input type="text" name="int8" value="" class="layui-input" style="width: 60px;display: inline-block;">分钟未押注自动踢出、连续被踢出<!-- <input type="text" name="title" value="" class="layui-input" style="width: 60px;display: inline-block;">次时<input type="text" name="title" value="" class="layui-input" style="width: 60px;display: inline-block;">分钟禁止进入此桌 -->
-					</div>
-				</div>
-				<!-- <div class="layui-form-item">
-					<label class="layui-form-label">奖池操作</label>
-					<div class="layui-input-block">
-						<input type="text" name="title" value="初级场" class="layui-input" style="width: 80px;display: inline-block;">场&nbsp;&nbsp;&nbsp;
-						<input type="text" name="title" value="03" class="layui-input" style="width: 80px;display: inline-block;">桌&nbsp;&nbsp;&nbsp;
-						当前奖池:200000分
-						<br /><br />增加<input type="text" name="title" value="" class="layui-input" style="width: 80px;display: inline-block;">
-						减少<input type="text" name="title" value="" class="layui-input" style="width: 80px;display: inline-block;">
-						<button type="button" class="layui-btn">一键清空</button>
-					</div>
-				</div> -->
-				<div class="layui-form-item">
-					<label class="layui-form-label">跑马灯条件</label>
-					<div class="layui-input-block">
-						中奖<input type="text" name="int2" value="" class="layui-input" style="width: 60px;display: inline-block;">倍以上
-					</div>
-				</div>
-
-				<div class="layui-form-item">
-					<div class="layui-input-block">
-						<button class="layui-btn" type="button" onclick="tijiao1()">立即提交</button>
-						<button type="reset" class="layui-btn layui-btn-primary">重置</button>
-					</div>
-				</div>
-			</form>
-
-		</div>
-
-		<script src="/layuiadmin/layui/layui.js"></script>
- 		 <script src="/layuiadmin/layui/jquery3.2.js"></script>
-		<script>
-			layui.config({
-				base: '/game/Public/layuiadmin/' //静态资源所在路径
-			}).extend({
-				index: 'lib/index' //主入口模块
-			}).use('index');
-			layui.use('form', function() {
-				var form = layui.form;
-
-				//监听提交
-				form.on('submit(formDemo)', function(data) {
-					layer.msg(JSON.stringify(data.field));
 
 
-	
-			
-					return false;
-				});
-			});
+	</div>
 
-			function tijiao(){
-var json = {"version":"v1.0",
-	"method":"login", "app_id":"1001", "user_name":"user001", "platform_code":"yqs", "game_code":"620",
-				'sign':"DUnJaN4AP6/AKv58HUNh1VuCC5F135aMIkOFVg+zXivAstHqQb1cXz2yHYjJfVR4ywftTTZPWSWzHjWCUjN34tggLgSj9h3WOOpM0zVveuWXeq7rVR+JFZ6cY+/NSojyQna8wKKxF4zHN2WZTwMSjBAH7gDZtyntL3q0inbcOlwA6zLM+U/5oOBMeQfrl28VOqTxg695bOYHKHurZXzuWy8gcMKlc+tdofSRs5k9M3nU/LcUjc3spnskR/PVcAECqcUXFTX4XOvDSeAWQWpMP3nKdGam/t+Omyq1GhIsM20U73CeBdKMCn0Qa4aSNPYmdm3m5Edl4vT4ocz/SWa1gw=="}
+	<script src="/layuiadmin/layui/layui.js"></script>
+	<script src="/layuiadmin/layui/jquery3.2.js"></script>
 
-				var jsonStr = JSON.stringify(json); 
-				$.ajax({
-              url: "https://apitest.xyapi001.com/gapi_platform/api/gateway.do",
-              type: 'post',
-              datatype: 'json',
-              data: jsonStr,
-              success: function(res) {
-                console.log(res);
-                if (res == '{"status":200}') {
-                  obj.del(); //删除对应行（tr）的DOM结构，并更新缓存
-                  layer.close(index);
-                  console.log(index);
-                  layer.msg("删除成功", {
-                    icon: 1
-                  });
-                } else {
-                  layer.msg("删除失败", {
-                    icon: 5
-                  });
-                }
-              }
-			});
-				jindou_shao_str = '';jindou_duo_str = '';fanli_str = '';
-				$("input[name='jindou_shao']").each(function(){					
-					jindou_shao_str += $(this).val()+',';
-				});
-				$("input[name='jindou_duo']").each(function(){
-					//console.log($(this).val())
-					jindou_duo_str += $(this).val()+',';
-				});
-				$("input[name='fanli']").each(function(){
-					//console.log($(this).val())
-					fanli_str += $(this).val()+',';
-				});
-				$.post('/game/index.php/Home/Game/add_qujian',{
-					 type:'FanPai',
-					//type:"",
-					jindou_shao_str:jindou_shao_str,
-					jindou_duo_str:jindou_duo_str,
-					fanli_str:fanli_str
-				},function(data){
-					//var type = ;
+
+
+
+	<script>
+		layui.config({
+			base: '/layuiadmin/' //静态资源所在路径
+		}).extend({
+			index: 'lib/index' //主入口模块
+		}).use(['index', 'form', 'laydate'], function() {
+			var $ = layui.$,
+				admin = layui.admin,
+				element = layui.element,
+				layer = layui.layer,
+				laydate = layui.laydate,
+				form = layui.form;
+
+			$.ajax({
+				headers: {
+					'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+				},
+				url: "{{url('/get/playing/region')}}",
+				method: 'get',
+
+				success: function(res) {
 					
-					$.post('/game/jiekou/dynamic_module.php',{type:'FanPai'},function(res){
-						//console.log(type)
-						console.log(res)
-						if(res == ' 成功'){
-							layer.msg('成功');
-						}else{
-							layer.msg('失败');
+					$.each(res, function(i, t) {
+						$("#regionData").append('<div class="layui-input-block">' +
+							'<input type="text" name="f_min_level[]" value="' + t.f_min_level + '" class="layui-input" lay-verify="min_level" style="width: 50px;display: inline-block;"> -- ' +
+							'<input type="text" name="f_max_level[]" value="' + t.f_max_level + '" class="layui-input" lay-verify="max_level" style="width: 50px;display: inline-block;">' + ' <span style="white-space:pre;">  ' + '  返利:' +
+							'  <input type="text" name="f_proportion[]" value="' + t.f_proportion + '" class="layui-input" style="width: 50px;display: inline-block;">单位:千分比' +
+							'<input type="hidden" name="f_id[]"  value="' + t.f_id + '">'+
+							'</div> ');
+					});
+
+				},
+
+			});
+
+
+			$("#addRegion").click(function() {//添加区间
+
+				$("#regionData").append('<div class="layui-input-block">' +
+					'<input type="text" name="jindou_shao" value="41" class="layui-input" style="width: 50px;display: inline-block;"> -- ' +
+					'<input type="text" name="jindou_duo" value="50" class="layui-input" style="width: 50px;display: inline-block;">' + ' <span style="white-space:pre;">  ' + '  返利:  ' +
+					'<input type="text" name="fanli" value="20" class="layui-input" style="width: 50px;display: inline-block;">单位:千分比' +
+					'</div> ');
+
+					$.ajax({
+					headers: {
+						'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+					},
+					url: "{{url('add/playing/region')}}",
+					method: 'POST',
+					success: function(res) {
+						console.log(res);
+						if (res == '{"status":200}') {
+							layer.msg('添加成功', {
+								offset: '15px',
+								icon: 1,
+								time: 1000
+							}, function(){
+            location.href= "{{url('/game/playing')}}";
+          });
+						} else {
+							console.log(res);
+							layer.msg('添加失败', {
+								offset: '15px',
+								icon: 2,
+								time: 3000
+							})
 						}
-					})
-					//layer.msg('添加成功')
-				})
-				//console.log(jindou_shao_str)
-				//console.log(jindou_duo_str)
-				//console.log(fanli_str)
-				//var jindou_shao = $('input[name="jindou_shao[]"]').val();
-				
-			}
-			function tijiao1(){
-				var int2 = $('input[name="int2"]:checked').val();
-				var int3 = $('input[name="int3"]').val();
-				var int4 = $('input[name="int4"]').val();
-				var int1 = $('input[name="int1"]').val();
-				$.post('/game/index.php/Home/Game/xiugai',{
-					type:'FanPai',
-					//type:"",
-					int2:int2,
-					int3:int3,
-					int4:int4,
-					int1:int1,
-					int5:int5,
-					int6:int6,
-					int7:int7,
-					int8:int8
-				},function(data){
-					//var type = ;
-					//console.log(type)
-					$.post('/game/jiekou/dynamic_module.php',{type1:'FanPai'},function(res){
-						console.log(res)
-						if(res == ' 成功'){
-							layer.msg('成功');
-						}else{
-							layer.msg('失败');
+					},
+					error: function(error) {
+						console.log(error);
+						layer.msg('添加失败请重新确认', {
+							offset: '15px',
+							icon: 2,
+							time: 3000
+						})
+					}
+				});
+				return false;
+			});
+
+			form.verify({
+				min_level: function(value) {
+					min_level = Number(value)
+					
+				},
+				max_level: function(value) {
+					max_level = Number(value);
+					
+					if (max_level < min_level) {
+						return '最大值必须大于最小值';
+					}
+				}
+
+			});
+
+			form.on('submit(updateRegion)', function(data) {//更新翻牌区间数据
+				var data = data.field;
+			//	console.log(data);
+				$.ajax({
+					headers: {
+						'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+					},
+					url: "{{url('update/playing/region')}}",
+					method: 'POST',
+					data: data,
+					success: function(res) {
+						console.log(res);
+						if (res == '{"status":200}') {
+							layer.msg('添加成功', {
+								offset: '15px',
+								icon: 1,
+								time: 3000
+							});
+						} else {
+							console.log(res);
+							layer.msg('添加失败', {
+								offset: '15px',
+								icon: 2,
+								time: 3000
+							})
 						}
-					})
-					//layer.msg('成功')
-				})
-				//console.log(int2)
-				//console.log(int3)
-				//console.log(int4)
-				//console.log(int1)
-			}
-		</script>
-	</body>
+					},
+					error: function(error) {
+						console.log(error);
+						layer.msg('添加失败请重新确认', {
+							offset: '15px',
+							icon: 2,
+							time: 3000
+						})
+					}
+				});
+				return false;
+			});
+
+
+		});
+	</script>
+</body>
 
 </html>
