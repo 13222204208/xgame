@@ -146,6 +146,40 @@ Route::post('/add/playing/region','Game\PlayingGameController@addPlayingRegion')
 Route::post('/update/playing/region','Game\PlayingGameController@updatePlayingRegion');//更新翻牌王牌小丑区间
 Route::post('/update/playing/weight','Game\PlayingGameController@updatePlayingWeight');//更新翻牌王牌小丑牌型权重
 
+//太上老君管理
+Route::get('/game/tslj', function() {
+    return view('game.tslj');
+});
+
+Route::get('/get/tslj/config','Game\TsljGameController@getTsljConfig');//获取太上老君设置
+Route::post('/update/tslj/config','Game\TsljGameController@updateTsljConfig');//修改太上老君设置
+Route::get('/get/tslj/region','Game\TsljGameController@getTsljRegion');//获取太上老君区间
+Route::post('/add/tslj/region','Game\TsljGameController@addTsljRegion');//添加太上老君区间
+Route::post('/update/tslj/region','Game\TsljGameController@updateTsljRegion');//更新太上老君区间
+
+//三色龙珠
+Route::get('/game/three-colour', function() {
+    return view('game.three-colour');
+});
+
+Route::get('/get/three/config','Game\ThreeColourController@getThreeConfig');//获取三色龙珠设置
+Route::post('/update/three/config','Game\ThreeColourController@updateThreeConfig');//修改三色龙珠设置
+Route::get('/get/three/region','Game\ThreeColourController@getThreeRegion');//获取三色龙珠区间
+Route::post('/add/three/region','Game\ThreeColourController@addThreeRegion');//添加三色龙珠区间
+Route::post('/update/three/region','Game\ThreeColourController@updateThreeRegion');//更新三色龙珠区间
+
+
+//神兽单挑
+Route::get('/game/animals', function() {
+    return view('game.animals');
+});
+
+Route::get('/get/animals/config','Game\AnimalsController@getAnimalsConfig');//获取太上老君设置
+Route::post('/update/animals/config','Game\AnimalsController@updateAnimalsConfig');//修改太上老君设置
+Route::get('/get/animals/region','Game\AnimalsController@getAnimalsRegion');//获取太上老君区间
+Route::post('/add/animals/region','Game\AnimalsController@addAnimalsRegion');//添加太上老君区间
+Route::post('/update/animals/region','Game\AnimalsController@updateAnimalsRegion');//更新太上老君区间
+
 Route::post('/send/mail','Mail\SendMailController@sendMail');//邮件发送
 Route::get('/test','Mail\SendMailController@test');
 

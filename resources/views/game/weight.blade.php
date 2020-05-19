@@ -41,67 +41,67 @@
 							<tr>
 								<td>五鬼</td>
 								<td>1000</td>
-								<td><input type="number" name="16" value="20" class="layui-input" style="width: 60px;height:24px;display: inline-block;"></td>
+								<td><input type="number" name="16" value="20" class="layui-input" style="width: 100px;height:24px;display: inline-block;"></td>
 							</tr>
 							<tr>
 								<td>五梅</td>
 								<td>250</td>
-								<td><input type="number" name="15" value="27" class="layui-input" style="width: 60px;height:24px;display: inline-block;"></td>
+								<td><input type="number" name="15" value="27" class="layui-input" style="width: 100px;height:24px;display: inline-block;"></td>
 							</tr>
 							<tr>
 								<td>同花大顺</td>
 								<td>500</td>
-								<td><input type="number" name="14" value="40" class="layui-input" style="width: 60px;height:24px;display: inline-block;"></td>
+								<td><input type="number" name="14" value="40" class="layui-input" style="width: 100px;height:24px;display: inline-block;"></td>
 							</tr>
 							<tr>
 								<td>同花小顺</td>
 								<td>120</td>
-								<td><input type="number" name="13" value="67" class="layui-input" style="width: 60px;height:24px;display: inline-block;"></td>
+								<td><input type="number" name="13" value="67" class="layui-input" style="width: 100px;height:24px;display: inline-block;"></td>
 							</tr>
 							<tr>
 								<td>正宗大四梅</td>
 								<td>100</td>
-								<td><input type="number" name="12" value="111" class="layui-input" style="width: 60px;height:24px;display: inline-block;"></td>
+								<td><input type="number" name="12" value="111" class="layui-input" style="width: 100px;height:24px;display: inline-block;"></td>
 							</tr>
 							<tr>
 								<td>正宗小四梅</td>
 								<td>80</td>
-								<td><input type="number" name="11" value="167" class="layui-input" style="width: 60px;height:24px;display: inline-block;"></td>
+								<td><input type="number" name="11" value="167" class="layui-input" style="width: 100px;height:24px;display: inline-block;"></td>
 							</tr>
 							<tr>
 								<td>大四梅</td>
 								<td>80</td>
-								<td><input type="number" name="10" value="250" class="layui-input" style="width: 60px;height:24px;display: inline-block;"></td>
+								<td><input type="number" name="10" value="250" class="layui-input" style="width: 100px;height:24px;display: inline-block;"></td>
 							</tr>
 							<tr>
 								<td>小四梅</td>
 								<td>50</td>
-								<td><input type="number" name="9" value="400" class="layui-input" style="width: 60px;height:24px;display: inline-block;"></td>
+								<td><input type="number" name="9" value="400" class="layui-input" style="width: 100px;height:24px;display: inline-block;"></td>
 							</tr>
 							<tr>
 								<td>葫芦</td>
 								<td>50</td>
-								<td><input type="number" name="8" value="2000" class="layui-input" style="width: 60px;height:24px;display: inline-block;"></td>
+								<td><input type="number" name="8" value="2000" class="layui-input" style="width: 100px;height:24px;display: inline-block;"></td>
 							</tr>
 							<tr>
 								<td>同花</td>
 								<td>10</td>
-								<td><input type="number" name="7" value="2857" class="layui-input" style="width: 60px;height:24px;display: inline-block;"></td>
+								<td><input type="number" name="7" value="2857" class="layui-input" style="width: 100px;height:24px;display: inline-block;"></td>
 							</tr>
 							<tr>
 								<td>顺子</td>
 								<td>7</td>
-								<td><input type="number" name="6" value="4000" class="layui-input" style="width: 60px;height:24px;display: inline-block;"></td>
+								<td><input type="number" name="6" value="4000" class="layui-input" style="width: 100px;height:24px;display: inline-block;"></td>
 							</tr>
 							<tr>
 								<td>三条</td>
 								<td>5</td>
-								<td><input type="number" name="5" value="6667" class="layui-input" style="width: 60px;height:24px;display: inline-block;"></td>
+								<td><input type="number" name="5" value="6667" class="layui-input" style="width: 100px;height:24px;display: inline-block;"></td>
 							</tr>
 							<tr>
 								<td>两对</td>
 								<td>3</td>
-								<td><input type="number" name="4" value="10000" class="layui-input" style="width: 80px;height:24px;display: inline-block;"></td>
+								<td><input type="number" name="4" value="10000" class="layui-input" style="width: 100px;height:24px;display: inline-block;"></td>
 							</tr>
 						</tbody>
 					</table>

@@ -224,23 +224,7 @@
                 </dd>
               </dl>
 
-              <dl class="layui-nav-child">
-                <dd>
-                  <a lay-href="">百人牛牛管理</a>
-                </dd>
-              </dl>
-
-              <dl class="layui-nav-child">
-                <dd>
-                  <a lay-href="">摇钱树捕鱼管理</a>
-                </dd>
-              </dl>
-
-              <dl class="layui-nav-child">
-                <dd>
-                  <a lay-href="">牛魔王捕鱼管理</a>
-                </dd>
-              </dl>
+         
 
               <dl class="layui-nav-child">
                 <dd>
@@ -260,29 +244,25 @@
                 </dd>
               </dl>
 
+
               <dl class="layui-nav-child">
                 <dd>
-                  <a lay-href="">骰宝管理</a>
+                  <a lay-href="{{ url('/game/tslj') }}">太上老君管理</a>
                 </dd>
               </dl>
 
               <dl class="layui-nav-child">
                 <dd>
-                  <a lay-href="">转盘管理</a>
+                  <a lay-href="{{ url('/game/three-colour') }}">三色龙珠管理</a>
                 </dd>
               </dl>
 
               <dl class="layui-nav-child">
                 <dd>
-                  <a lay-href="">太上老君管理</a>
+                  <a lay-href="{{ url('/game/animals') }}">神兽单挑管理</a>
                 </dd>
               </dl>
 
-              <dl class="layui-nav-child">
-                <dd>
-                  <a lay-href="">百家乐管理</a>
-                </dd>
-              </dl>
             </li>
 
             <li data-name="app" class="layui-nav-item ">
