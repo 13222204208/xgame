@@ -11,7 +11,7 @@ class ThreeColourController extends Controller
 {
     public function getThreeConfig()
     {
-        $data=  DB::table('game_controler')->select('f_int1','f_int2','f_int3','f_int4')
+        $data=  DB::table('game_controler')->select('f_int1','f_int2','f_int3','f_int7','f_int5')
         ->where('f_room_type','Sslz')
         ->get();
         return $data;
@@ -23,13 +23,15 @@ class ThreeColourController extends Controller
             $int1 = $request->input('int1');
             $int2 = $request->input('int2');
             $int3 = $request->input('int3');
-            $int4 = $request->input('int4');
+            $int7 = $request->input('int7');
+            $int5 = $request->input('int5');
 
             $status= DB::table('game_controler')->where('f_room_type','Sslz')->update([
                 'f_int1'=>$int1,
                 'f_int2'=>$int2,
                 'f_int3'=>$int3,
-                'f_int4'=>$int4
+                'f_int7'=>$int7,
+                'f_int5'=>$int5
             ]);
             
             if ($status == 1) {

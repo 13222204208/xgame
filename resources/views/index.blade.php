@@ -265,6 +265,13 @@
 
             </li>
 
+            <li data-name="user" class="layui-nav-item">
+              <a href="javascript:;" lay-href="{{ url('/game/task-management') }}" lay-tips="任务管理" lay-direction="2">
+                <i class="layui-icon layui-icon-auz"></i>
+                <cite>任务管理</cite>
+              </a>
+            </li>
+
             <li data-name="app" class="layui-nav-item ">
               <a lay-tips="" lay-tips="活动配置" lay-direction="2">
                 <i class="layui-icon layui-icon-app"></i>

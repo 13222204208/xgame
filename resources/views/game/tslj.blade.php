@@ -73,8 +73,8 @@
 			<div class="layui-form-item">
 				<label class="layui-form-label" style="width:100px">奖池最低金额</label>
 				<div class="layui-input-block">
-					<input type="number" name="int4" value="20000" class="layui-input" onKeyUp="this.value=this.value.replace(/[^\.\d]/g,'');this.value=this.value.replace('.','');" style="width: 400px;display: inline-block;">
-					%
+					<input type="number" name="int7" value="20000" class="layui-input" onKeyUp="this.value=this.value.replace(/[^\.\d]/g,'');this.value=this.value.replace('.','');" style="width: 400px;display: inline-block;">
+					
 				</div>
 			</div>
 
@@ -198,7 +198,7 @@
 					$(" input[ name='int1' ] ").val(res[0].f_int1);
 					$(" input[ name='int2' ] ").val(res[0].f_int2);
 					$(" input[ name='int3' ] ").val(res[0].f_int3);
-					$(" input[ name='int4' ] ").val(res[0].f_int4);
+					$(" input[ name='int7' ] ").val(res[0].f_int7);
 
 				},
 

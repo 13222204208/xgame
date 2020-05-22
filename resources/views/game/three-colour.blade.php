@@ -73,8 +73,16 @@
 			<div class="layui-form-item">
 				<label class="layui-form-label" style="width:100px">奖池最低金额</label>
 				<div class="layui-input-block">
-					<input type="number" name="int4" value="20000" class="layui-input" onKeyUp="this.value=this.value.replace(/[^\.\d]/g,'');this.value=this.value.replace('.','');" style="width: 400px;display: inline-block;">
-					%
+					<input type="number" name="int7" value="20000" class="layui-input" onKeyUp="this.value=this.value.replace(/[^\.\d]/g,'');this.value=this.value.replace('.','');" style="width: 400px;display: inline-block;">
+					
+				</div>
+			</div>
+
+			<div class="layui-form-item">
+				<label class="layui-form-label" style="width:100px">得彩金概率</label>
+				<div class="layui-input-block">
+					<input type="number" name="int5" value="1" class="layui-input" onKeyUp="this.value=this.value.replace(/[^\.\d]/g,'');this.value=this.value.replace('.','');" style="width: 400px;display: inline-block;">
+					
 				</div>
 			</div>
 
@@ -198,7 +206,8 @@
 					$(" input[ name='int1' ] ").val(res[0].f_int1);
 					$(" input[ name='int2' ] ").val(res[0].f_int2);
 					$(" input[ name='int3' ] ").val(res[0].f_int3);
-					$(" input[ name='int4' ] ").val(res[0].f_int4);
+					$(" input[ name='int7' ] ").val(res[0].f_int7);
+					$(" input[ name='int5' ] ").val(res[0].f_int5);
 
 				},
 
@@ -216,6 +225,12 @@
 				int3: function(value) {
 					if (value > 100) {
 						return '彩金抽取不能大于100';
+					}
+				},
+
+				int5: function(value) {
+					if (value > 10000) {
+						return '彩金概率不能大于10000';
 					}
 				},
 			});
