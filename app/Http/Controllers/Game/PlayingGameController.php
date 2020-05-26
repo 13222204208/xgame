@@ -20,7 +20,7 @@ class PlayingGameController extends Controller
             $int5 = $request->input('int5');
             $int6 = $request->input('int6');
             $int7 = $request->input('int7');
-            $int8 = $request->input('int8');
+            $int8 = intval($request->input('int8'))*60*1000;
 
             $status= DB::table('game_controler')->where('f_room_type','Fanpai')->update([
                 'f_int1'=>$int1,
@@ -147,7 +147,7 @@ class PlayingGameController extends Controller
             $id[5]= $request->input('5');
             $id[6]= $request->input('6');
             $id[7]= $request->input('7');
-            $id[8]= intval($request->input('8'))*60*1000;//多少分钟后自动踢出
+            $id[8]= $request->input('8');//多少分钟后自动踢出
             $id[9]= $request->input('9');
             $id[10]= $request->input('10');
             $id[11]= $request->input('11');
