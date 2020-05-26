@@ -186,6 +186,8 @@ Route::get('/game/task-management', function() {
     return view('game.task-management');
 });
 
+Route::post('/query/task/requirement','Game\TaskManagementController@taskRequirement');//任务条件
+
 
 Route::post('/send/mail','Mail\SendMailController@sendMail');//邮件发送
 Route::get('/test','Mail\SendMailController@test');

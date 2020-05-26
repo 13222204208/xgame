@@ -9,7 +9,7 @@
 </head>
 
 <body>
-<div class="layui-fluid">
+  <div class="layui-fluid">
     <div class="layui-row layui-col-space15">
       <div class="layui-col-md12">
         <div class="layui-card">
@@ -20,7 +20,7 @@
               <div class="layui-card-body">
                 <div class="layui-upload">
                   <button type="button" class="layui-btn" id="task-management">新建任务</button>
-         
+
                 </div>
 
               </div>
@@ -35,34 +35,43 @@
   <table id="demo" lay-filter="test"></table>
 
   <script type="text/html" id="barDemo">
-  
- <!--  <a class="layui-btn layui-btn-xs" lay-event="edit">编辑</a> -->
+    <!--  <a class="layui-btn layui-btn-xs" lay-event="edit">编辑</a> -->
   <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="del">删除</a>
   </script>
 
   <div class="layui-row" id="popUpdateTest" style="display:none;">
     <form class="layui-form layui-from-pane" required lay-verify="required" lay-filter="formUpdate" style="margin:20px">
 
- 
-
       <div class="layui-form-item">
-        <label class="layui-form-label">游戏类型</label>
+        <label class="layui-form-label">任务描述</label>
         <div class="layui-input-block">
-          <select name="f_weights" required lay-verify="required">
-            <option value="">全部游戏</option>
-            <option value="3">王牌小丑</option>
-            <option value="2">三色龙珠</option>
-            <option value="1">太上老君</option>
-            <option value="1">神兽单挑</option>
-
-          </select>
+          <input type="text" name="f_mission_content" required lay-verify="required" autocomplete="off" placeholder="请输入任务描述" value="无" class="layui-input">
         </div>
       </div>
 
       <div class="layui-form-item">
+        <label class="layui-form-label">任务条件</label>
+        <div class="layui-input-inline">
+          <select name="f_mission_event" required id="f_mission_event">
+          <option value="">请选择条件</option>
+            <option value="1">压注次数</option>
+            <option value="2">赢分</option>
+            <option value="3">押注金额</option>
+            <option value="4">洗码量获得</option>
+            <option value="5">小四条以上牌型</option>
+            <option value="6">正宗小四条以上</option>
+          </select>
+        </div>
+
+      </div>
+
+
+
+      <div class="layui-form-item">
         <label class="layui-form-label">场次类型</label>
         <div class="layui-input-block">
-          <select name="f_weights" required lay-verify="required">
+          <select name="f_bottom_point" required lay-filter="f_bottom_point">
+            <option value="0">全部场次</option>
             <option value="1">1元场</option>
             <option value="5">5元场</option>
             <option value="10">10元场</option>
@@ -75,35 +84,71 @@
       </div>
 
       <div class="layui-form-item">
-        <label class="layui-form-label">任务条件</label>
+        <label class="layui-form-label">对应游戏</label>
         <div class="layui-input-block">
-          <select name="f_weights" required lay-verify="required">
-            <option value="1">小四条以上牌型</option>
-            <option value="5">正宗小四条以上</option>
-            <option value="10">压注次数</option>
-            <option value="20">赢分</option>
-            <option value="50">押注金额</option>
-            <option value="100">洗码量获得</option>
-
+        <select name="f_mission_game" required >
+            <option value="">请选择游戏</option>  
           </select>
         </div>
       </div>
 
-      
-      <div class="layui-form-item">
-          <label class="layui-form-label">条件数量</label>
-          <div class="layui-input-block">
-            <input type="number" name="f_title" required lay-verify="required" autocomplete="off" placeholder="请输入条件数量" class="layui-input">
-          </div>
-        </div>
 
-        
-        <div class="layui-form-item">
-          <label class="layui-form-label">奖励金额</label>
-          <div class="layui-input-block">
-            <input type="number" name="f_title" required lay-verify="required" autocomplete="off" placeholder="请输入奖励金额" class="layui-input">
+
+
+
+      <div class="layui-form-item">
+        <label class="layui-form-label">任务权重</label>
+        <div class="layui-input-block">
+          <input type="number" name="f_title" required lay-verify="required" autocomplete="off" placeholder="请输入条件数量" class="layui-input">
+        </div>
+      </div>
+
+
+      <div class="layui-form-item">
+        <label class="layui-form-label">任务次数</label>
+        <div class="layui-input-block">
+          <input type="number" name="f_title" required lay-verify="required" autocomplete="off" placeholder="请输入条件数量" class="layui-input">
+        </div>
+      </div>
+
+
+      <div class="layui-form-item">
+        <label class="layui-form-label">任务奖励</label>
+        <div class="layui-input-block">
+          <input type="number" name="f_title" required lay-verify="required" autocomplete="off" placeholder="请输入奖励金额" class="layui-input">
+        </div>
+      </div>
+
+      <div class="layui-form-item">
+        <label class="layui-form-label">是否每日刷新</label>
+        <div class="layui-input-block">
+          <input type="checkbox" checked="" id="switchID" required lay-verify="required" name="f_enable" lay-skin="switch" lay-filter="switchTest" lay-text="是|否">
+        </div>
+      </div>
+
+      <div class="layui-form-item">
+        <div class="layui-inline">
+          <label class="layui-form-label">启用时间</label>
+          <div class="layui-input-inline">
+            <input type="text" class="layui-input" required lay-verify="required" name='f_opentime' id="f_opentime" placeholder="yyyy-MM-dd HH:mm:ss">
           </div>
         </div>
+      </div>
+      <div class="layui-form-item">
+        <div class="layui-inline">
+          <label class="layui-form-label">关闭时间</label>
+          <div class="layui-input-inline">
+            <input type="text" class="layui-input" required lay-verify="required" name='f_closetime' id="f_closetime" placeholder="yyyy-MM-dd HH:mm:ss">
+          </div>
+        </div>
+      </div>
+
+      <div class="layui-form-item">
+        <label class="layui-form-label">任务状态</label>
+        <div class="layui-input-block">
+          <input type="checkbox" checked="" id="switchID" required lay-verify="required" name="f_enable" lay-skin="switch" lay-filter="switchTest" lay-text="开启|关闭">
+        </div>
+      </div>
 
 
       <div class="layui-form-item ">
@@ -123,23 +168,109 @@
   <script src="/layuiadmin/layui/layui.js"></script>
   <script src="/layuiadmin/layui/jquery3.2.js"></script>
   <script>
-    layui.use(['table', 'form', 'laydate', 'util','jquery'], function() {
+    layui.use(['table', 'form', 'laydate', 'util', 'jquery'], function() {
       var table = layui.table;
       var laydate = layui.laydate;
       var form = layui.form;
       var util = layui.util;
       var $ = layui.jquery;
+/* 
+      form.on('select(f_mission_event)', function(data) {
+        let num= Number(data.value);
+        let arr = [1,2,3,4];
+        let arr2 = [5,6];
+
+        if (arr.includes(num)) {
+          $("#f_mission_game").html( '<option value="">全部游戏</option>'+
+            '<option value="3">王牌小丑</option>'+
+           ' <option value="2">三色龙珠</option>'+
+            '<option value="1">太上老君</option>'+
+            '<option value="1">神兽单挑</option>');
+        }else if (arr2.includes(num)) {
+          $("#f_mission_game").html( 
+            '<option value="3">王牌小丑</option>');
+        }
+          form.render('select'); 
+
+      }); */
+
+      form.on('select(f_bottom_point)', function(data) {
+        let req= Number(data.value);
+        let num= $('#f_mission_event').val();
+
+        $.ajax({
+            headers: {
+              'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+            },
+            url: "{{url('/query/task/requirement')}}",
+            type: 'post',
+            data: {
+              num: num,
+              req: req
+            },
+            success: function(msg) {
+              console.log(msg);
+              status= msg.status;
+              res= msg.game;
+              if (status == 200) {
+              
+/*                 $.each(res, function(i, t) {
+            $("#f_mission_game").append('<option value="'+t.f_room_type+'">'+t.f_room_type+'</option>');        
+          }); */
+          options="";
+          for (var i = 0; i < res.length; i++) {
+                        var t = res[i];
+                        options +='<option value="'+t.f_room_type+'">'+t.f_room_type+'</option>';
+                    }
+                    $("select[name='f_mission_game']").html(options);
+                    form.render('select');
+
+        
+              } else {
+                layer.msg("修改失败", {
+                  icon: 5
+                });
+              }
+            }
+          });
+          return false;
+         
+    
+
+/*         if (arr.includes(num)) {
+          $("#f_mission_game").html( '<option value="">全部游戏</option>'+
+            '<option value="3">王牌小丑</option>'+
+           ' <option value="2">三色龙珠</option>'+
+            '<option value="1">太上老君</option>'+
+            '<option value="1">神兽单挑</option>');
+        }else if (arr2.includes(num)) {
+          $("#f_mission_game").html( 
+            '<option value="3">王牌小丑</option>');
+        } */
+         
+
+      });
+
+      laydate.render({ //日期时间选择器
+        elem: '#f_opentime',
+        type: 'datetime'
+      });
+
+      laydate.render({
+        elem: '#f_closetime',
+        type: 'datetime'
+      });
       form.render(null, 'component-form-group');
 
-      $(document).on('click','#task-management',function(){
+      $(document).on('click', '#task-management', function() {
         layer.open({
-            //layer提供了5种层类型。可传入的值有：0（信息框，默认）1（页面层）2（iframe层）3（加载层）4（tips层）
-            type: 1,
-            title: "新建任务",
-            area: ['620px', '480px'],
-            content: $("#popUpdateTest") //引用的弹出层的页面层的方式加载修改界面表单
-          });
+          //layer提供了5种层类型。可传入的值有：0（信息框，默认）1（页面层）2（iframe层）3（加载层）4（tips层）
+          type: 1,
+          title: "新建任务",
+          area: ['620px', '480px'],
+          content: $("#popUpdateTest") //引用的弹出层的页面层的方式加载修改界面表单
         });
+      });
 
       //第一个实例
       table.render({
@@ -178,7 +309,7 @@
               title: '公告内容',
               align: 'center',
               width: 280
-            },{
+            }, {
               field: 'f_openday',
               title: '启用日期',
               width: 200,
@@ -224,7 +355,7 @@
                 return d.f_waitime + '秒';
               },
               width: 120
-            },  {
+            }, {
               fixed: 'right',
               width: 150,
               align: 'center',
@@ -287,17 +418,17 @@
             //layer提供了5种层类型。可传入的值有：0（信息框，默认）1（页面层）2（iframe层）3（加载层）4（tips层）
             type: 1,
             title: "编辑广告内容",
-            area: ['620px', '630px'],
+            area: ['620px', '830px'],
             content: $("#popUpdateTest") //引用的弹出层的页面层的方式加载修改界面表单
           });
 
           form.val("formUpdate", data);
           setFormValue(obj, data);
-          var stime = util.toDateString(data.f_opentime * 1000, "HH:mm:ss");//启用时间
-          var ctime = util.toDateString(data.f_closetime * 1000, "HH:mm:ss");//关闭时间
+          var stime = util.toDateString(data.f_opentime * 1000, "HH:mm:ss"); //启用时间
+          var ctime = util.toDateString(data.f_closetime * 1000, "HH:mm:ss"); //关闭时间
 
-          var sdate = util.toDateString(data.f_openday * 1000, "yyyy-MM-dd");//启用日期
-          var cdate = util.toDateString(data.f_closeday * 1000, "yyyy-MM-dd");//关闭日期
+          var sdate = util.toDateString(data.f_openday * 1000, "yyyy-MM-dd"); //启用日期
+          var cdate = util.toDateString(data.f_closeday * 1000, "yyyy-MM-dd"); //关闭日期
           laydate.render({
             elem: '#LAY-component-form-start-time',
             value: stime,
@@ -312,7 +443,7 @@
 
           laydate.render({
             elem: '#LAY-component-form-start-date',
-            value:sdate,
+            value: sdate,
             type: 'date'
           });
 
@@ -321,7 +452,7 @@
             value: cdate,
             type: 'date'
           });
-        
+
 
         } else if (layEvent === 'LAYTABLE_TIPS') {
           layer.alert('Hi，头部工具栏扩展的右侧图标。');
@@ -357,12 +488,12 @@
                   icon: 6
                 });
                 setTimeout(function() {
-                  function changetime(mytime){
+                  function changetime(mytime) {
                     var date = mytime;
-                      date = date.substring(0,19);    
-                      date = date.replace(/-/g,'/'); //必须把日期'-'转为'/'
-                      var timestamp = new Date(date).getTime()/1000;
-                      return timestamp;
+                    date = date.substring(0, 19);
+                    date = date.replace(/-/g, '/'); //必须把日期'-'转为'/'
+                    var timestamp = new Date(date).getTime() / 1000;
+                    return timestamp;
                   }
                   obj.update({
                     f_weights: massage.field.f_weights,
@@ -373,8 +504,8 @@
                     f_closetime: changetime(massage.field.f_closetime),
                     f_waitime: massage.field.f_waitime,
                   }); //修改成功修改表格数据不进行跳转 
- 
-             
+
+
                   layer.closeAll(); //关闭所有的弹出层
                   //window.location.href = "/edit/horse-info";
 
