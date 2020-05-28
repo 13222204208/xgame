@@ -38,7 +38,7 @@ Route::get('/set/user/power', function() {
 });//添加权限页面
 
 Route::post('add/role','UserManageController@addRole');//添加权限
-Route::post('add/newuser','UserManageController@addNewuser');//添加权限
+Route::post('add/newuser','UserManageController@addNewuser');//添加后台管理帐号
 
 //公会
 
@@ -120,6 +120,10 @@ Route::get('/edit/game/user', function() {
     return view('edit.game-user');
 });//游戏用户设置
 
+Route::get('/game/player/records', function() {
+    return view('game.player-records');
+});//客户查询记录
+
 //邮件
 Route::get('/create/mail', function() {
     return view('create.mail');
@@ -187,10 +191,14 @@ Route::get('/game/task-management', function() {
 });
 
 Route::post('/query/task/requirement','Game\TaskManagementController@taskRequirement');//任务条件
+Route::post('/create/game/task','Game\TaskManagementController@createGameTask');//创建游戏任务
+Route::get('/check/game/task','Game\TaskManagementController@checkGameTask');//查看所有游戏任务
+Route::post('/update/game/task','Game\TaskManagementController@updateGameTask');//更新游戏任务
+Route::post('/get/game/pay','Game\TaskManagementController@getGamePay');//获取游戏场次类型
 
 
 Route::post('/send/mail','Mail\SendMailController@sendMail');//邮件发送
 Route::get('/test','Mail\SendMailController@test');
 
-Route::post('admin/login','AdminLoginController@login');//后台登录
+Route::post('/admin/login','AdminLoginController@login');//后台登录
  

@@ -103,7 +103,7 @@ return [
             ]) : [],
         ],
 
-        'mysql_guild' => [//游戏公会
+        'mysql_game' => [//游戏后台
             'driver' => 'mysql',
             'url' => env('DATABASE_URL'),
             'host' => env('DB_HOST_GUILD', '127.0.0.1'),

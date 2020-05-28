@@ -33,7 +33,7 @@
         </div>
 
         <div class="layui-form-item" style="margin-bottom: 20px;">
-          <input type="checkbox" name="remember" lay-skin="primary" title="记住密码">
+          <input type="checkbox" lay-filter="remember" name="remember_user" id="remember_user" lay-skin="primary" title="记住密码">
 
         </div>
         <div class="layui-form-item">
@@ -62,28 +62,41 @@
 
   <script src="/layuiadmin/layui/layui.js"></script>
   <script src="/layuiadmin/layui/jquery3.2.js"></script>
-  <script> 
+  <script>
     layui.config({
       base: '/layuiadmin/'
     }).extend({
-      index: 'lib/index' 
-    }).use(['index', 'user'], function() {
+      index: 'lib/index'
+    }).use(['index', 'user', 'form','jquery'], function() {
 
       var form = layui.form;
+    
+      /*记住用户名和密码*/
+      if ($.cookie("remember_user")) {
+        console.log($.cookie("user_name"))
+        console.log($.cookie("user_password"))
+        $("#remember_user").prop("checked", true);
+        form.val("add_form", {
+          "username": $.cookie("user_name"),
+          "password": $.cookie("user_password")
+        })
+      }
+
+
       form.verify({
-                username: function(value){
-                    if(value.length < 6){
-                        return '用户名至少得6个字符啊';
-                    }
-                }, 
-                
-                password: function(value){
-                    if(value.length < 8){
-                        return '请输入至少8位';
-                    }
-                },
-                //phone: [/^1[3|4|5|7|8]\d{9}$/, '手机必须11位，只能是数字！'],
-                //email: [/^[a-z0-9._%-]+@([a-z0-9-]+\.)+[a-z]{2,4}$|^1[3|4|5|7|8]\d{9}$/, '邮箱格式不对']
+        username: function(value) {
+          if (value.length < 6) {
+            return '用户名至少得6个字符啊';
+          }
+        },
+
+        password: function(value) {
+          if (value.length < 8) {
+            return '请输入至少8位';
+          }
+        },
+        //phone: [/^1[3|4|5|7|8]\d{9}$/, '手机必须11位，只能是数字！'],
+        //email: [/^[a-z0-9._%-]+@([a-z0-9-]+\.)+[a-z]{2,4}$|^1[3|4|5|7|8]\d{9}$/, '邮箱格式不对']
       });
 
       var $ = layui.$,
@@ -97,45 +110,72 @@
 
       //提交
       form.on('submit(LAY-user-login-submit)', function(obj) {
-      
+        data = obj.field;
+        //勾选记住密码
+        if (data.remember_user == "on") {
+          var user_name = data.username;
+          var user_password = data.password;
+          $.cookie("remember_user", "true", {
+            expires: 7
+          }); // 存储一个带7天期限的 cookie
+          $.cookie("user_name", user_name, {
+            expires: 7
+          }); // 存储一个带7天期限的 cookie
+          $.cookie("user_password", user_password, {
+            expires: 7
+          }); // 存储一个带7天期限的 cookie
+        } else {
+          $.cookie("remember_user", "false", {
+            expires: -1
+          }); // 删除 cookie
+          $.cookie("user_name", '', {
+            expires: -1
+          });
+          $.cookie("user_password", '', {
+            expires: -1
+          });
+        }
+
         $.ajax({
-          headers: { 'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content') },
+          headers: {
+            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+          },
           url: "{{url('admin/login')}}",
           method: 'POST',
           data: obj.field,
           dataType: 'json',
           success: function(res) {
+            console.log(res);
             if (res.status == 200) {
-              layer.msg('登入成功',{
+              layer.msg('登入成功', {
                 offset: '15px',
                 icon: 1,
                 time: 1000
-              }, function(){
-                location.href= '/';
+              }, function() {
+                location.href = '/';
               })
-            }else if (res.status == 403) {
-              layer.msg('登录失败请确认用户密码',{
+            } else if (res.status == 403) {
+              layer.msg('登录失败请确认用户密码', {
                 offset: '15px',
                 icon: 1,
                 time: 3000
-              }, function(){
-                location.href= '/login';
+              }, function() {
+                location.href = '/login';
               })
             }
           },
           error: function(error) {
-            layer.msg('登录失败请确认信息',{
-                offset: '15px',
-                icon: 1,
-                time: 3000
-              }, function(){
-                location.href= '/login';
-              })
+            layer.msg('登录失败请确认信息', {
+              offset: '15px',
+              icon: 1,
+              time: 3000
+            }, function() {
+              location.href = '/login';
+            })
           }
         });
 
       });
-
 
     });
   </script>

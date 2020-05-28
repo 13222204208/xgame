@@ -132,15 +132,15 @@
             <li data-name="component" class="layui-nav-item">
               <a href="javascript:;" lay-tips="广告管理" lay-direction="2">
                 <i class="layui-icon layui-icon-component"></i>
-                <cite>广告管理</cite>
+                <cite>公告管理</cite>
               </a>
               <dl class="layui-nav-child">
 
                 <dd data-name="nav">
-                  <a lay-href="{{ url('/create/advert') }}">创建广告</a>
+                  <a lay-href="{{ url('/create/advert') }}">创建公告</a>
                 </dd>
                 <dd data-name="tabs">
-                  <a lay-href="{{ url('/edit/advert-info') }}">编辑广告</a>
+                  <a lay-href="{{ url('/edit/advert-info') }}">编辑公告</a>
                 </dd>
 
             </li>
@@ -178,7 +178,7 @@
 
             </li>
 
-            <li data-name="app" class="layui-nav-item">
+<!--             <li data-name="app" class="layui-nav-item">
               <a href="javascript:;" lay-tips="游玩记录" lay-direction="2">
                 <i class="layui-icon layui-icon-app"></i>
                 <cite>游玩记录</cite>
@@ -191,7 +191,7 @@
                 </dd>
 
               </dl>
-            </li>
+            </li> -->
 
             <li data-name="app" class="layui-nav-item">
               <a href="javascript:;" lay-tips="统计" lay-direction="2">
@@ -202,7 +202,7 @@
 
 
                 <dd>
-                  <a lay-href="app/message/index.html">账单</a>
+                  <a lay-href="/game/player/records">客户查询</a>
                 </dd>
 
               </dl>
@@ -212,7 +212,7 @@
                 <i class="layui-icon layui-icon-senior"></i>
                 <cite>游戏管理</cite>
               </a>
-              <dl class="layui-nav-child">
+<!--               <dl class="layui-nav-child">
                 <dd>
                   <a lay-href="">跑的快管理</a>
                 </dd>
@@ -222,7 +222,7 @@
                 <dd>
                   <a lay-href="">抢庄牛牛管理</a>
                 </dd>
-              </dl>
+              </dl> -->
 
          
 
@@ -271,7 +271,7 @@
                 <cite>任务管理</cite>
               </a>
             </li>
-
+<!-- 
             <li data-name="app" class="layui-nav-item ">
               <a lay-tips="" lay-tips="活动配置" lay-direction="2">
                 <i class="layui-icon layui-icon-app"></i>
@@ -297,15 +297,15 @@
                   <a lay-href="/game/index.php/Home/Huodong/ewai_list.html">额外奖励</a>
                 </dd>
               </dl>
-            </li>
+            </li> -->
 
-
+<!-- 
             <li data-name="user" class="layui-nav-item">
               <a href="javascript:;" lay-href="http://www.layui.com/admin/#get" lay-tips="客户流失" lay-direction="2">
                 <i class="layui-icon layui-icon-auz"></i>
                 <cite>客户流失</cite>
               </a>
-            </li>
+            </li> -->
 
             <li data-name="app" class="layui-nav-item">
               <a href="javascript:;" lay-tips="客服管理" lay-direction="2">
@@ -323,7 +323,7 @@
               </dl>
             </li>
 
-            <li data-name="set" class="layui-nav-item">
+<!--             <li data-name="set" class="layui-nav-item">
               <a href="javascript:;" lay-tips="设置" lay-direction="2">
                 <i class="layui-icon layui-icon-set"></i>
                 <cite>设置</cite>
@@ -344,7 +344,7 @@
                   </dl>
                 </dd>
               </dl>
-            </li>
+            </li> -->
             <li data-name="get" class="layui-nav-item">
               <a href="javascript:;" lay-href="{{ url('/create/mail') }}" lay-tips="发送邮件" lay-direction="2">
                 <i class="layui-icon layui-icon-auz"></i>

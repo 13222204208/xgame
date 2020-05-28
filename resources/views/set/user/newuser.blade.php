@@ -28,8 +28,8 @@
                   <select name="role" lay-verify="">
                     <option value="1" disabled>超级管理员</option>
                     <option value="普通管理员" selected>普通管理员</option>
-                    <option value="审核员" selected>审核员</option>
-                    <option value="编辑人员" selected>编辑人员</option>
+<!--                     <option value="审核员" selected>审核员</option>
+                    <option value="编辑人员" selected>编辑人员</option> -->
                   </select> 
                 </div>
 
