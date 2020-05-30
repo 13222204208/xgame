@@ -17,9 +17,9 @@ Route::get('/', function () {
     return view('index',['name' => session('username')]);
 });//主页
 
-Route::get('/console', function () {
+/* Route::get('/console', function () {
     return view('home.console');
-});//控制台
+}); */
 
 Route::get('/login', function () {
     return view('user.login');
@@ -139,6 +139,10 @@ Route::get('/create/FAQ', function() {
 });//创建常见问题页面
 Route::post('/create/question/type','Game\FAQController@createQtype');//创建问题类型
 Route::get('/get/question/type','Game\FAQController@getQtype');//创建问题类型
+Route::get('/get/game/question/{tid}','Game\FAQController@getQuestion');//查询问题
+Route::post('/add/question/answer','Game\FAQController@addQAnswer');//添加问题及答案
+Route::get('/del/question','Game\FAQController@delQuestion');//删除问题
+Route::post('/update/question','Game\FAQController@updateQuestion');//更新问题
 
 //邮件
 Route::get('/create/mail', function() {

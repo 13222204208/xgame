@@ -105,9 +105,9 @@
 
 
       <div class="layui-form-item">
-        <label class="layui-form-label">任务次数</label>
+        <label class="layui-form-label">任务数量</label>
         <div class="layui-input-block">
-          <input type="number" name="f_mission_count" required lay-verify="required" autocomplete="off" placeholder="请输入任务次数" class="layui-input">
+          <input type="number" name="f_mission_count" required lay-verify="required" autocomplete="off" placeholder="请输入任务数量" class="layui-input">
         </div>
       </div>
 
@@ -182,9 +182,9 @@
 
 
       <!--       <div class="layui-form-item">
-        <label class="layui-form-label">任务次数</label>
+        <label class="layui-form-label">任务数量</label>
         <div class="layui-input-block">
-          <input type="number" name="f_mission_count" required lay-verify="required" autocomplete="off" placeholder="请输入任务次数" class="layui-input">
+          <input type="number" name="f_mission_count" required lay-verify="required" autocomplete="off" placeholder="请输入任务数量" class="layui-input">
         </div>
       </div> -->
 
@@ -435,7 +435,7 @@
               sort: true
             }, {
               field: 'f_mission_count',
-              title: '任务次数',
+              title: '任务数量',
               width: 110,
               align: 'center',
               sort: true
