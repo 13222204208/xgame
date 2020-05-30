@@ -94,11 +94,6 @@
               title: '创建时间',
               align: 'center',
               width: 180
-            }, {
-              field: '',
-              title: '玩家总充值',
-              align: 'center',
-              width: 180,
             }
           ]
          
