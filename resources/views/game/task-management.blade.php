@@ -470,7 +470,7 @@
               },
               sort: true
             }, {
-              field: 'f_mission_consume',
+              field: 'f_bottom_point',
               title: '场次类型',
               width: 130,
               align: 'center',
@@ -479,32 +479,8 @@
                 if (d.f_mission_consume === 0) {
                   return "全部场次";
                 } else {
-             function getData(){    
-                 
-                  $.ajax({
-                    headers: {
-                      'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-                    },
-                    async:false,
-                    url: "{{url('/get/game/pay')}}",
-                    type: 'post',
-                    data: {id:d.f_mission_consume},
-                    success: function(msg) {
-                
-                      console.log(msg);
-                      // return false;
-                      if (msg.status == 200) {
-                       pay=  msg.f_mission_consume+"元场";
-                      return pay;
-
-                      } else {
-                        return "error";
-                      }
-                    }
-                  })
-                  
-           
-            } 
+                  return d.f_bottom_point+"元场";
+        
 
                 }
               },

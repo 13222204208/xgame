@@ -215,7 +215,7 @@ Route::post('/query/task/requirement','Game\TaskManagementController@taskRequire
 Route::post('/create/game/task','Game\TaskManagementController@createGameTask');//创建游戏任务
 Route::get('/check/game/task','Game\TaskManagementController@checkGameTask');//查看所有游戏任务
 Route::post('/update/game/task','Game\TaskManagementController@updateGameTask');//更新游戏任务
-Route::post('/get/game/pay','Game\TaskManagementController@getGamePay');//获取游戏场次类型
+/* Route::get('/get/game/pay','Game\TaskManagementController@getGamePay');//获取游戏场次类型 */
 
 
 Route::post('/send/mail','Mail\SendMailController@sendMail');//邮件发送

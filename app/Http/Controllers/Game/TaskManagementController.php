@@ -101,7 +101,8 @@ class TaskManagementController extends Controller
     function checkGameTask(Request $request)//查看所有任务
     {
         $limit= $request->get('limit');
-        $data=  DB::table('mission_template')->paginate($limit);
+       // $data=  DB::table('mission_template')->paginate($limit);
+        $data= DB::table('mission_template')->leftJoin('consume_config','consume_config.f_consume_id','=','mission_template.f_mission_consume')->paginate($limit);
         return $data;
     }
 
@@ -144,17 +145,18 @@ class TaskManagementController extends Controller
         }
     }
 
-    public function getGamePay(Request $request)
+/*     public function getGamePay(Request $request)
     {
-        if ($request->ajax()) {
-            $id = intval($request->input('id'));
+        //if ($request->ajax()) {
+          //  $id = intval($request->input('id'));
+          $id= intval($request->id);
             //return response()->json(['status'=>200,'f_mission_consume'=>$id]);
-            $f_mission_consume= DB::table('consume_config')->where('f_consume_id',$id)->value('f_bottom_point');
-          //  if ($f_mission_consume) {
-                return response()->json(['status'=>200,'f_mission_consume'=>$f_mission_consume]);
-          /*   }else{
+            $f_bottom_point= DB::table('consume_config')->where('f_consume_id',$id)->value('f_bottom_point');
+           if ($f_bottom_point) {
+                return response()->json(['status'=>200,'f_bottom_point'=>$f_bottom_point]);
+             }else{
                 return response()->json(['status'=>403]);
-            } */
-        }
-    }
+            } 
+       // }
+    } */
 }
