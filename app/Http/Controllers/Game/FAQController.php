@@ -69,6 +69,18 @@ class FAQController extends Controller
         }
     }
 
+    public function delQType(Request $request)//删除一个问题类型
+    {
+        $type= $request->type;
+        $state= DB::table('customerservice_config')->where('f_type','=',$type)->delete();
+        $status = DB::table('customerservice_tag')->where('f_type',$type)->delete();
+        if ($status) {
+            return response()->json(['status'=>200]);
+        }else{
+            return response()->json(['status'=>403]);
+        }
+    }
+
     public function updateQuestion(Request $request)
     {
         if ($request->ajax()) {
@@ -76,10 +88,11 @@ class FAQController extends Controller
             $f_question = $request->input('f_question');
             $f_answer = $request->input('f_answer');
 
-            $state= DB::table('customerservice_tag')->where('f_id',$f_id)->update([
+            $state= DB::table('customerservice_config')->where('f_id',$f_id)->update([
                 'f_question'=>$f_question,
                 'f_answer'=>$f_answer
             ]);
+
 
             if ($state) {
                 return response()->json(['status'=>200]);

@@ -143,6 +143,7 @@ Route::get('/get/game/question/{tid}','Game\FAQController@getQuestion');//查询
 Route::post('/add/question/answer','Game\FAQController@addQAnswer');//添加问题及答案
 Route::get('/del/question','Game\FAQController@delQuestion');//删除问题
 Route::post('/update/question','Game\FAQController@updateQuestion');//更新问题
+Route::get('/del/question/type','Game\FAQController@delQType');//删除问题类型
 
 //邮件
 Route::get('/create/mail', function() {

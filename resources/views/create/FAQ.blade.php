@@ -29,7 +29,7 @@
                 </div>
 
               </div><br>
-              <div class="layui-form-item" style="width:420px" >
+              <div class="layui-form-item" style="width:620px" >
                 <label class="layui-form-label">问题类型</label>
                 <div class="layui-input-inline">
                   <select name="qtype" lay-verify="required" id="insertData" lay-filter="qtypename">
@@ -38,11 +38,12 @@
                   
                 </div>
                <button class="layui-btn" lay-filter="createQtype" id="newQuestion">新建问题</button>
+               <button class="layui-btn" lay-filter="delQtype" id="delQtype" style="background:#FFC0CB;">删除问题类型</button>
               </div>
               <table id="demo" lay-filter="test"></table>
               <script type="text/html" id="barDemo">
 
-    <a class="layui-btn layui-btn-xs" lay-event="edit">编辑</a>
+    <a class="layui-btn layui-btn-xs" lay-event="edit">修改</a>
     <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="del">删除</a>
   </script>
             </div>
@@ -80,7 +81,7 @@
   </div>
 
   <div class="layui-row" id="createQuestion" style="display:none;">
-    <form class="layui-form layui-from-pane" required lay-verify="required" lay-filter="cquerstion" lay-filter="updateTask" style="margin:20px">
+    <form class="layui-form layui-from-pane" required lay-verify="required" lay-filter="cquerstion" lay-filter="update" style="margin:20px">
 
 
       <div class="layui-form-item">
@@ -111,7 +112,7 @@
   </div>
 
   <div class="layui-row" id="editQuesAnswer" style="display:none;">
-    <form class="layui-form layui-from-pane" required lay-verify="required"  lay-filter="updateTask" style="margin:20px">
+    <form class="layui-form layui-from-pane" required lay-verify="required"  lay-filter="updateQues" style="margin:20px">
 
 
       <div class="layui-form-item">
@@ -309,6 +310,47 @@
 
       });
 
+      $(document).on('click', '#delQtype', function() {
+       var qtype= $("select[name='qtype'] option:selected").val();
+        if (qtype != "") {
+          layer.confirm('真的删除这个问题类型么', function(index) {
+                    $.ajax({
+                      url: "{{url('/del/question/type')}}",
+                      type: 'get',
+                      datatype: 'json',
+                      data: {
+                        'type': qtype
+                      }, //向服务端发送删除的id
+                      success: function(res) {
+                        console.log(res);
+                        if (res.status == 200) {
+                         
+                          layer.msg("删除成功", {
+                            icon: 1
+                          });
+                          window.location.href="/create/FAQ"
+                        } else {
+                          layer.msg("删除失败", {
+                            icon: 5
+                          });
+                        }
+                      }
+                    });
+                    layer.close(index);
+                    //向服务端发送删除指令
+                  });
+        }else{
+          layer.msg("请先选择问题类型", {
+                icon: 2
+              });
+              setTimeout(function() {
+                layer.closeAll(); //关闭所有的弹出层
+                //window.location.href = "/create/FAQ";
+              }, 1000);
+        }
+
+      });
+
       form.on('submit(referQuestion)', function(data) {
         
         data = data.field;
@@ -395,7 +437,7 @@
             content: $("#editQuesAnswer") //引用的弹出层的页面层的方式加载修改界面表单
           });
           // console.log(data);
-          form.val("updateTask", data);
+          form.val("updateQues", data);
           setFormValue(obj, data);
 
         
@@ -410,19 +452,19 @@
          
          updateData= massage.field;
          updateData.f_id = data.f_id;
-         console.log(updateData);return false;
-          updateData = massage.field;
-          // console.log(updateData); return false;
+    
+           //console.log(updateData); return false;
           $.ajax({
             headers: {
-              'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-            },
+						'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+					},
             url: "{{url('/update/question')}}",
             type: 'post',
             data: updateData,
             success: function(msg) {
               console.log(msg);
-              if (msg == '{"status":200}') {
+             
+              if (msg.status == 200) {
                 layer.closeAll('loading');
                 layer.load(2);
                 layer.msg("修改成功", {
@@ -430,10 +472,14 @@
                 });
                 setTimeout(function() {
 
-                  layer.closeAll(); //关闭所有的弹出层
-                  window.location.href = "/game/task-management";
+                  obj.update({
+                    f_answer: massage.field.f_answer,
+                    f_question: massage.field.f_question
+                  });
 
-                }, 2000);
+                  layer.closeAll(); //关闭所有的弹出层
+                 
+                }, 1000);
 
               } else {
                 layer.msg("修改失败", {
