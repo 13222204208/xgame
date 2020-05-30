@@ -2,10 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
+use App\User;
 
 use App\Power;
-use App\User;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class UserManageController extends Controller
 {
@@ -59,5 +60,14 @@ class UserManageController extends Controller
         }else{
             return response()->json(['status' => 403]);
         }
+    }
+
+    public function getBackUsers(Request $request)
+    {
+       
+        $limit = $request->get('limit');
+        $data= DB::table('users')->where('id','!=',1)->paginate($limit);
+ 
+        return $data;
     }
 }

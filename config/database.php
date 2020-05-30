@@ -103,15 +103,15 @@ return [
             ]) : [],
         ],
 
-        'mysql_game' => [//游戏后台
+        'mysql_logs' => [//游戏玩家记录
             'driver' => 'mysql',
             'url' => env('DATABASE_URL'),
-            'host' => env('DB_HOST_GUILD', '127.0.0.1'),
-            'port' => env('DB_PORT_GUILD', '3306'),
-            'database' => env('DB_DATABASE_GUILD', 'forge'),
-            'username' => env('DB_USERNAME_GUILD', 'forge'),
-            'password' => env('DB_PASSWORD_GUILD', ''),
-            'unix_socket' => env('DB_SOCKET_GUILD', ''),
+            'host' => env('DB_HOST_LOGS', '127.0.0.1'),
+            'port' => env('DB_PORT_LOGS', '3306'),
+            'database' => env('DB_DATABASE_LOGS', 'forge'),
+            'username' => env('DB_USERNAME_LOGS', 'forge'),
+            'password' => env('DB_PASSWORD_LOGS', ''),
+            'unix_socket' => env('DB_SOCKET_LOGS', ''),
             'charset' => 'utf8mb4',
             'collation' => 'utf8mb4_unicode_ci',
             'prefix' => env('DB_PREFIX', ''),

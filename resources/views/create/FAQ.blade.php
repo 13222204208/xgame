@@ -1,184 +1,56 @@
+
+
 <!DOCTYPE html>
 <html>
-
 <head>
   <meta charset="utf-8">
+  <title>常见问题</title>
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <meta name="csrf-token" content="{{ csrf_token() }}">
-  <title>任务管理</title>
-  <link rel="stylesheet" href="/layuiadmin/layui/css/layui.css" media="all">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0">
+  <link rel="stylesheet" href="{{ asset('layuiadmin/layui/css/layui.css') }}" media="all">
+  <link rel="stylesheet" href="{{ asset('layuiadmin/style/admin.css') }}" media="all">
 </head>
-
 <body>
-  <div class="layui-fluid">
+
+<div class="layui-fluid">
     <div class="layui-row layui-col-space15">
       <div class="layui-col-md12">
         <div class="layui-card">
-
+          
           <div class="layui-card-body" pad15>
 
             <div class="layui-form" lay-filter="">
               <div class="layui-card-body">
                 <div class="layui-upload">
-                  <button type="button" class="layui-btn" id="task-management">新建任务</button>
-
+                  <button type="button" class="layui-btn" id="FAQ">新建类型</button>
+   
                 </div>
 
-              </div>
+              </div><br>
+              <div class="layui-form-item" style="width:220px">
+    <label class="layui-form-label">问题类型</label>
+    <div class="layui-input-block">
+      <select name="qtype" lay-verify="required" id="insertData">
+        <option value=""></option>
+      </select>
+    </div>
+  </div>
 
             </div>
+
 
           </div>
         </div>
       </div>
     </div>
   </div>
-  <table id="demo" lay-filter="test"></table>
-
-  <script type="text/html" id="barDemo">
-    <a class="layui-btn layui-btn-xs" lay-event="edit">编辑</a>
-    <!--   <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="del">删除</a> -->
-  </script>
-
-  <div class="layui-row" id="popCreateTask" style="display:none;">
-    <form class="layui-form layui-from-pane" required lay-verify="required" style="margin:20px">
-
-      <div class="layui-form-item">
-        <label class="layui-form-label">任务描述</label>
-        <div class="layui-input-block">
-          <input type="text" name="f_mission_content" required lay-verify="required" autocomplete="off" placeholder="请输入任务描述" value="无" class="layui-input">
-        </div>
-      </div>
-
-      <div class="layui-form-item">
-        <label class="layui-form-label">任务条件</label>
-        <div class="layui-input-inline">
-          <select name="f_mission_event" required id="f_mission_event">
-            <option value="0">请选择条件</option>
-            <option value="1">压注次数</option>
-            <option value="2">赢分</option>
-            <option value="3">押注金额</option>
-            <option value="4">洗码量获得</option>
-            <option value="5">小四条以上牌型</option>
-            <option value="6">正宗小四条以上</option>
-          </select>
-        </div>
-
-      </div>
 
 
+  <div class="layui-row" id="createFAQ" style="display:none;">
+    <form class="layui-form layui-from-pane" required lay-verify="required" lay-filter="qtype" lay-filter="updateTask" style="margin:20px">
 
-      <div class="layui-form-item">
-        <label class="layui-form-label">场次类型</label>
-        <div class="layui-input-block">
-          <select name="f_bottom_point" required lay-filter="f_bottom_point">
-            <option value="0">全部场次</option>
-            <option value="1">1元场</option>
-            <option value="5">5元场</option>
-            <option value="10">10元场</option>
-            <option value="20">20元场</option>
-            <option value="50">50元场</option>
-            <option value="100">100元场</option>
-
-          </select>
-        </div>
-      </div>
-
-      <div class="layui-form-item">
-        <label class="layui-form-label">对应游戏</label>
-        <div class="layui-input-block">
-          <select name="f_mission_game" required>
-            <option value="">请选择游戏</option>
-          </select>
-        </div>
-      </div>
-
-
-
-
-
-      <div class="layui-form-item">
-        <label class="layui-form-label">任务权重</label>
-        <div class="layui-input-block">
-          <input type="number" name="f_mission_weight" required lay-verify="required" autocomplete="off" placeholder="请输入任务权重" class="layui-input">
-        </div>
-      </div>
-
-
-      <div class="layui-form-item">
-        <label class="layui-form-label">任务次数</label>
-        <div class="layui-input-block">
-          <input type="number" name="f_mission_count" required lay-verify="required" autocomplete="off" placeholder="请输入任务次数" class="layui-input">
-        </div>
-      </div>
-
-
-      <div class="layui-form-item">
-        <label class="layui-form-label">任务奖励</label>
-        <div class="layui-input-block">
-          <input type="number" name="f_mission_reward" required lay-verify="required" autocomplete="off" placeholder="请输入奖励金额" class="layui-input">
-        </div>
-      </div>
-
-      <div class="layui-form-item">
-        <label class="layui-form-label">是否每日刷新</label>
-        <div class="layui-input-block">
-          <input type="checkbox" checked required lay-verify="required" name="f_mission_day_refresh" lay-skin="switch" lay-filter="switchTest" lay-text="是|否">
-        </div>
-      </div>
-
-      <div class="layui-form-item">
-        <div class="layui-inline">
-          <label class="layui-form-label">启用时间</label>
-          <div class="layui-input-inline">
-            <input type="text" class="layui-input" required lay-verify="required" name='f_mission_start_time' id="f_opentime" placeholder="yyyy-MM-dd HH:mm:ss">
-          </div>
-        </div>
-      </div>
-      <div class="layui-form-item">
-        <div class="layui-inline">
-          <label class="layui-form-label">关闭时间</label>
-          <div class="layui-input-inline">
-            <input type="text" class="layui-input" required lay-verify="required" name='f_mission_close_time' id="f_closetime" placeholder="yyyy-MM-dd HH:mm:ss">
-          </div>
-        </div>
-      </div>
-
-      <div class="layui-form-item">
-        <label class="layui-form-label">任务状态</label>
-        <div class="layui-input-block">
-          <input type="checkbox" checked required lay-verify="required" name="f_mission_state" lay-skin="switch" lay-text="开启|关闭">
-        </div>
-      </div>
-
-
-      <div class="layui-form-item ">
-        <div class="layui-input-block">
-          <div class="layui-footer" style="left: 0;">
-            <button class="layui-btn" lay-submit="" lay-filter="createTask">立即提交</button>
-            <button type="reset" class="layui-btn layui-btn-primary">重置</button>
-          </div>
-        </div>
-      </div>
-    </form>
-  </div>
-
-
-  <div class="layui-row" id="popUpdateTask" style="display:none;">
-    <form class="layui-form layui-from-pane" required lay-verify="required" lay-filter="updateTask" style="margin:20px">
-
-      <div class="layui-form-item">
-        <label class="layui-form-label">任务描述</label>
-        <div class="layui-input-block">
-          <input type="text" name="f_mission_content" required lay-verify="required" autocomplete="off" placeholder="请输入任务描述" value="无" class="layui-input">
-        </div>
-      </div>
-
-      <div class="layui-form-item">
-        <label class="layui-form-label">任务权重</label>
-        <div class="layui-input-block">
-          <input type="number" name="f_mission_weight" required lay-verify="required" autocomplete="off" placeholder="请输入任务权重" class="layui-input">
-        </div>
-      </div>
 
 
       <!--       <div class="layui-form-item">
@@ -190,48 +62,18 @@
 
 
       <div class="layui-form-item">
-        <label class="layui-form-label">任务奖励</label>
+        <label class="layui-form-label">类型名称</label>
         <div class="layui-input-block">
-          <input type="number" name="f_mission_reward" required lay-verify="required" autocomplete="off" placeholder="请输入奖励金额" class="layui-input">
+          <input type="text" name="f_title" required lay-verify="qtype" autocomplete="off" placeholder="请输入类型名称" class="layui-input">
         </div>
       </div>
 
-      <div class="layui-form-item">
-        <label class="layui-form-label">是否每日刷新</label>
-        <div class="layui-input-block">
-          <input type="checkbox" checked="" required lay-verify="required" name="f_mission_day_refresh" lay-skin="switch" id="taskRefresh" lay-filter="switchTest" lay-text="是|否">
-        </div>
-      </div>
-
-      <div class="layui-form-item">
-        <div class="layui-inline">
-          <label class="layui-form-label">启用时间</label>
-          <div class="layui-input-inline">
-            <input type="text" class="layui-input" required lay-verify="required" name='f_mission_start_time' id="f_mission_start_time" placeholder="yyyy-MM-dd HH:mm:ss">
-          </div>
-        </div>
-      </div>
-      <div class="layui-form-item">
-        <div class="layui-inline">
-          <label class="layui-form-label">关闭时间</label>
-          <div class="layui-input-inline">
-            <input type="text" class="layui-input" required lay-verify="required" name='f_mission_close_time' id="f_mission_close_time" placeholder="yyyy-MM-dd HH:mm:ss">
-          </div>
-        </div>
-      </div>
-
-      <div class="layui-form-item">
-        <label class="layui-form-label">任务状态</label>
-        <div class="layui-input-block">
-          <input type="checkbox" checked="" required lay-verify="required" name="f_mission_state" lay-skin="switch" id="taskState" lay-text="开启|关闭">
-        </div>
-      </div>
 
 
       <div class="layui-form-item ">
         <div class="layui-input-block">
           <div class="layui-footer" style="left: 0;">
-            <button class="layui-btn" lay-submit="" lay-filter="updateOneTask">立即提交</button>
+            <button class="layui-btn" lay-submit="" lay-filter="createQtype">立即提交</button>
             <button type="reset" class="layui-btn layui-btn-primary">重置</button>
           </div>
         </div>
@@ -240,36 +82,92 @@
   </div>
 
 
-
-
-  <script src="/layuiadmin/layui/layui.js"></script>
+    
+  <script src="/layuiadmin/layui/layui.js"></script>  
   <script src="/layuiadmin/layui/jquery3.2.js"></script>
   <script>
-    layui.use(['table', 'form', 'laydate', 'util', 'jquery'], function() {
+   layui.use(['table', 'form', 'laydate', 'util', 'jquery'], function() {
       var table = layui.table;
       var laydate = layui.laydate;
       var form = layui.form;
       var util = layui.util;
       var $ = layui.jquery;
-      /* 
-            form.on('select(f_mission_event)', function(data) {
-              let num= Number(data.value);
-              let arr = [1,2,3,4];
-              let arr2 = [5,6];
 
-              if (arr.includes(num)) {
-                $("#f_mission_game").html( '<option value="">全部游戏</option>'+
-                  '<option value="3">王牌小丑</option>'+
-                 ' <option value="2">三色龙珠</option>'+
-                  '<option value="1">太上老君</option>'+
-                  '<option value="1">神兽单挑</option>');
-              }else if (arr2.includes(num)) {
-                $("#f_mission_game").html( 
-                  '<option value="3">王牌小丑</option>');
-              }
-                form.render('select'); 
+      $(document).on('click', '#FAQ', function() {
+        layer.open({
+          //layer提供了5种层类型。可传入的值有：0（信息框，默认）1（页面层）2（iframe层）3（加载层）4（tips层）
+          type: 1,
+          title: "新建类型",
+          area: ['620px', '200px'],
+          content: $("#createFAQ") //引用的弹出层的页面层的方式加载修改界面表单
+        });
+      });
 
-            }); */
+      form.verify({
+        qtype:function(value){
+          if (value.length > 4) {
+              return "不能大于四个字符";
+          }
+        }
+      });
+
+      form.on('submit(createQtype)', function(data) {
+
+
+        qtype = data.field;
+        console.log(qtype);
+        $.ajax({
+          headers: {
+            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+          },
+          url: "{{url('/create/question/type')}}",
+          type: 'post',
+          data: qtype,
+          success: function(msg) {
+            console.log(msg);
+            // return false;
+            if (msg.status ==200) {
+  
+              layer.msg("新建成功", {
+                icon: 6
+              });
+              setTimeout(function() {
+                layer.closeAll(); //关闭所有的弹出层
+                window.location.href = "/create/FAQ";
+              }, 2000);
+
+            } else {
+              layer.msg("新建失败", {
+                icon: 5
+              });
+            }
+          }
+        })
+        return false;
+      });
+
+     
+			$.ajax({
+				headers: {
+					'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+				},
+				url: "{{url('/get/question/type')}}",
+				method: 'get',
+
+				success: function(res) {
+					console.log(res);
+					$.each(res, function(i, t) {
+          //  $("#insertData").append('1');
+					 	$("#insertData").append('<option value="'+t.f_type+'">'+t.f_title+'</option>'); 
+					});
+
+				},
+
+			});
+
+      return false;
+   
+  
 
       form.on('select(f_bottom_point)', function(data) {
         let req = Number(data.value);
@@ -291,9 +189,7 @@
             res = msg.game;
             if (status == 200) {
 
-              /*                 $.each(res, function(i, t) {
-                          $("#f_mission_game").append('<option value="'+t.f_room_type+'">'+t.f_room_type+'</option>');        
-                        }); */
+            
               options = "";
               game = "";
               for (var i = 0; i < res.length; i++) {
@@ -337,72 +233,11 @@
 
       });
 
-      form.on('submit(createTask)', function(data) {
-        if (data.field.f_mission_day_refresh == "on") { //每日刷新
-          data.field.f_mission_day_refresh = 1;
-        } else {
-          data.field.f_mission_day_refresh = 2;
-        }
 
-        if (data.field.f_mission_state == "on") { //任务状态
-          data.field.f_mission_state = 1;
-        } else {
-          data.field.f_mission_state = 2;
-        }
 
-        task = data.field;
-        console.log(task);
-        $.ajax({
-          headers: {
-            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-          },
-          url: "{{url('/create/game/task')}}",
-          type: 'post',
-          data: task,
-          success: function(msg) {
-            console.log(msg);
-            // return false;
-            if (msg == '{"status":200}') {
-              layer.closeAll('loading');
-              layer.load(2);
-              layer.msg("新建成功", {
-                icon: 6
-              });
-              setTimeout(function() {
-                layer.closeAll(); //关闭所有的弹出层
-                window.location.href = "/game/task-management";
-              }, 2000);
 
-            } else {
-              layer.msg("新建失败", {
-                icon: 5
-              });
-            }
-          }
-        })
-        return false;
-      });
 
-      laydate.render({ //日期时间选择器
-        elem: '#f_opentime',
-        type: 'datetime'
-      });
 
-      laydate.render({
-        elem: '#f_closetime',
-        type: 'datetime'
-      });
-      form.render(null, 'component-form-group');
-
-      $(document).on('click', '#task-management', function() {
-        layer.open({
-          //layer提供了5种层类型。可传入的值有：0（信息框，默认）1（页面层）2（iframe层）3（加载层）4（tips层）
-          type: 1,
-          title: "新建任务",
-          area: ['620px', '780px'],
-          content: $("#popCreateTask") //引用的弹出层的页面层的方式加载修改界面表单
-        });
-      });
 
       //第一个实例
       table.render({
@@ -737,7 +572,7 @@
       }
 
     });
+
   </script>
 </body>
-
 </html>

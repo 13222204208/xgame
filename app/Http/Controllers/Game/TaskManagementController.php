@@ -150,11 +150,11 @@ class TaskManagementController extends Controller
             $id = intval($request->input('id'));
             //return response()->json(['status'=>200,'f_mission_consume'=>$id]);
             $f_mission_consume= DB::table('consume_config')->where('f_consume_id',$id)->value('f_bottom_point');
-            if ($f_mission_consume) {
+          //  if ($f_mission_consume) {
                 return response()->json(['status'=>200,'f_mission_consume'=>$f_mission_consume]);
-            }else{
+          /*   }else{
                 return response()->json(['status'=>403]);
-            }
+            } */
         }
     }
 }

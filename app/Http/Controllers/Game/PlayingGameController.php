@@ -176,4 +176,32 @@ class PlayingGameController extends Controller
             
         }
     }
+
+    public function queryPlayerRecords(Request $request ,$f_role_id, $f_account_id, $tname)//查询客户游玩记录
+    {
+        
+            $limit = $request->get('limit');
+            //$f_account_id = $request->input('f_account_id');
+            if ($f_role_id =="not" && $f_account_id =="not") {
+                return response()->json(['status'=>403]);
+            }
+          
+            $tname = 'game_money_dot_'.$tname;
+            if ($f_account_id != "not") {
+                $role_id = $f_account_id << 4 | 1;  //帐号id左移4位或1等于角色id
+            }else{
+                $role_id = $f_role_id;
+            }
+           
+            $data= DB::connection('mysql_logs')->table($tname)->where('f_role_id',$role_id)->paginate($limit);
+            return $data;
+/*             if ($data) {
+                $data = json_encode($data);
+                return response()->json(['status'=>200,'data'=>$data]);
+            }else{
+                return response()->json(['status'=>403]);
+            } */
+           
+   
+    }
 }

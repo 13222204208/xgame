@@ -54,6 +54,11 @@
       </div>
     </div>
   </div>
+
+
+  <table id="demo" lay-filter="test"></table>
+
+
   <script src="/layuiadmin/layui/layui.js"></script>
   <script src="/layuiadmin/layui/jquery3.2.js"></script>
   <script> 
@@ -61,9 +66,58 @@
       base: '/layuiadmin/'
     }).extend({
       index: 'lib/index' 
-    }).use(['index', 'user'], function() {
+    }).use(['index', 'user','table'], function() {
 
       var form = layui.form;
+
+      var table = layui.table;
+
+
+      //第一个实例
+      table.render({
+        elem: '#demo',
+        height: 600,
+        url: "{{url('/get/back/users')}}" //数据接口
+          ,
+        page: true //开启分页
+          ,
+        cols: [
+          [ //表头
+            {
+              field: 'username',
+              title: '管理员用户名',
+              width: 280,
+              align: 'center',
+              sort: true
+            }, {
+              field: 'created_at',
+              title: '创建时间',
+              align: 'center',
+              width: 180
+            }, {
+              field: '',
+              title: '玩家总充值',
+              align: 'center',
+              width: 180,
+            }
+          ]
+         
+        ],  
+        parseData: function(res) { //res 即为原始返回的数据
+          console.log(res);
+          return {
+            "code": '0', //解析接口状态
+            "msg": res.message, //解析提示文本
+            "count": res.total, //解析数据长度
+            "data": res.data //解析数据列表
+          }
+        },
+        toolbar: '#toolbarDemo',
+        title: '后台广告管理',
+        totalRow: true
+
+      });
+
       form.verify({
 
                 

@@ -22,6 +22,7 @@
       <div class="layadmin-user-login-box layadmin-user-login-header">
         <h2>游戏平台管理</h2>
       </div>
+      <form class="layui-form" lay-filter="add_form" >
       <div class="layadmin-user-login-box layadmin-user-login-body layui-form">
         <div class="layui-form-item">
           <label class="layadmin-user-login-icon layui-icon layui-icon-username" for="LAY-user-login-username"></label>
@@ -37,10 +38,11 @@
 
         </div>
         <div class="layui-form-item">
-          <button id='hide' class="layui-btn layui-btn-fluid" lay-submit lay-filter="LAY-user-login-submit">登 入</button>
+          <button id='hide' class="layui-btn layui-btn-fluid" lay-submit="" lay-filter="LAY-user-login-submit">登 入</button>
         </div>
 
       </div>
+      </form>
     </div>
 
 
@@ -60,8 +62,9 @@
 
   </div>
 
-  <script src="/layuiadmin/layui/layui.js"></script>
+  <script src="/layuiadmin/layui/layui.all.js"></script>
   <script src="/layuiadmin/layui/jquery3.2.js"></script>
+  <script src="/layuiadmin/layui/jquery.cookie.js"></script>
   <script>
     layui.config({
       base: '/layuiadmin/'
@@ -70,6 +73,7 @@
     }).use(['index', 'user', 'form','jquery'], function() {
 
       var form = layui.form;
+      var $= layui.jquery;
     
       /*记住用户名和密码*/
       if ($.cookie("remember_user")) {
@@ -111,30 +115,8 @@
       //提交
       form.on('submit(LAY-user-login-submit)', function(obj) {
         data = obj.field;
-        //勾选记住密码
-        if (data.remember_user == "on") {
-          var user_name = data.username;
-          var user_password = data.password;
-          $.cookie("remember_user", "true", {
-            expires: 7
-          }); // 存储一个带7天期限的 cookie
-          $.cookie("user_name", user_name, {
-            expires: 7
-          }); // 存储一个带7天期限的 cookie
-          $.cookie("user_password", user_password, {
-            expires: 7
-          }); // 存储一个带7天期限的 cookie
-        } else {
-          $.cookie("remember_user", "false", {
-            expires: -1
-          }); // 删除 cookie
-          $.cookie("user_name", '', {
-            expires: -1
-          });
-          $.cookie("user_password", '', {
-            expires: -1
-          });
-        }
+        console.log(data);
+
 
         $.ajax({
           headers: {
@@ -174,6 +156,32 @@
             })
           }
         });
+
+                //勾选记住密码
+                if (data.remember_user == "on") {
+          var user_name = data.username;
+          var user_password = data.password;
+          $.cookie("remember_user", "true", {
+            expires: 7
+          }); // 存储一个带7天期限的 cookie
+          $.cookie("user_name", user_name, {
+            expires: 7
+          }); // 存储一个带7天期限的 cookie
+          $.cookie("user_password", user_password, {
+            expires: 7
+          }); // 存储一个带7天期限的 cookie
+        } else {
+          $.cookie("remember_user", "false", {
+            expires: -1
+          }); // 删除 cookie
+          $.cookie("user_name", '', {
+            expires: -1
+          });
+          $.cookie("user_password", '', {
+            expires: -1
+          });
+        }
+        return false;
 
       });
 

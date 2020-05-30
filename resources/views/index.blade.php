@@ -207,6 +207,15 @@
 
               </dl>
             </li>
+
+            
+            <li data-name="get" class="layui-nav-item">
+              <a href="javascript:;" lay-href="{{ url('/clients/loss ') }}" lay-tips="客户流失" lay-direction="2">
+                <i class="layui-icon layui-icon-auz"></i>
+                <cite>客户流失</cite>
+              </a>
+            </li>
+
             <li data-name="senior" class="layui-nav-item">
               <a href="javascript:;" lay-tips="游戏管理" lay-direction="2">
                 <i class="layui-icon layui-icon-senior"></i>
@@ -321,6 +330,13 @@
                   <a lay-href="{{ url('/set/user/power') }}">权限管理</a>
                 </dd>
               </dl>
+            </li>
+
+            <li data-name="get" class="layui-nav-item">
+              <a href="javascript:;" lay-href="{{ url('/create/FAQ') }}" lay-tips="常见问题" lay-direction="2">
+                <i class="layui-icon layui-icon-auz"></i>
+                <cite>常见问题</cite>
+              </a>
             </li>
 
 <!--             <li data-name="set" class="layui-nav-item">

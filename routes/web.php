@@ -39,6 +39,7 @@ Route::get('/set/user/power', function() {
 
 Route::post('add/role','UserManageController@addRole');//添加权限
 Route::post('add/newuser','UserManageController@addNewuser');//添加后台管理帐号
+Route::get('get/back/users','UserManageController@getBackUsers');//获取后台管理帐号
 
 //公会
 
@@ -123,6 +124,21 @@ Route::get('/edit/game/user', function() {
 Route::get('/game/player/records', function() {
     return view('game.player-records');
 });//客户查询记录
+Route::get('/query/player/records/{f_role_id}/{f_account_id}/{tname}','Game\PlayingGameController@queryPlayerRecords');//客户游玩记录
+
+
+Route::get('/clients/loss', function() {
+    return view('game.clients-loss');
+});//客户流失
+
+Route::get('/check/clients/loss','Game\ClientsLossController@checkClientsLoss');
+
+//常见问题
+Route::get('/create/FAQ', function() {
+    return view('create.FAQ');
+});//创建常见问题页面
+Route::post('/create/question/type','Game\FAQController@createQtype');//创建问题类型
+Route::get('/get/question/type','Game\FAQController@getQtype');//创建问题类型
 
 //邮件
 Route::get('/create/mail', function() {
